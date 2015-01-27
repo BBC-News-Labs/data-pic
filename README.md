@@ -1,2 +1,0 @@
-# data-pic
-data-pic
