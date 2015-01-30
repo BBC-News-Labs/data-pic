@@ -551,6 +551,7 @@ function debounce(callback, context, ms) {
     var originalArray;
     var changedArray;
     var annotationArray;
+    var colourHighlighting = '';
 
 $(document).on('ready', function(){
     $("#h3_annotation").hide();
@@ -559,7 +560,7 @@ $(document).on('ready', function(){
     //$("#list_figures_annotation").hide;
 
     var code = $("#iframe-preview").contents().find("h2");
-    code.css("background-color","yellow", 1000) && $("#h2_annotation").show(1000) && $("#h2_explainer").show(1000);
+    $("#background_overlay_h2").show(1000) && $("#h2_annotation").show(1000) && $("#h2_explainer").show(1000);
 alert("This tool will help you build a data pic. You have to use HTML and CSS coding to put your own data pic together. Look out for hints and advice as you work through the instructions.");
 
 
@@ -573,6 +574,7 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
 
 
     ],
+
     changedArray = [
         '#title',
         '.subtitle',
@@ -603,22 +605,38 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
    $("#bgimage_explainer")
     ];
 
+    backgroundArray = [
+    $("#background_overlay_h2"),
+    $("#background_overlay_h3"),
+    $("#background_overlay_impact"),
+    $("#background_overlay_paragraph"),
+    $("#background_overlay_figures"),
+    $("#background_overlay_source")
+    ];
+
 
     get_html_window = $('#html-window').contents().text();
 
     setInterval(function counter (){
     // console.log(originalArray, changedArray, annotationArray);
 
+    //var colourHighlighting = $("#iframe-preview").contents().find(changedArray[i + 1]).css("background-color","pink");
+
     //Does not execute the 3rd else if statement
     for (var i =0; i < originalArray.length; i++) {
        if (originalArray[i].text() !== $("#iframe-preview").contents().find(changedArray[i]).text()) {
-            explainerArray[i].hide();
-            annotationArray[i].hide();
+            explainerArray[i].hide(1000);
+            annotationArray[i].hide(1000);
+            backgroundArray[i].hide(1000);
+            //colourHighlighting.hide();
 
-            $("#iframe-preview").contents().find(changedArray[i + 1]).css('background-color', 'yellow');
+            //$("#iframe-preview").contents().find(changedArray[i + 1]).css("background-color","pink");
 
-            annotationArray[i + 1].show();
-            explainerArray[i + 1].show();
+            annotationArray[i + 1].show(4000);
+            explainerArray[i + 1].show(4000);
+            backgroundArray[i + 1].show(4000);
+            //colourHighlighting.show(1500);
+
 
             //console.log('CHANGED ARRAY ' + changedArray[i]);
             //console.log('ORIGINAL ARRAY ' + originalArray[i].text);
@@ -626,28 +644,29 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
             changedArray.splice(i, 1);
             annotationArray.splice(i, 1);
             explainerArray.splice(i, 1);
+            backgroundArray.splice(i, 1);
             //hides the first speech bubble when something else was changed but we want it to show another asset instead
             //eliminate hide error
-            if ($("#iframe-preview").contents().find(annotationArray[i - 1])) {
-                annotationArray[i-1].hide();
-                explainerArray[i-1].hide();
-                }
-            if ($("#iframe-preview").contents().find(annotationArray[i - 2])) {
-                annotationArray[i-2].hide();
-                explainerArray[i-2].hide();
-                }
-            if ($("#iframe-preview").contents().find(annotationArray[i - 3])) {
-                annotationArray[i-3].hide();
-                explainerArray[i-3].hide();
-                }
-            if ($("#iframe-preview").contents().find(annotationArray[i - 4])) {
-                annotationArray[i-3].hide();
-                explainerArray[i-3].hide();
-                }
-            if ($("#iframe-preview").contents().find(annotationArray[i - 5])) {
-                annotationArray[i-3].hide();
-                explainerArray[i-3].hide();
-                }
+            // if ($("#iframe-preview").contents().find(annotationArray[i - 1])) {
+            //     annotationArray[i-1].hide();
+            //     explainerArray[i-1].hide();
+            //     }
+            // if ($("#iframe-preview").contents().find(annotationArray[i - 2])) {
+            //     annotationArray[i-2].hide();
+            //     explainerArray[i-2].hide();
+            //     }
+            // if ($("#iframe-preview").contents().find(annotationArray[i - 3])) {
+            //     annotationArray[i-3].hide();
+            //     explainerArray[i-3].hide();
+            //     }
+            // if ($("#iframe-preview").contents().find(annotationArray[i - 4])) {
+            //     annotationArray[i-3].hide();
+            //     explainerArray[i-3].hide();
+            //     }
+            // if ($("#iframe-preview").contents().find(annotationArray[i - 5])) {
+            //     annotationArray[i-3].hide();
+            //     explainerArray[i-3].hide();
+            //     }
             }
         }
     }, 3000);

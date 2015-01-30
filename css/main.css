@@ -431,6 +431,54 @@ div.code-lines span {
     z-index: 1;
 }
 
+/*Background overlays*/
+#background_overlay_h2 {
+    left: 2%;
+    position: absolute;
+    top: 42px;
+    z-index: 0;
+}
+
+#background_overlay_h3 {
+    display: none;
+    left: 2%;
+    position: absolute;
+    top: 67px;
+    z-index: 0;
+}
+
+#background_overlay_impact {
+    display: none;
+    left: 2%;
+    position: absolute;
+    top: 100px;
+    z-index: 1;
+}
+
+#background_overlay_paragraph {
+    display: none;
+    left: 2%;
+    position: absolute;
+    top: 152px;
+    z-index: 1;
+}
+
+#background_overlay_figures {
+    display: none;
+    left: 2%;
+    position: absolute;
+    top: 201px;
+    z-index: 1;
+}
+
+#background_overlay_source {
+    display: none;
+    left: 2%;
+    position: absolute;
+    top: 372px;
+    z-index: 0;
+}
+
 /*Explainer Array Stylings */
 
 #explainers {
