@@ -691,6 +691,7 @@ var takeScreenshot = function () {
     var iframeCopy = document.getElementById('html-window').value;
     var newWindow = window.open('window');
     console.log(iframeCopy + ' Iframe Copy test new');
+    console.log(document.body + ' logging body');
     newWindow.document.body.appendChild(newIframe);
     newWindow.document.write(iframeCopy);
 
