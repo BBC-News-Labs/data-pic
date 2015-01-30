@@ -681,7 +681,9 @@ count = 0;
 var takeScreenshot = function () {
 
     var newIframe = document.createElement('iframe');
+    console.log(newIframe + 'test');
     var y = (newIframe.contentWindow || newIframe.contentDocument);
+
     var iframeCopy = document.getElementById('html-window').value;
     var newWindow = window.open('');
     newWindow.document.body.appendChild(newIframe);

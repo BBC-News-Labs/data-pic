@@ -609,6 +609,7 @@ div.code-lines span {
 
 @media (min-width: 1px) and (max-width: 1259px) {
         /*put message for mobile devices here*/
+        detect viewport width in JS
 
 
 }
