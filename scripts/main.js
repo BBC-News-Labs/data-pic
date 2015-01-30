@@ -681,11 +681,13 @@ count = 0;
 var takeScreenshot = function () {
 
     var newIframe = document.createElement('iframe');
-    console.log(newIframe + ' test');
-    console.log(newIframe + ' test2 furtherNEW');
-    // console.log(newIframe.contentWindow + ' content.window');
-    console.log(newIframe.contentDocument + ' content.documentNEW');
-    var y = (newIframe.contentWindow || newIframe.contentDocument);
+    // console.log(newIframe + ' test');
+    // console.log(newIframe + ' test2 furtherNEW');
+    // // console.log(newIframe.contentWindow + ' content.window');
+    // console.log(newIframe.contentDocument + ' content.documentNEW');
+    // var y = (newIframe.contentWindow || newIframe.contentDocument);
+    console.log('newest');
+
     var iframeCopy = document.getElementById('html-window').value;
     var newWindow = window.open('');
     newWindow.document.body.appendChild(newIframe);
