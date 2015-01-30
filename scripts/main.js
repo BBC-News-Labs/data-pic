@@ -683,7 +683,7 @@ var takeScreenshot = function () {
     var newIframe = document.createElement('iframe');
     console.log(newIframe + ' test');
     console.log(newIframe + ' test2 further');
-    console.log(newIframe.contentWindow + ' content.window');
+    // console.log(newIframe.contentWindow + ' content.window');
     console.log(newIframe.contentDocument + ' content.document');
     var y = (newIframe.contentWindow || newIframe.contentDocument);
     var iframeCopy = document.getElementById('html-window').value;
