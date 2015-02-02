@@ -154,32 +154,17 @@
               background-position: top right; }
 
             .datapic_stat .inner_wrapper {
-              background: white;
+              /*background: white;*/
+              background-image:
+                    url(http://data-pic.bbcnewslabs.co.uk/images/background_overlayTest.png);
               /* RGB value followed by opacity - all other browsers */
-              background: rgba(255, 255, 255, 0.8);
 
               width: 100%;
               padding: 0 1.875em 0 1.4375em;
               display: block;
+              z-index: 1;
 
             }
-
-            .opac_box_ie {
-
-              width: 50%;
-              height: 50%;
-
-              /*IE8*/
-              background: white;
-              opacity: 0.0;
-              -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-
-              /* IE 5-7 */
-              filter: alpha(opacity=50);
-
-            }
-
-
 
             .datapic_stat .inner_wrapper .title {
               font-size: 1.125em;
