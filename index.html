@@ -157,9 +157,20 @@
               background: white;
               /* RGB value followed by opacity - all other browsers */
               background: rgba(255, 255, 255, 0.8);
+
               width: 100%;
               padding: 0 1.875em 0 1.4375em;
-              display: block; }
+              display: block;
+
+              /*IE8*/
+              -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+
+              /* IE 5-7 */
+              filter: alpha(opacity=50);
+
+            }
+
+
 
             .datapic_stat .inner_wrapper .title {
               font-size: 1.125em;
