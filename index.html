@@ -32,7 +32,7 @@
           <textarea id="html-window" class="white" rows="38" >
 <body>
   <!-- THIS IS WERE YOUR HTML GOES-->
-          <div class="datapic__news datapic_stat datapic_stat--ebola-updates infographic_template">
+          <div id="ie8" class="datapic__news datapic_stat datapic_stat--ebola-updates infographic_template">
 
                 <div class="outer_wrapper outer_wrapper__align-bottom">
                     <div class="inner_wrapper">
@@ -222,7 +222,7 @@
             .datapic_stat .inner_wrapper ul .impact p span:nth-child(2) {
               padding-left: 0.25em; }
 
-            @media only screen and (min-width: 1px) {
+           /* @media only screen and (min-width: 1px) {
               .storybody-halfwide-include {
                 width: 100%; }
 
@@ -238,7 +238,7 @@
               .datapic_stat .outer_wrapper .inner_wrapper .footer {
                 font-size: 1em;
                 margin-top: 0;
-                padding-bottom: 0; } }
+                padding-bottom: 0; } }*/
             .datapic_stat .outer_wrapper {
               background-size: cover;
               background-repeat: no-repeat;
@@ -285,15 +285,15 @@
               padding-bottom: 0; }
 
 
-            @media only screen and (min-width: 1px) {
+            /*@media only screen and (min-width: 1px) {
               .datapic_stat--ebola-updates .outer_wrapper {
                 background-image: none;
               }
               .datapic_stat--ebola-updates .outer_wrapper .inner_wrapper {
                 max-width: 100%;
               }
-            }
-            @media only screen and (min-width: 480px) {
+            }*/
+            /*@media only screen and (min-width: 480px) {
               .datapic_stat--ebola-updates .outer_wrapper .inner_wrapper {
                 max-width: 50%;
               }
@@ -301,14 +301,23 @@
                     background-image:
                     url(http://newsimg.bbc.co.uk/media/images/80300000/jpg/_80300093_470473253.jpg);
               }
-            }
-            .ie8 .datapic_stat--ebola-updates .outer_wrapper .inner_wrapper {
+            }*/
+             .datapic_stat--ebola-updates .outer_wrapper .inner_wrapper {
                 max-width: 50%;
               }
-            .ie8 .datapic_stat--ebola-updates .outer_wrapper {
+             .datapic_stat--ebola-updates .outer_wrapper {
                     background-image:
                     url(http://newsimg.bbc.co.uk/media/images/80300000/jpg/_80300093_470473253.jpg);
               }
+
+              #ie8 .ns_datapic_quote--<?= $this->dataPic->projectName ?> .ns_outer_wrapper .ns_inner_wrapper {
+              max-width: <?= $this->dataPic->contentWidth ?>%;
+              padding: 0 1.875em 0 1.4375em;
+              }
+              #ie8 .ns_datapic_quote--<?= $this->dataPic->projectName ?> .ns_outer_wrapper {
+              background-image: url(<?= $this->dataPic->backgroundImage->src ?>);
+              }
+
           </style>
 </body>
 
