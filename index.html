@@ -288,11 +288,11 @@
                     url(http://newsimg.bbc.co.uk/media/images/80300000/jpg/_80300093_470473253.jpg);
               }
 
-              #ie8 .ns_datapic_quote--<?= $this->dataPic->projectName ?> .ns_outer_wrapper .ns_inner_wrapper {
+              #ie8 <?= $this->dataPic->projectName ?> .outer_wrapper .inner_wrapper {
               max-width: <?= $this->dataPic->contentWidth ?>%;
               padding: 0 1.875em 0 1.4375em;
               }
-              #ie8 .ns_datapic_quote--<?= $this->dataPic->projectName ?> .ns_outer_wrapper {
+              #ie8 <?= $this->dataPic->projectName ?> .outer_wrapper {
               background-image: url(<?= $this->dataPic->backgroundImage->src ?>);
               }
 
