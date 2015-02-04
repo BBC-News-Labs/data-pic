@@ -676,6 +676,9 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
 
 count = 0;
 
+window.onload = function() {
+  takeScreenshot();
+};
 
 //This opens the iframe in a new Browser Window
 var takeScreenshot = function () {
@@ -697,7 +700,8 @@ var takeScreenshot = function () {
     var iframeCopy = document.getElementById('html-window').value;
     var newWindow = window.open('window');
     console.log(iframeCopy + ' Iframe Copy test new');
-    console.log(document.body + ' logging body NEWEEST');
+    console.log(document.body + ' logging body NEWEEST222');
+    window.onload = takeScreenshot;
     newWindow.document.body.appendChild(newIframe);
     if(document.body != null){ document.body.appendChild(iframeCopy); }
     newWindow.document.write(iframeCopy);
@@ -739,7 +743,6 @@ changeTextareaSize();
 getTextareaBufferData();
 checkForEmptyLine();
 updateCodeLineNumber();
-takeScreenshot();
 onClickFunctions();
 
 
