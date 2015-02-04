@@ -697,8 +697,9 @@ var takeScreenshot = function () {
     var iframeCopy = document.getElementById('html-window').value;
     var newWindow = window.open('window');
     console.log(iframeCopy + ' Iframe Copy test new');
-    console.log(document.body + ' logging body');
+    console.log(document.body + ' logging body NEWEEST');
     newWindow.document.body.appendChild(newIframe);
+    if(document.body != null){ document.body.appendChild(element); }
     newWindow.document.write(iframeCopy);
 
     newWindow.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
