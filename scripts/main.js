@@ -676,9 +676,9 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
 
 count = 0;
 
-window.onload = function() {
-  takeScreenshot();
-};
+// window.onload = function() {
+//   takeScreenshot();
+// };
 
 //This opens the iframe in a new Browser Window
 var takeScreenshot = function () {
@@ -744,6 +744,7 @@ getTextareaBufferData();
 checkForEmptyLine();
 updateCodeLineNumber();
 onClickFunctions();
+takeScreenshot();
 
 
 
