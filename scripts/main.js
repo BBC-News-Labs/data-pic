@@ -682,12 +682,12 @@ count = 0;
 
 //This opens the iframe in a new Browser Window
 var takeScreenshot = function () {
-    if(document.readyState === "complete") {
-          console.log(' Dom has completely loaded!')
-        }
-        else {
-            console.log('NOT LOADED');
-        }
+    // if(document.readyState === "complete") {
+    //       console.log(' Dom has completely loaded!')
+    //     }
+    //     else {
+    //         console.log('NOT LOADED');
+    //     }
 
     var newIframe = document.createElement('iframe');
     // console.log(newIframe + ' test');
@@ -703,7 +703,7 @@ var takeScreenshot = function () {
     console.log(document.body + ' logging body NEWEEST222');
     //window.onload = takeScreenshot;
     newWindow.document.body.appendChild(newIframe);
-    if(document.body != null){ document.body.appendChild(iframeCopy); }
+    //if(document.body != null){ document.body.appendChild(iframeCopy); }
     newWindow.document.write(iframeCopy);
 
     newWindow.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
