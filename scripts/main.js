@@ -679,6 +679,12 @@ count = 0;
 
 //This opens the iframe in a new Browser Window
 var takeScreenshot = function () {
+    if(document.readyState === "complete") {
+          console.log(' Dom has completely loaded!')
+        }
+        else {
+            console.log('NOT LOADED');
+        }
 
     var newIframe = document.createElement('iframe');
     // console.log(newIframe + ' test');
@@ -686,12 +692,12 @@ var takeScreenshot = function () {
     // // console.log(newIframe.contentWindow + ' content.window');
     // console.log(newIframe.contentDocument + ' content.documentNEW');
     // var y = (newIframe.contentWindow || newIframe.contentDocument);
-    console.log('newest');
+    //console.log('newest');
 
     var iframeCopy = document.getElementById('html-window').value;
     var newWindow = window.open('window');
-    console.log(iframeCopy + ' Iframe Copy test new');
-    console.log(document.body + ' logging body');
+    //console.log(iframeCopy + ' Iframe Copy test new');
+    //console.log(document.body + ' logging body');
     newWindow.document.body.appendChild(newIframe);
     newWindow.document.write(iframeCopy);
 
@@ -719,6 +725,8 @@ var setUpDataPicHTMLClipboard = function () {
       });
     } );
 };
+
+
 
 setUpDataPicHTMLClipboard();
 setUpUITabs();
