@@ -681,7 +681,9 @@ count = 0;
 // };
 
 //This opens the iframe in a new Browser Window
-var takeScreenshot = function () {
+
+if(document.readyState === "complete") {
+    var takeScreenshot = function () {
     // if(document.readyState === "complete") {
     //       console.log(' Dom has completely loaded!')
     //     }
@@ -709,7 +711,9 @@ var takeScreenshot = function () {
     newWindow.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
     newWindow.document.close();
 
-};
+    };
+
+}
 
 var setUpUITabs = function () {
 
