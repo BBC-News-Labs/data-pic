@@ -647,26 +647,26 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
             backgroundArray.splice(i, 1);
             //hides the first speech bubble when something else was changed but we want it to show another asset instead
             //eliminate hide error
-            // if ($("#iframe-preview").contents().find(annotationArray[i - 1])) {
-            //     annotationArray[i-1].hide();
-            //     explainerArray[i-1].hide();
-            //     }
-            // if ($("#iframe-preview").contents().find(annotationArray[i - 2])) {
-            //     annotationArray[i-2].hide();
-            //     explainerArray[i-2].hide();
-            //     }
-            // if ($("#iframe-preview").contents().find(annotationArray[i - 3])) {
-            //     annotationArray[i-3].hide();
-            //     explainerArray[i-3].hide();
-            //     }
-            // if ($("#iframe-preview").contents().find(annotationArray[i - 4])) {
-            //     annotationArray[i-3].hide();
-            //     explainerArray[i-3].hide();
-            //     }
-            // if ($("#iframe-preview").contents().find(annotationArray[i - 5])) {
-            //     annotationArray[i-3].hide();
-            //     explainerArray[i-3].hide();
-            //     }
+            if ($("#iframe-preview").contents().find(explainerArray[i - 1])) {
+                annotationArray[i-1].hide();
+                explainerArray[i-1].hide();
+                }
+            if ($("#iframe-preview").contents().find(explainerArray[i - 2])) {
+                annotationArray[i-2].hide();
+                explainerArray[i-2].hide();
+                }
+            if ($("#iframe-preview").contents().find(explainerArray[i - 3])) {
+                annotationArray[i-3].hide();
+                explainerArray[i-3].hide();
+                }
+            if ($("#iframe-preview").contents().find(explainerArray[i - 4])) {
+                annotationArray[i-3].hide();
+                explainerArray[i-3].hide();
+                }
+            if ($("#iframe-preview").contents().find(explainerArray[i - 5])) {
+                annotationArray[i-3].hide();
+                explainerArray[i-3].hide();
+                }
             }
         }
     }, 3000);

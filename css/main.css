@@ -268,12 +268,12 @@ div.code-lines span {
 
 #preview-overlay {
     background-color: yellow;
-    height: 362px;
+    height: 65%;
     left: 10px;
     opacity: 0.5;
     position: absolute;
     top: 40px;
-    width: 624px;
+    width: 96%;
     display: none;
 
 }
@@ -426,7 +426,7 @@ div.code-lines span {
     display: none;
     left: 51%;
     position: absolute;
-    top: 373px;
+    top: 424px;
     width:50%;
     z-index: 1;
 }
@@ -468,6 +468,8 @@ div.code-lines span {
     left: 2%;
     position: absolute;
     top: 201px;
+    width: 50%;
+    height: 36%;
     z-index: 1;
 }
 
@@ -475,7 +477,7 @@ div.code-lines span {
     display: none;
     left: 2%;
     position: absolute;
-    top: 372px;
+    top: 424px;
     z-index: 0;
 }
 
@@ -484,7 +486,7 @@ div.code-lines span {
 #explainers {
 
     position: absolute;
-    top: 475px;
+    top: 470px;
     left: 16px;
 
 }
@@ -509,7 +511,8 @@ div.code-lines span {
 
     display: none;
     font-family: Arial;
-    font-size: 15px;
+    font-size: 14px;
+    height: 60%;
     width: 90%;
     z-index: 1;
 }
@@ -528,6 +531,7 @@ div.code-lines span {
     display: none;
     font-family: Arial;
     font-size: 15px;
+    height: 60%;
     top: -29%;
     z-index: 1;
 }
@@ -536,7 +540,7 @@ div.code-lines span {
 
     display: none;
     font-family: Arial;
-    font-size: 15px;
+    font-size: 14px;
     width: 90%;
     z-index: 1;
 }
@@ -546,9 +550,10 @@ div.code-lines span {
 
     display: none;
     font-family: Arial;
-    font-size: 15px;
+    font-size: 14px;
     z-index: 1;
-    width: 90%;
+    width: 98%;
+    top: ;
 }
 
 #d_debug {
