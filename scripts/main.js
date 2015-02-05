@@ -720,7 +720,7 @@ $('#screenshot').click(function () {
     console.log('entered this function.');
     iframeCopy = document.getElementById('html-window').value;
     newWindow = window.open('window');
-  $(newWindow).append(thing);
+  $(newWindow).append(newIframe);
    //newWindow.document.body.appendChild(newIframe);
         //if(document.body != null){ document.body.appendChild(iframeCopy); }
     newWindow.document.write(iframeCopy);
