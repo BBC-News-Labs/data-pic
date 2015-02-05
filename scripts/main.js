@@ -687,33 +687,33 @@ count = 0;
     var iframeCopy = '';
     var newWindow = '';
 
-    var takeScreenshot = function () {
-    newIframe = document.createElement('iframe');
+    // var takeScreenshot = function () {
+    // newIframe = document.createElement('iframe');
 
-    iframeCopy = document.getElementById('html-window').value;
-    newWindow = window.open('window');
+    // iframeCopy = document.getElementById('html-window').value;
+    // newWindow = window.open('window');
 
-    // if(document.readyState === "complete") {
-        //console.log('dom ready');
-        newWindow.document.body.appendChild(newIframe);
-        //if(document.body != null){ document.body.appendChild(iframeCopy); }
-        newWindow.document.write(iframeCopy);
+    // // if(document.readyState === "complete") {
+    //     //console.log('dom ready');
+    //     newWindow.document.body.appendChild(newIframe);
+    //     //if(document.body != null){ document.body.appendChild(iframeCopy); }
+    //     newWindow.document.write(iframeCopy);
 
-        newWindow.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
-        newWindow.document.close();
+    //     newWindow.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
+    //     newWindow.document.close();
 
-        // }
-        // else {
-        //     console.log('NOT LOADED');
-        // }
-
-
-    console.log(iframeCopy + ' Iframe Copy test new');
-    console.log(document.body + ' logging body NEWEEST222');
-    //window.onload = takeScreenshot;
+    //     // }
+    //     // else {
+    //     //     console.log('NOT LOADED');
+    //     // }
 
 
-    };
+    // console.log(iframeCopy + ' Iframe Copy test new');
+    // console.log(document.body + ' logging body NEWEEST222');
+    // //window.onload = takeScreenshot;
+
+
+    // };
 
 $.ready(function () {
     newIframe = document.createElement('iframe');
