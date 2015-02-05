@@ -609,12 +609,23 @@ div.code-lines span {
         left: 79%;
     }
 
+    #device_message {
+        display: none !important;
+    }
+
 
 }
 
 @media (min-width: 1px) and (max-width: 1259px) {
-        /*put message for mobile devices here*/
-        detect viewport width in JS
-
+        body { display: none }
+        #device_message .device_message  {
+            display: block;
+            position: absolute;
+            left: 15px;
+            top: 465px;
+            width: 95%;
+            font-size: 20px;
+            color: red;
+        }
 
 }

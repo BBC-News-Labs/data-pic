@@ -800,6 +800,18 @@ $('#d_clip_button').click(function () {
 });
 
 
+var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+
+console.log('w ' + w + 'h ' + h);
+
+if (w < 1259) {
+    alert ('This application only supports laptop and desktop.');
+    $("p:first").addClass("device_message");
+}
+
+
+
 
 setUpDataPicHTMLClipboard();
 setUpUITabs();
