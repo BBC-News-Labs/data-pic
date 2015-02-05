@@ -682,20 +682,19 @@ count = 0;
 
 //This opens the iframe in a new Browser Window
 
+    var newIframe = '';
+
+    var iframeCopy = '';
+    var newWindow = '';
+
     var takeScreenshot = function () {
-    var newIframe = document.createElement('iframe');
-    // console.log(newIframe + ' test');
-    // console.log(newIframe + ' test2 furtherNEW');
-    // // console.log(newIframe.contentWindow + ' content.window');
-    // console.log(newIframe.contentDocument + ' content.documentNEW');
-    // var y = (newIframe.contentWindow || newIframe.contentDocument);
-    //console.log('newest');
+    newIframe = document.createElement('iframe');
 
-    var iframeCopy = document.getElementById('html-window').value;
-    var newWindow = window.open('window');
+    iframeCopy = document.getElementById('html-window').value;
+    newWindow = window.open('window');
 
-    if(document.readyState === "complete") {
-        console.log('dom ready');
+    // if(document.readyState === "complete") {
+        //console.log('dom ready');
         newWindow.document.body.appendChild(newIframe);
         //if(document.body != null){ document.body.appendChild(iframeCopy); }
         newWindow.document.write(iframeCopy);
@@ -703,10 +702,10 @@ count = 0;
         newWindow.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
         newWindow.document.close();
 
-        }
-        else {
-            console.log('NOT LOADED');
-        }
+        // }
+        // else {
+        //     console.log('NOT LOADED');
+        // }
 
 
     console.log(iframeCopy + ' Iframe Copy test new');
@@ -715,6 +714,20 @@ count = 0;
 
 
     };
+
+$.ready(function () {
+    newIframe = document.createElement('iframe');
+    console.log('entered this function.');
+    iframeCopy = document.getElementById('html-window').value;
+    newWindow = window.open('window');
+  $(newWindow).append(thing);
+   //newWindow.document.body.appendChild(newIframe);
+        //if(document.body != null){ document.body.appendChild(iframeCopy); }
+    newWindow.document.write(iframeCopy);
+
+    newWindow.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
+    newWindow.document.close();
+});
 
 
 var setUpUITabs = function () {
