@@ -715,7 +715,7 @@ count = 0;
 
     // };
 
-$.ready(function () {
+$('#screenshot').click(function () {
     newIframe = document.createElement('iframe');
     console.log('entered this function.');
     iframeCopy = document.getElementById('html-window').value;
