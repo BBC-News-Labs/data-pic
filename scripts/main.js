@@ -797,10 +797,10 @@ var BrowserDetect = {
 
 $('#d_clip_button').click(function () {
     BrowserDetect.init();
-    if (BrowserDetect.browser === "Explorer" || "Trident") {
-        alert ('Sorry, this feature does not work on Internet Explorer.');
-        console.log("You are using <b>" + BrowserDetect.browser + "</b> with version <b>" + BrowserDetect.version + "</b>");
-    }
+    // if (BrowserDetect.browser === "Explorer" || "Trident") {
+    //     alert ('Sorry, this feature does not work on Internet Explorer.');
+    //     console.log("You are using <b>" + BrowserDetect.browser + "</b> with version <b>" + BrowserDetect.version + "</b>");
+    // }
 });
 
 
