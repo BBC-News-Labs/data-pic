@@ -417,7 +417,7 @@ div.code-lines span {
     display: none;
     left: 52%;
     position: absolute;
-    top: 198px;
+    top: 191px;
     width:50%;
     z-index: 1;
 }
@@ -467,9 +467,9 @@ div.code-lines span {
     display: none;
     left: 2%;
     position: absolute;
-    top: 201px;
-    width: 50%;
-    height: 36%;
+    top: 190px;
+    width: 50% !important;
+    height: 38% !important;
     z-index: 1;
 }
 
