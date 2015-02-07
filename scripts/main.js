@@ -231,15 +231,15 @@ var onClickFunctions = function() {
     undockWindow(wtop, wleft);
     });
     // About window
-    $("#a-about").click(function() {
-    // opens about window on about button click
-    $("#div-about").css("display", "block");
-    $( "#div-about" ).draggable({ zIndex: 2, cursor:"move", containment: "#tabs", scroll:false, stack:"#ul-toolbar" });
-    });
-    $("#div-about div img.close").click(function() {
-    // closes about window on close button click
-    $("#div-about").css("display", "none");
-    });
+    // $("#a-about").click(function() {
+    // // opens about window on about button click
+    // $("#div-about").css("display", "block");
+    // $( "#div-about" ).draggable({ zIndex: 2, cursor:"move", containment: "#tabs", scroll:false, stack:"#ul-toolbar" });
+    // });
+    // $("#div-about div img.close").click(function() {
+    // // closes about window on close button click
+    // $("#div-about").css("display", "none");
+    // });
     // New Project
     $("#a-new-project").click(function() {
     // prompts the user for a project name and starts new project
