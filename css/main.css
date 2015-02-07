@@ -477,7 +477,7 @@ div.code-lines span {
     display: none;
     left: 2%;
     position: absolute;
-    top: 424px;
+    top: 399px;
     z-index: 0;
 }
 
@@ -591,7 +591,7 @@ div.code-lines span {
     }
 
     #source_annotation {
-        top: 411px;
+        top: 398px;
     }
 
     #impact_figure_annotation {
