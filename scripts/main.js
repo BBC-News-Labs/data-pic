@@ -560,8 +560,6 @@ $(document).on('ready', function(){
 
     $("#list_figures_annotation").hide;
 
-
-
     var code = $("#iframe-preview").contents().find("h2");
     console.log('changed h2 ' + changed_h2);
     $("#background_overlay_h2").show(1000) && $("#h2_annotation").show(1000) && $("#h2_explainer").show(1000);
@@ -689,7 +687,6 @@ count = 0;
 //This opens the iframe in a new Browser Window
 
     var newIframe = '';
-
     var iframeCopy = '';
     var newWindow = '';
 
