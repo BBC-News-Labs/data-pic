@@ -557,8 +557,6 @@ $(document).on('ready', function(){
     $("#h3_annotation").hide();
     $("#impact_figure_annotation").hide();
     $("#paragraph_annotation").hide();
-    $("#background_overlay_h2").hide();
-    $("#h2_explainer").hide();
 
     $("#list_figures_annotation").hide;
 
@@ -568,6 +566,7 @@ $(document).on('ready', function(){
     console.log('changed h2 ' + changed_h2);
     $("#background_overlay_h2").show(1000) && $("#h2_annotation").show(1000) && $("#h2_explainer").show(1000);
 alert("This tool will help you build a data pic. You have to use HTML and CSS coding to put your own data pic together. Look out for hints and advice as you work through the instructions.");
+
 
 
     originalArray = [
