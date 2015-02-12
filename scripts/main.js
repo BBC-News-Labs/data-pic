@@ -626,7 +626,11 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
 
     //Does not execute the 3rd else if statement
     for (var i =0; i < originalArray.length; i++) {
-        console.log('org Array ' + originalArray[i].text());
+        console.log('explainer Array ' + explainerArray[i].text());
+        console.log('annotationArr ' + annotationArray[i].text());
+        console.log('iframeprev obj ' + $("#iframe-preview"));
+        console.log('contents iframe ' + $("#iframe-preview").contents());
+        console.log('iframe whole ' + $("#iframe-preview").contents().find(changedArray[i]).text());
        if (originalArray[i].text() !== $("#iframe-preview").contents().find(changedArray[i]).text()) {
 
             explainerArray[i].hide(1000);
