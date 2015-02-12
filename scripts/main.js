@@ -621,8 +621,7 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
     get_html_window = $('#html-window').contents().text();
 
     setInterval(function counter (){
-    // console.log(originalArray, changedArray, annotationArray);
-
+    console.log('test ' + originalArray, changedArray, annotationArray);
     //var colourHighlighting = $("#iframe-preview").contents().find(changedArray[i + 1]).css("background-color","pink");
 
     //Does not execute the 3rd else if statement
@@ -689,34 +688,6 @@ count = 0;
     var newIframe = '';
     var iframeCopy = '';
     var newWindow = '';
-
-    // var takeScreenshot = function () {
-    // newIframe = document.createElement('iframe');
-
-    // iframeCopy = document.getElementById('html-window').value;
-    // newWindow = window.open('window');
-
-    // // if(document.readyState === "complete") {
-    //     //console.log('dom ready');
-    //     newWindow.document.body.appendChild(newIframe);
-    //     //if(document.body != null){ document.body.appendChild(iframeCopy); }
-    //     newWindow.document.write(iframeCopy);
-
-    //     newWindow.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
-    //     newWindow.document.close();
-
-    //     // }
-    //     // else {
-    //     //     console.log('NOT LOADED');
-    //     // }
-
-
-    // console.log(iframeCopy + ' Iframe Copy test new');
-    // console.log(document.body + ' logging body NEWEEST222');
-    // //window.onload = takeScreenshot;
-
-
-    // };
 
 $('#screenshot').click(function () {
     newIframe = document.createElement('iframe');
