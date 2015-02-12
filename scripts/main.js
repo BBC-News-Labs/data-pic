@@ -625,7 +625,7 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
     //var colourHighlighting = $("#iframe-preview").contents().find(changedArray[i + 1]).css("background-color","pink");
 
     //Does not execute the 3rd else if statement
-    for (var i =0; i < originalArray.length; i++) {
+    for (var i =0; i < 6; i++) {
 
        if (originalArray[i].text() !== $("#iframe-preview").contents().find(changedArray[i]).text()) {
 
