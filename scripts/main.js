@@ -627,6 +627,7 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
         console.log('iframeprev obj ' + $("#iframe-preview"));
         console.log('contents iframe ' + $("#iframe-preview").contents());
         console.log('iframe whole ' + $("#iframe-preview").contents().find(changedArray[i]).text());
+        console.log('orginal array ' + originalArray.length);
     //var colourHighlighting = $("#iframe-preview").contents().find(changedArray[i + 1]).css("background-color","pink");
 
     //Does not execute the 3rd else if statement
