@@ -628,9 +628,9 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
     for (var i =0; i < originalArray.length; i++) {
 
          console.log('iframe prev ' + $("#iframe-preview").contents().find(changedArray[i]).text());
-         // console.log('original array ' + originalArray);
-         // console.log('original array item ' + originalArray[i]);
-         // console.log('original array item text ' + originalArray[i].text());
+         console.log('original array ' + originalArray);
+         console.log('original array item ' + originalArray[i]);
+         console.log('original array item text ' + originalArray[i].text());
 
        if (originalArray[i].text() !== $("#iframe-preview").contents().find(changedArray[i]).text()) {
         console.log('here now' + [i]);//BUGGER HERE IT FAILS
@@ -655,8 +655,8 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
             annotationArray.splice(i, 1);
             explainerArray.splice(i, 1);
             backgroundArray.splice(i, 1);
-            hides the first speech bubble when something else was changed but we want it to show another asset instead
-            eliminate hide error
+            // hides the first speech bubble when something else was changed but we want it to show another asset instead
+            // eliminate hide error
             if ($("#iframe-preview").contents().find(explainerArray[i - 1])) {
                 annotationArray[i-1].hide();
                 explainerArray[i-1].hide();
