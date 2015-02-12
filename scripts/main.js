@@ -628,8 +628,10 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
     for (var i =0; i < originalArray.length; i++) {
 
          console.log('iframe prev ' + $("#iframe-preview").contents().find(changedArray[i]).text());
-         console.log('original array ' + originalArray);
-         console.log('original array item ' + originalArray[i]);
+         console.log('original array ');
+         console.log(originalArray);
+         console.log('original array item ');
+         console.log(originalArray[i]);
          console.log('original array item text ' + originalArray[i].text());
 
        if (originalArray[i].text() !== $("#iframe-preview").contents().find(changedArray[i]).text()) {
