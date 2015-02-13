@@ -261,8 +261,9 @@ var wtop; // preview window current top position
 // >>> Main functions
 
 var loadData = function(frame, html, css) {
+    css = '.h2_explainer--hide #h2_eplainer { display: none;}'
     // function that creates html document to be uploaded on iframe
-    console.log('Any CSS', css);
+    console.log('Any CSS', );
     $("#" + frame).prop("contentDocument").write('<style>');
     $("#" + frame).prop("contentDocument").write($("#" + css).val());
     $("#" + frame).prop("contentDocument").write('</style></head>');
@@ -628,7 +629,7 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
     //Does not execute the 3rd else if statement
     for (var i =0; i < originalArray.length; i++) {
 
-        console.log('Test this for equality ********************')
+         console.log('Test this for equality ********************')
          console.log('iframe prev ' + $("#iframe-preview").contents().find(changedArray[i]).text());
          console.log(originalArray[i].text());
 
