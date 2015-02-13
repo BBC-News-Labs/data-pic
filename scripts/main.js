@@ -261,7 +261,7 @@ var wtop; // preview window current top position
 // >>> Main functions
 
 var loadData = function(frame, html, css) {
-    //css = ".h2_explainer--hide #h2_eplainer { display: none;}";
+    css = ".h2_explainer--hide #h2_eplainer { display: none;}";
     // function that creates html document to be uploaded on iframe
     console.log('Any CSS', css);
     $("#" + frame).prop("contentDocument").write('<style>' + css + '</style>');
