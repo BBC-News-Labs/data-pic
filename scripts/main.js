@@ -16,10 +16,10 @@ var wleft; // preview window current left position
 var wtop; // preview window current top position
 
 // >>> Main functions
-// var loadData = function(frame, html, css, jscript) {
+var loadData = function(frame, html, css, jscript) {
 
-// $("#"+frame).prop("contentDocument").close();
-// }
+$("#"+frame).prop("contentDocument").close();
+}
 
 var resetPanel = function() {
 // function that resets the active panel, updating it with the default values
@@ -261,11 +261,11 @@ var wtop; // preview window current top position
 // >>> Main functions
 
 var loadData = function(frame, html, css) {
-    css = ".h2_explainer--hide #h2_explainer { display: none;}";
     // function that creates html document to be uploaded on iframe
-    console.log('Any CSS', css);
-    $("#" + frame).prop("contentDocument").write('<style>' + css + '</style>');
-    $("#" + frame).prop("contentDocument").write('</head>');
+
+    $("#" + frame).prop("contentDocument").write('<style>');
+    $("#" + frame).prop("contentDocument").write($("#" + css).val());
+    $("#" + frame).prop("contentDocument").write('</style></head>');
     $("#" + frame).prop("contentDocument").write($("#" + html).val());
     $("#" + frame).prop("contentDocument").write('</html>');
     $("#" + frame).prop("contentDocument").close();
@@ -599,13 +599,13 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
     ];
 
     explainerArray = [
-    "h2_explainer",
-    "h3_explainer",
-   // $("#impact_figure_explainer"),
-   // $("#paragraph_explainer"),
-   // $("#list_figures_explainer"),
-   // $("#source_explainer"),
-   // $("#bgimage_explainer")
+   $("#h2_explainer"),
+   $("#h3_explainer"),
+   $("#impact_figure_explainer"),
+   $("#paragraph_explainer"),
+   $("#list_figures_explainer"),
+   $("#source_explainer"),
+   $("#bgimage_explainer")
     ];
 
     backgroundArray = [
@@ -617,7 +617,6 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
     $("#background_overlay_source")
     ];
 
-    console.log(explainerArray[0]);
 
     get_html_window = $('#html-window').contents().text();
 
@@ -628,17 +627,17 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
     //Does not execute the 3rd else if statement
     for (var i =0; i < originalArray.length; i++) {
 
-         console.log('Test this for equality ********************')
          console.log('iframe prev ' + $("#iframe-preview").contents().find(changedArray[i]).text());
-         console.log(originalArray[i].text());
+         console.log('original array ' + originalArray);
+         console.log('original array item ' + originalArray[i]);
+         console.log(originalArray[i]);
+         console.log('original array item text ' + originalArray[i].text());
 
        if (originalArray[i].text() !== $("#iframe-preview").contents().find(changedArray[i]).text()) {
-            console.log('Its not equal: here now' + [i]);//BUGGER HERE IT FAILS
+        console.log('here now' + [i]);//BUGGER HERE IT FAILS
 
-            console.log(explainerArray, i);
-            console.log(explainerArray[i]);
-            $("#iframe-preview").addClass(explainerArray[i]+'--hide');
             explainerArray[i].hide(1000);
+            annotationArray[i].hide(1000);
             backgroundArray[i].hide(1000);
             //colourHighlighting.hide();
 
@@ -657,8 +656,8 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
             annotationArray.splice(i, 1);
             explainerArray.splice(i, 1);
             backgroundArray.splice(i, 1);
-            hides the first speech bubble when something else was changed but we want it to show another asset instead
-            eliminate hide error
+            // hides the first speech bubble when something else was changed but we want it to show another asset instead
+            // eliminate hide error
             if ($("#iframe-preview").contents().find(explainerArray[i - 1])) {
                 annotationArray[i-1].hide();
                 explainerArray[i-1].hide();
@@ -679,10 +678,7 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
                 annotationArray[i-3].hide();
                 explainerArray[i-3].hide();
                 }
-            } else {
-                console.log("Its equal....");
             }
-            console.log('**********************');
         }
     }, 3000);
 
