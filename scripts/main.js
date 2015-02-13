@@ -617,6 +617,7 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
     $("#background_overlay_source")
     ];
 
+    console.log(explainerArray[0]);
 
     get_html_window = $('#html-window').contents().text();
 
@@ -633,6 +634,9 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
 
        if (originalArray[i].text() !== $("#iframe-preview").contents().find(changedArray[i]).text()) {
             console.log('Its not equal: here now' + [i]);//BUGGER HERE IT FAILS
+
+            console.log(explainerArray, i);
+            console.log(explainerArray[i]);
 
             explainerArray[i].hide(1000);
             // annotationArray[i].hide(1000);
