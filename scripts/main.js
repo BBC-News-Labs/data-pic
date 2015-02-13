@@ -635,25 +635,25 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
             console.log('Its not equal: here now' + [i]);//BUGGER HERE IT FAILS
 
             explainerArray[i].hide(1000);
-            annotationArray[i].hide(1000);
-            backgroundArray[i].hide(1000);
-            //colourHighlighting.hide();
+            // annotationArray[i].hide(1000);
+            // backgroundArray[i].hide(1000);
+            // //colourHighlighting.hide();
 
-            //$("#iframe-preview").contents().find(changedArray[i + 1]).css("background-color","pink");
+            // //$("#iframe-preview").contents().find(changedArray[i + 1]).css("background-color","pink");
 
-            annotationArray[i + 1].show(4000);
-            explainerArray[i + 1].show(4000);
-            backgroundArray[i + 1].show(4000);
-            //colourHighlighting.show(1500);
+            // annotationArray[i + 1].show(4000);
+            // explainerArray[i + 1].show(4000);
+            // backgroundArray[i + 1].show(4000);
+            // //colourHighlighting.show(1500);
 
 
-            console.log('NOW: CHANGED ARRAY ' + changedArray[i]);
-            console.log('NOW: ORIGINAL ARRAY ' + originalArray[i].text);
-            originalArray.splice(i, 1);
-            changedArray.splice(i, 1);
-            annotationArray.splice(i, 1);
-            explainerArray.splice(i, 1);
-            backgroundArray.splice(i, 1);
+            // console.log('NOW: CHANGED ARRAY ' + changedArray[i]);
+            // console.log('NOW: ORIGINAL ARRAY ' + originalArray[i].text);
+            // originalArray.splice(i, 1);
+            // changedArray.splice(i, 1);
+            // annotationArray.splice(i, 1);
+            // explainerArray.splice(i, 1);
+            // backgroundArray.splice(i, 1);
             // hides the first speech bubble when something else was changed but we want it to show another asset instead
             // eliminate hide error
             // if ($("#iframe-preview").contents().find(explainerArray[i - 1])) {
