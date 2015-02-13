@@ -637,7 +637,7 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
 
             console.log(explainerArray, i);
             console.log(explainerArray[i]);
-            $("#iframe-preview").contents().find('#h2_explainer').hide(1000);
+            $("#iframe-preview").contents().find('#h2_explainer').addClass('Boo');
             //explainerArray[i].hide(1000);
             // annotationArray[i].hide(1000);
             // backgroundArray[i].hide(1000);
