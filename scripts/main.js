@@ -627,14 +627,12 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
     //Does not execute the 3rd else if statement
     for (var i =0; i < originalArray.length; i++) {
 
+        console.log('Test this for equality ********************')
          console.log('iframe prev ' + $("#iframe-preview").contents().find(changedArray[i]).text());
-         console.log('original array ' + originalArray);
-         console.log('original array item ' + originalArray[i]);
-         console.log(originalArray[i]);
          console.log(originalArray[i].text());
 
        if (originalArray[i].text() !== $("#iframe-preview").contents().find(changedArray[i]).text()) {
-        console.log('here now' + [i]);//BUGGER HERE IT FAILS
+            console.log('Its not equal: here now' + [i]);//BUGGER HERE IT FAILS
 
             explainerArray[i].hide(1000);
             annotationArray[i].hide(1000);
@@ -678,7 +676,10 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
                 annotationArray[i-3].hide();
                 explainerArray[i-3].hide();
                 }
+            } else {
+                console.log("Its equal....");
             }
+            console.log('**********************');
         }
     }, 3000);
 
