@@ -16,10 +16,10 @@ var wleft; // preview window current left position
 var wtop; // preview window current top position
 
 // >>> Main functions
-var loadData = function(frame, html, css, jscript) {
+// var loadData = function(frame, html, css, jscript) {
 
-$("#"+frame).prop("contentDocument").close();
-}
+// $("#"+frame).prop("contentDocument").close();
+// }
 
 var resetPanel = function() {
 // function that resets the active panel, updating it with the default values
@@ -262,7 +262,7 @@ var wtop; // preview window current top position
 
 var loadData = function(frame, html, css) {
     // function that creates html document to be uploaded on iframe
-
+    console.log('Any CSS', css);
     $("#" + frame).prop("contentDocument").write('<style>');
     $("#" + frame).prop("contentDocument").write($("#" + css).val());
     $("#" + frame).prop("contentDocument").write('</style></head>');
@@ -599,13 +599,13 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
     ];
 
     explainerArray = [
-   $("#h2_explainer"),
-   $("#h3_explainer"),
-   $("#impact_figure_explainer"),
-   $("#paragraph_explainer"),
-   $("#list_figures_explainer"),
-   $("#source_explainer"),
-   $("#bgimage_explainer")
+    "h2_explainer",
+    "h3_explainer",
+   // $("#impact_figure_explainer"),
+   // $("#paragraph_explainer"),
+   // $("#list_figures_explainer"),
+   // $("#source_explainer"),
+   // $("#bgimage_explainer")
     ];
 
     backgroundArray = [
@@ -637,8 +637,7 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
 
             console.log(explainerArray, i);
             console.log(explainerArray[i]);
-            $("#iframe-preview").contents().find('#h2_explainer').addClass('Boo');
-            explainerArray[i].addClass('Boo');
+            $("#iframe-preview").addClass(explainerArray[i]+'--hide');
             //explainerArray[i].hide(1000);
             // backgroundArray[i].hide(1000);
             // //colourHighlighting.hide();
