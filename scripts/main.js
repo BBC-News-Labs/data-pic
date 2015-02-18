@@ -10,10 +10,9 @@ var loadData = function(frame, html) {
 
     var content ;//= $("#" + frame).prop("contentDocument");
 
-        contentDocument = '<html><head></head>';
+        contentDocument = '<head></head>';
         contentDocument += $("#" + html).val();
-        contentDocument += '</html>';
-        console.log(contentDocument);
+        $("#" + frame).contents().find("html").append(contentDocument);
 
     // if (typeof contentDocument !== 'undefined') {
     //     contentDocument.write('<style>');
