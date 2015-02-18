@@ -4,15 +4,13 @@ var wtop; // preview window current top position
 
 // >>> Main functions
 
-var loadData = function(frame, html, css) {
+var loadData = function(frame, html) {
     // function that creates html document to be uploaded on iframe
     // contentDocument gets what's inside the iframe.
 
     var content ;//= $("#" + frame).prop("contentDocument");
 
-        contentDocument = '<style>';
-        contentDocument += $("#" + css).val();
-        contentDocument += '</style></head>';
+        contentDocument = '<html><head></head>';
         contentDocument += $("#" + html).val();
         contentDocument += '</html>';
         console.log(contentDocument);
