@@ -181,7 +181,7 @@ var primeIframe = function() {
     //console.log(document.domain);
     console.log('in prime');
     document.domain = document.domain;
-    $("#iframe-preview").attr('src', 'preview.html?domain='+document.domain);
+    //$("#iframe-preview").attr('src', 'preview.html?domain='+document.domain);
 }
 
 $(document).ready(function() {
