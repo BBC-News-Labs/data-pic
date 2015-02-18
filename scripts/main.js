@@ -173,6 +173,7 @@ var onClickFunctions = function() {
 }
 
 var primeIframe = function() {
+    console.log(document.domain);
     $("#iframe-preview").attr('src', 'preview.html?domain='+document.domain);
 }
 

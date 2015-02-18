@@ -1,7 +1,10 @@
 <p>Data pic preview loading please wait...</p>
 <script type="text/javascript">
     console.log(document);
-    document.domain = queryString()['domain'];
+
+    if (typeof queryString()['domain'] == 'string') {
+        document.domain = queryString()['domain'];
+    }
 
     function queryString() {
         var
