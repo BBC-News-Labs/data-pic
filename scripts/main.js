@@ -8,16 +8,16 @@ var loadData = function(frame, html, css) {
     // function that creates html document to be uploaded on iframe
     // contentDocument gets what's inside the iframe.
 
-    // var contentDocument = $("#" + frame).prop("contentDocument");
+    var contentDocument = $("#" + frame).prop("contentDocument");
 
-    // if (typeof contentDocument !== 'undefined') {
-    //     contentDocument.write('<style>');
-    //     contentDocument.write($("#" + css).val());
-    //     contentDocument.write('</style></head>');
-    //     contentDocument.write($("#" + html).val());
-    //     contentDocument.write('</html>');
-    //     contentDocument.close();
-    // }
+    if (typeof contentDocument !== 'undefined') {
+        contentDocument.write('<style>');
+        contentDocument.write($("#" + css).val());
+        contentDocument.write('</style></head>');
+        contentDocument.write($("#" + html).val());
+        contentDocument.write('</html>');
+        contentDocument.close();
+    }
 }
 
 var old = '';
@@ -173,7 +173,7 @@ var onClickFunctions = function() {
 }
 
 var primeIframe = function() {
-    console.log(document.domain);
+    //console.log(document.domain);
     document.domain = document.domain;
     $("#iframe-preview").attr('src', 'preview.html?domain='+document.domain);
 }
