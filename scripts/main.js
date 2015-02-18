@@ -129,6 +129,10 @@ var codeLineNumberManagement = function() {
         updateCodeLineNumber('html');
         changeTextareaSize('html');
     });
+
+    $("#html-window").on('scroll', function() {
+        $(".code-lines").scrollTop($(this).scrollTop());
+    })
     // $("#html-window").keyup(function() {
     //     // console.log('HTML window keyup');
     // });
@@ -286,8 +290,16 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
 
 // for (var j =0; j < originalArray.length; j++) {
                 //getElementById("h2_explainer").classList.add("hide");
-                explainerArray[i].addClass("hide");
-                explainerArray[i+1].addClass("show") && removeClass("hide");
+                //explainerArray[i].addClass("hide");
+                //console.log(explainerArray[i+1]);
+                //$(explainerArray[i+1]).addClass("show").removeClass("hide");
+                // console.log('siomething changed at array pos ', i);
+                /// explainerArray[i].hide();
+
+                explainerArray[i].css('display', 'none');
+                explainerArray[i+1].css('display', 'block');
+                //explainerArray[i+1].css('border', '10px solid red');
+
 // };
 
 
