@@ -616,6 +616,12 @@ div.code-lines span {
 
 }
 
+/*Hides the annotations overlays*/
+
+.hide {
+    display: none;
+}
+
 @media (min-width: 1px) and (max-width: 1259px) {
         body { display: none }
         #device_message .device_message  {
