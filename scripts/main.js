@@ -6,6 +6,7 @@ var wtop; // preview window current top position
 
 var loadData = function(frame, html, css) {
     // function that creates html document to be uploaded on iframe
+    // contentDocument gets what's inside the iframe.
 
     var contentDocument = $("#" + frame).prop("contentDocument");
 
@@ -269,6 +270,7 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
 
     for (var i =0; i < originalArray.length; i++) {
 
+
         // console.log('Test this for equality ********************')
         // console.log('iframe prev ' + $("#iframe-preview").contents().find(changedArray[i]).text());
         // console.log(originalArray[i].text());
@@ -280,53 +282,65 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
          // // console.log('original array item text ' + originalArray[i].text());
 
        if (originalArray[i].text() !== $("#iframe-preview").contents().find(changedArray[i]).text()) {
-        // console.log('Not equal here now' + [i]);
-         // $("#iframe-preview").addClass('hide');
 
-            // for (var j = 0; j < backgroundArray.length; j++) {
-            //     backgroundArray[i].addClass('hide');
+
+// for (var j =0; j < originalArray.length; j++) {
+                //getElementById("h2_explainer").classList.add("hide");
+                explainerArray[i].addClass("hide");
+                explainerArray[i+1].addClass("show") && removeClass("hide");
+// };
+
+
+
+        // console.log('Not equal here now' + [i]);
+
+// var
+//          $("#explainers").prop("#h2_explainer").write('<html class=' + 'h2_explainer--hide' + '</html>');
+
+            // for (var j = 0; j < annotationArray.length; j++) {s
+            //     annotationArray[i].addClass('hide');
             // }
 
-            explainerArray[i].hide(1000);
-            annotationArray[i].hide(1000);
-            backgroundArray[i].hide(1000);
-            //colourHighlighting.hide();
+            //explainerArray[i].hide(1000);
+            // annotationArray[i].hide(1000);
+            // // backgroundArray[i].hide(1000);
+            // //colourHighlighting.hide();
 
-            //$("#iframe-preview").contents().find(changedArray[i + 1]).css("background-color","pink");
+            // //$("#iframe-preview").contents().find(changedArray[i + 1]).css("background-color","pink");
 
-            annotationArray[i + 1].show(4000);
-            explainerArray[i + 1].show(4000);
-            backgroundArray[i + 1].show(4000);
+            // annotationArray[i + 1].show(4000);
+            // explainerArray[i + 1].show(4000);
+            // backgroundArray[i + 1].show(4000);
 
-            // // console.log('NOW: CHANGED ARRAY ' + changedArray[i]);
-            // // console.log('NOW: ORIGINAL ARRAY ' + originalArray[i].text);
-            originalArray.splice(i, 1);
-            changedArray.splice(i, 1);
-            annotationArray.splice(i, 1);
-            explainerArray.splice(i, 1);
-            backgroundArray.splice(i, 1);
-            // hides the first speech bubble when something else was changed but we want it to show another asset instead
-            // eliminate hide error
-            if ($("#iframe-preview").contents().find(explainerArray[i - 1])) {
-                annotationArray[i-1].hide();
-                explainerArray[i-1].hide();
-                }
-            if ($("#iframe-preview").contents().find(explainerArray[i - 2])) {
-                annotationArray[i-2].hide();
-                explainerArray[i-2].hide();
-                }
-            if ($("#iframe-preview").contents().find(explainerArray[i - 3])) {
-                annotationArray[i-3].hide();
-                explainerArray[i-3].hide();
-                }
-            if ($("#iframe-preview").contents().find(explainerArray[i - 4])) {
-                annotationArray[i-3].hide();
-                explainerArray[i-3].hide();
-                }
-            if ($("#iframe-preview").contents().find(explainerArray[i - 5])) {
-                annotationArray[i-3].hide();
-                explainerArray[i-3].hide();
-                }
+            // // // console.log('NOW: CHANGED ARRAY ' + changedArray[i]);
+            // // // console.log('NOW: ORIGINAL ARRAY ' + originalArray[i].text);
+            // originalArray.splice(i, 1);
+            // changedArray.splice(i, 1);
+            // annotationArray.splice(i, 1);
+            // explainerArray.splice(i, 1);
+            // backgroundArray.splice(i, 1);
+            // // hides the first speech bubble when something else was changed but we want it to show another asset instead
+            // // eliminate hide error
+            // if ($("#iframe-preview").contents().find(explainerArray[i - 1])) {
+            //     annotationArray[i-1].hide();
+            //     explainerArray[i-1].hide();
+            //     }
+            // if ($("#iframe-preview").contents().find(explainerArray[i - 2])) {
+            //     annotationArray[i-2].hide();
+            //     explainerArray[i-2].hide();
+            //     }
+            // if ($("#iframe-preview").contents().find(explainerArray[i - 3])) {
+            //     annotationArray[i-3].hide();
+            //     explainerArray[i-3].hide();
+            //     }
+            // if ($("#iframe-preview").contents().find(explainerArray[i - 4])) {
+            //     annotationArray[i-3].hide();
+            //     explainerArray[i-3].hide();
+            //     }
+            // if ($("#iframe-preview").contents().find(explainerArray[i - 5])) {
+            //     annotationArray[i-3].hide();
+            //     explainerArray[i-3].hide();
+            //     }
             } else {
                 console.log("Its equal....");
             }

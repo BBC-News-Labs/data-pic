@@ -617,9 +617,12 @@ div.code-lines span {
 }
 
 /*Hides the annotations overlays*/
-
 .hide {
-    display: none;
+    display: none !important;
+}
+
+.show {
+    display: block !important;
 }
 
 @media (min-width: 1px) and (max-width: 1259px) {
