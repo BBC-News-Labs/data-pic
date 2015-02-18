@@ -13,7 +13,7 @@ var loadData = function(frame, html) {
         contentDocument = '<head></head>';
         contentDocument += $("#" + html).val();
 
-        $("#" + frame).contents().find("html").append($.parseHTML(contentDocument));
+        $("#" + frame).contents().find("html").html($.parseHTML(contentDocument));
 
     // if (typeof contentDocument !== 'undefined') {
     //     contentDocument.write('<style>');
