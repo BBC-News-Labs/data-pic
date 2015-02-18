@@ -179,6 +179,7 @@ var onClickFunctions = function() {
 
 var primeIframe = function() {
     //console.log(document.domain);
+    console.log('in prime');
     document.domain = document.domain;
     $("#iframe-preview").attr('src', 'preview.html?domain='+document.domain);
 }
@@ -296,10 +297,10 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
          // // console.log('original array item ' + originalArray[i]);
          // // console.log(originalArray[i]);
          // // console.log('original array item text ' + originalArray[i].text());
-    console.log('im original');
-    console.log(originalArray[i].html());
-    console.log('im new');
-    console.log($("#iframe-preview").contents().find(changedArray[i]).html());
+    // console.log('im original');
+    // console.log(originalArray[i].html());
+    // console.log('im new');
+    // console.log($("#iframe-preview").contents().find(changedArray[i]).html());
        if (originalArray[i].html() !== $("#iframe-preview").contents().find(changedArray[i]).html()) {
 
 
