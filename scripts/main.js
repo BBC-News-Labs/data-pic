@@ -8,16 +8,23 @@ var loadData = function(frame, html, css) {
     // function that creates html document to be uploaded on iframe
     // contentDocument gets what's inside the iframe.
 
-    var contentDocument = $("#" + frame).prop("contentDocument");
+    var content ;//= $("#" + frame).prop("contentDocument");
 
-    if (typeof contentDocument !== 'undefined') {
-        contentDocument.write('<style>');
-        contentDocument.write($("#" + css).val());
-        contentDocument.write('</style></head>');
-        contentDocument.write($("#" + html).val());
-        contentDocument.write('</html>');
-        contentDocument.close();
-    }
+        contentDocument = '<style>';
+        contentDocument += $("#" + css).val();
+        contentDocument += '</style></head>';
+        contentDocument += $("#" + html).val();
+        contentDocument += '</html>';
+        console.log(contentDocument);
+
+    // if (typeof contentDocument !== 'undefined') {
+    //     contentDocument.write('<style>');
+    //     contentDocument.write($("#" + css).val());
+    //     contentDocument.write('</style></head>');
+    //     contentDocument.write($("#" + html).val());
+    //     contentDocument.write('</html>');
+    //     contentDocument.close();
+    // }
 }
 
 var old = '';
