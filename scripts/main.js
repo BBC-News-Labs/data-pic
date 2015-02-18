@@ -248,13 +248,13 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
     ];
 
     explainerArray = [
-   {'id': 'h2_explainer'},
-   {'id': 'h3_explainer'},
-   {'id': 'impact_figure_explainer'},
-   {'id': 'paragraph_explainer'},
-   {'id': 'list_figures_explainer'},
-   {'id': 'source_explainer'},
-   {'id': 'bgimage_explainer'}
+   "#h2_explainer",
+   "#h3_explainer",
+   "#impact_figure_explainer",
+   "#paragraph_explainer",
+   "#list_figures_explainer",
+   "#source_explainer",
+   "#bgimage_explainer"
     ];
 
     backgroundArray = [
@@ -296,8 +296,8 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
                 // console.log('siomething changed at array pos ', i);
                 /// explainerArray[i].hide();
 
-                explainerArray[i].css('display', 'none');
-                explainerArray[i+1].css('display', 'block');
+                $(explainerArray[i]).css('display', 'none');
+                $(explainerArray[i+1]).css('display', 'block');
                 //explainerArray[i+1].css('border', '10px solid red');
 
 // };
