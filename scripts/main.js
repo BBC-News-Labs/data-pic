@@ -172,7 +172,12 @@ var onClickFunctions = function() {
     });
 }
 
+var primeIframe = function() {
+    $("#iframe-preview").attr('src', 'preview.html?domain='+document.domain);
+}
+
 $(document).ready(function() {
+    primeIframe();
     onClickFunctions();
     codeLineNumberManagement();
     updatePreviewWindow();
@@ -284,8 +289,11 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
          // // console.log('original array item ' + originalArray[i]);
          // // console.log(originalArray[i]);
          // // console.log('original array item text ' + originalArray[i].text());
-
-       if (originalArray[i].text() !== $("#iframe-preview").contents().find(changedArray[i]).text()) {
+    console.log('im original');
+    console.log(originalArray[i].html());
+    console.log('im new');
+    console.log($("#iframe-preview").contents().find(changedArray[i]).html());
+       if (originalArray[i].html() !== $("#iframe-preview").contents().find(changedArray[i]).html()) {
 
 
 // for (var j =0; j < originalArray.length; j++) {
@@ -295,9 +303,10 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
                 //$(explainerArray[i+1]).addClass("show").removeClass("hide");
                 // console.log('siomething changed at array pos ', i);
                 /// explainerArray[i].hide();
+                console.log('im herer and its not equal');
 
-                $(explainerArray[i]).css('display', 'none');
-                $(explainerArray[i+1]).css('display', 'block');
+                //$(explainerArray[i]).css('display', 'none');
+                //$(explainerArray[i+1]).css('display', 'block');
                 //explainerArray[i+1].css('border', '10px solid red');
 
 // };
