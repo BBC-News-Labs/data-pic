@@ -353,9 +353,7 @@ $(document).on('ready', function(){
                 //     annotationArray[i-3].hide();
                 //     explainerArray[i-3].hide();
                 //     }
-                } else {
-                    console.log("Its equal....");
-                }
+                } 
                 // console.log('**********************');
             }
         }, 3000);
@@ -451,7 +449,6 @@ $(function() {
 
 var setUpDataPicHTMLClipboard = function () {
     var client = new ZeroClipboard( document.getElementById("d_clip_button") );
-    console.log('testing zclip');
     client.on( "ready", function( readyEvent ) {
       client.on( "copy", function (e) {
         var htmlString = document.getElementById('html-window').value;
