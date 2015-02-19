@@ -176,6 +176,7 @@ var onClickFunctions = function() {
 var primeIframe = function() {
     //console.log(document.domain);
     document.domain = document.domain;
+    console.log('parent domain', document.domain)
     $("#iframe-preview").attr('src', 'preview.html?domain='+document.domain);
     //console.log('load data', document.domain);
     setTimeout(function(){

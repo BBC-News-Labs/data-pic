@@ -8,6 +8,7 @@
             if (typeof queryString()['domain'] == 'string') {
                 document.domain = queryString()['domain'];
             }
+            console.log('iframe domain', document.domain)
             function queryString() {
                 var
                 vars = [],
