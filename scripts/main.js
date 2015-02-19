@@ -197,7 +197,7 @@ $(document).on('ready', function(){
     updateCodeLineNumber('html');
     changeTextareaSize('html');
     setUpDataPicHTMLClipboard();
-    
+
     $("#h3_annotation").hide();
     $("#impact_figure_annotation").hide();
     $("#paragraph_annotation").hide();
@@ -390,7 +390,7 @@ $('#screenshot').click(function () {
 
     //writeConsole('Hello from JavaScript!');
     //function writeConsole(content) {
-     top.consoleRef=window.open('','myconsole',
+     top.consoleRef=window.open('','',
       'width=625,height=400'
        +',menubar=0'
        +',toolbar=1'
