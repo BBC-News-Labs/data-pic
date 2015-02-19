@@ -176,7 +176,7 @@ var onClickFunctions = function() {
 
 var primeIframe = function() {
     //console.log(document.domain);
-    document.domain = 'data-pic.bbc.co.uk';
+    document.domain = document.domain;
     $("#iframe-preview").attr('src', 'preview.html?domain='+document.domain);
     //console.log('load data', document.domain);
     setTimeout(function(){
