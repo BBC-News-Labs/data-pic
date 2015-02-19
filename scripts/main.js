@@ -26,14 +26,6 @@ var loadData = function(frame, html) {
 
 var old = '';
 
-function init() {
-}
-
-//window.onload = init;
-
-function update() {
-
-}
 
 var changeTextareaSize = function(tab_name) {
     // function that increases or decreases the textarea according with content size
@@ -140,16 +132,6 @@ var codeLineNumberManagement = function() {
     // });
 }
 
-var updatePreviewWindow = function() {
-    // function to allows the preview window to be updated while the user is typing
-    $('#html-window').keyup(function() {
-        loadData('iframe-preview', 'html-window');
-    });
-    $('#css-window').keyup(function() {
-        loadData('iframe-preview', 'html-window');
-    });
-}
-
 var onClickFunctions = function() {
     // function that compiles all the click event functions
 
@@ -182,44 +164,44 @@ var primeIframe = function() {
     setTimeout(function(){
         loadData('iframe-preview', 'html-window');    
     }, 300)
-    
+    $('#html-window').keyup(function() {
+        loadData('iframe-preview', 'html-window');
+    });
+    $('#css-window').keyup(function() {
+        loadData('iframe-preview', 'html-window');
+    });
 }
 
 
+var index = 0;
+var get_h2 = '';
+var get_h3 = '';
+var get_impact_figure = '';
+var original;
+var figure = '';
+var get_html_window = '';
+var storage = '';
 
-$(document).ready(function() {
-    
+var changed_h2 = '';
+var changed_h3 = '';
+var changed_figure = '';
+var changed_paragraph = '';
+var changed = '';
+
+var originalArray;
+var changedArray;
+var annotationArray;
+var colourHighlighting = '';
+
+$(document).on('ready', function(){
     onClickFunctions();
     codeLineNumberManagement();
     primeIframe();
-    updatePreviewWindow();
-    update();
     
     updateCodeLineNumber('html');
     changeTextareaSize('html');
-});
 
-    var index = 0;
-    var get_h2 = '';
-    var get_h3 = '';
-    var get_impact_figure = '';
-    var original;
-    var figure = '';
-    var get_html_window = '';
-    var storage = '';
 
-    var changed_h2 = '';
-    var changed_h3 = '';
-    var changed_figure = '';
-    var changed_paragraph = '';
-    var changed = '';
-
-    var originalArray;
-    var changedArray;
-    var annotationArray;
-    var colourHighlighting = '';
-
-$(document).on('ready', function(){
     $("#h3_annotation").hide();
     $("#impact_figure_annotation").hide();
     $("#paragraph_annotation").hide();
