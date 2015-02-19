@@ -380,6 +380,7 @@ $('#screenshot').click(function () {
 
     var w = window.open();
     var html = iframeCopy;
+    w.document.domain = document.domain;
     w.document.writeln(html);
     w.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
     w.document.close();
