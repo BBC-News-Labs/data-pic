@@ -372,6 +372,7 @@ count = 0;
     var newWindow = '';
 
 $('#screenshot').click(function () {
+    newIframe = document.createElement('iframe');
     iframeCopy = document.getElementById('html-window').value;
 
 
@@ -415,6 +416,7 @@ console.log('gets to here***************');
     console.log('doc' + x.document);
 
 x.document.open();
+$(newWindow).append(newIframe);
 x.document.write(html);
 x.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
 //x.close();
