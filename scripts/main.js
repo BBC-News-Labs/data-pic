@@ -413,7 +413,7 @@ $('#screenshot').click(function () {
     var x=window.open('#');
 x.document.open();
 x.document.write(html);
-x.document.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
+x.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
 //x.close();
 
  
