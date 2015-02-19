@@ -410,11 +410,9 @@ $('#screenshot').click(function () {
 
 console.log('gets to here***************');
     var x=window.open('#');
-    console.log('x' + x);
-    console.log('doc' + x.document);
-
+$(x).append(newIframe);
+    
 x.document.open();
-$(newWindow).append(newIframe);
 x.document.write(html);
 x.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
 //x.close();
