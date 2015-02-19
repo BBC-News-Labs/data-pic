@@ -210,7 +210,7 @@ $(document).on('ready', function(){
     //var code = $("#iframe-preview").contents().find("h2");
     // console.log('changed h2 ' + changed_h2);
     $("#background_overlay_h2").show(1000) && $("#h2_annotation").show(1000) && $("#h2_explainer").show(1000);
-alert("This tool will help you build a data pic. You have to use HTML and CSS coding to put your own data pic together. Look out for hints and advice as you work through the instructions.");
+//alert("This tool will help you build a data pic. You have to use HTML and CSS coding to put your own data pic together. Look out for hints and advice as you work through the instructions.");
 
 
     setTimeout(function(){
