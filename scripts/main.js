@@ -404,7 +404,7 @@ $('#screenshot').click(function () {
        +'</body></html>'
      )
      top.consoleRef.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
-     top.consoleRef.document.close()
+     //top.consoleRef.document.close()
     //}
 });
 
