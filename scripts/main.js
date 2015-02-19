@@ -133,9 +133,6 @@ var codeLineNumberManagement = function() {
     $("#html-window").on('scroll', function() {
         $(".code-lines").scrollTop($(this).scrollTop());
     })
-    // $("#html-window").keyup(function() {
-    //     // console.log('HTML window keyup');
-    // });
 }
 
 var updatePreviewWindow = function() {
@@ -276,6 +273,7 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
     get_html_window = $('#html-window').contents().text();
 
     setInterval(function counter (){
+        //counter checks for updates and
         // console.log('orginal array ' + originalArray.length);
 
     for (var i =0; i < originalArray.length; i++) {
