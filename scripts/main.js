@@ -10,7 +10,6 @@ var loadData = function(frame, html) {
 
     var content ;//= $("#" + frame).prop("contentDocument");
 
-        content = '<head></head>';
         content += $("#" + html).val();
 
         $("#" + frame).contents().find("body").html($.parseHTML(content));
