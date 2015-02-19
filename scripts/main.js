@@ -157,9 +157,9 @@ var primeIframe = function() {
     document.domain = document.domain;
     $("#iframe-preview").attr('src', 'preview.html?domain='+document.domain);
     //console.log('load data', document.domain);
-    //setTimeout(function(){
+    setTimeout(function(){
         loadData('iframe-preview', 'html-window');
-    //}, 300)
+    }, 300)
     $('#html-window').keyup(function() {
         loadData('iframe-preview', 'html-window');
     });
