@@ -196,8 +196,8 @@ $(document).on('ready', function(){
 
     updateCodeLineNumber('html');
     changeTextareaSize('html');
-
-
+    setUpDataPicHTMLClipboard();
+    
     $("#h3_annotation").hide();
     $("#impact_figure_annotation").hide();
     $("#paragraph_annotation").hide();
@@ -368,20 +368,24 @@ $(document).on('ready', function(){
 
 count = 0;
 
-    var newIframe = '';
     var iframeCopy = '';
     var newWindow = '';
 
 $('#screenshot').click(function () {
-    newIframe = document.createElement('iframe');
-    // console.log('entered this function.');
     iframeCopy = document.getElementById('html-window').value;
-    newWindow = window.open('window');
-  $(newWindow).append(newIframe);
-    newWindow.document.write(iframeCopy);
 
-    newWindow.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
-    newWindow.document.close();
+
+    // newWindow = window.open();
+    // $(newWindow).append(newIframe);
+
+    var w = window.open();
+    var html = iframeCopy;
+    w.document.writeln(html);
+    w.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
+    w.document.close();
+    // newWindow.document.write(iframeCopy);
+    // newWindow.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
+    // newWindow.document.close();
 });
 
 
@@ -396,7 +400,7 @@ $(function() {
 
 var setUpDataPicHTMLClipboard = function () {
     var client = new ZeroClipboard( document.getElementById("d_clip_button") );
-    // console.log('testing zclip');
+    console.log('testing zclip');
     client.on( "ready", function( readyEvent ) {
       client.on( "copy", function (e) {
         var htmlString = document.getElementById('html-window').value;
