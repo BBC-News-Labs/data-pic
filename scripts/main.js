@@ -378,7 +378,7 @@ $('#screenshot').click(function () {
     // newWindow = window.open();
     // $(newWindow).append(newIframe);
 
-    var w = window.open('window');
+    var w = window.open(document.domain+'/window');
     var html = iframeCopy;
     w.document.domain = document.domain;
     w.document.writeln(html);
