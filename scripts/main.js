@@ -408,7 +408,7 @@ $('#screenshot').click(function () {
 
 
 console.log('gets to here***************');
-    var x=window.open('blank.html');
+    var x=window.open('#');
     console.log('x' + x);
     console.log('doc' + x.document);
 
