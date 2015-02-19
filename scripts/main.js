@@ -390,22 +390,47 @@ $('#screenshot').click(function () {
 
     //writeConsole('Hello from JavaScript!');
     //function writeConsole(content) {
-     top.consoleRef=window.open('','',
-      'width=625,height=400'
-       +',menubar=0'
-       +',toolbar=1'
-       +',status=0'
-       +',scrollbars=1'
-       +',resizable=1')
-     top.consoleRef.document.writeln(
-      '<html><head><title>Console</title></head>'
-       +'<body bgcolor=white onLoad="self.focus()">'
-       +html
-       +'<h1>TEST</h1>'
-       +'</body></html>'
-     )
-     top.consoleRef.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
+     // top.consoleRef=window.open('','',
+     //  'width=625,height=400'
+     //   +',menubar=0'
+     //   +',toolbar=1'
+     //   +',status=0'
+     //   +',scrollbars=1'
+     //   +',resizable=1')
+     // top.consoleRef.document.writeln(
+     //  '<html><head><title>Console</title></head>'
+     //   +'<body bgcolor=white onLoad="self.focus()">'
+     //   +html
+     //   +'<h1>TEST</h1>'
+     //   +'</body></html>'
+     // )
+//     top.consoleRef.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
      //top.consoleRef.document.close()
+
+
+
+
+    var x=window.open();
+x.document.open().write(html);
+//x.close();
+
+ 
+     // top.consoleRef=window.open('','myconsole',
+     //  'width=625,height=400'
+     //   +',menubar=0'
+     //   +',toolbar=1'
+     //   +',status=0'
+     //   +',scrollbars=1'
+     //   +',resizable=1')
+     // top.consoleRef.document.writeln(
+     //  '<html><head><title>Console</title></head>'
+     //   +'<body bgcolor=white onLoad="self.focus()">'
+     //   +html
+     //   +'</body></html>'
+     // )
+     // top.consoleRef.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
+     // top.consoleRef.document.close()
+
     //}
 });
 
