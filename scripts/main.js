@@ -158,7 +158,6 @@ var onClickFunctions = function() {
 var primeIframe = function() {
     //console.log(document.domain);
     document.domain = document.domain;
-    console.log('parent domain', document.domain)
     $("#iframe-preview").attr('src', 'preview.html?domain='+document.domain);
     //console.log('load data', document.domain);
     setTimeout(function(){
@@ -364,7 +363,7 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
             }
         }, 3000);
 
-    }, 1000)
+    }, 2000)
     
 
 });
