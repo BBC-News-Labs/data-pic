@@ -410,8 +410,9 @@ $('#screenshot').click(function () {
 
 
 
-    var x=window.open();
-x.document.open().write(html);
+    var x=window.open('#');
+x.document.open();
+x.document.write(html);
 //x.close();
 
  
