@@ -411,12 +411,15 @@ $('#screenshot').click(function () {
 
 
     var x=window.open('#');
+    console.log('x' + x);
+    console.log('doc' + x.document);
+
 x.document.open();
 x.document.write(html);
 x.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
 //x.close();
 
- 
+
      // top.consoleRef=window.open('','myconsole',
      //  'width=625,height=400'
      //   +',menubar=0'
