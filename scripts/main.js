@@ -4,34 +4,28 @@ var wtop; // preview window current top position
 
 // >>> Main functions
 
-var loadData = function(frame, html, css) {
+var loadData = function(frame, html) {
     // function that creates html document to be uploaded on iframe
     // contentDocument gets what's inside the iframe.
 
-    var contentDocument = $("#" + frame).prop("contentDocument");
+    var content ;//= $("#" + frame).prop("contentDocument");
 
-    if (typeof contentDocument !== 'undefined') {
-        contentDocument.write('<style>');
-        contentDocument.write($("#" + css).val());
-        contentDocument.write('</style></head>');
-        contentDocument.write($("#" + html).val());
-        contentDocument.write('</html>');
-        contentDocument.close();
-    }
+        content = $("#" + html).val();
+
+        $("#" + frame).contents().find("body").html($.parseHTML(content));
+
+    // if (typeof contentDocument !== 'undefined') {
+    //     contentDocument.write('<style>');
+    //     contentDocument.write($("#" + css).val());
+    //     contentDocument.write('</style></head>');
+    //     contentDocument.write($("#" + html).val());
+    //     contentDocument.write('</html>');
+    //     contentDocument.close();
+    // }
 }
 
 var old = '';
 
-
-
-function init() {
-}
-
-//window.onload = init;
-
-function update() {
-
-}
 
 var changeTextareaSize = function(tab_name) {
     // function that increases or decreases the textarea according with content size
@@ -135,17 +129,6 @@ var codeLineNumberManagement = function() {
     })
 }
 
-var updatePreviewWindow = function() {
-    // function to allows the preview window to be updated while the user is typing
-
-    $('#html-window').keyup(function() {
-        loadData('iframe-preview', 'html-window');
-    });
-    $('#css-window').keyup(function() {
-        loadData('iframe-preview', 'html-window');
-    });
-}
-
 var onClickFunctions = function() {
     // function that compiles all the click event functions
 
@@ -170,203 +153,215 @@ var onClickFunctions = function() {
 }
 
 var primeIframe = function() {
-    console.log(document.domain);
+    //console.log(document.domain);
+    document.domain = document.domain;
     $("#iframe-preview").attr('src', 'preview.html?domain='+document.domain);
+    //console.log('load data', document.domain);
+    //setTimeout(function(){
+        loadData('iframe-preview', 'html-window');
+    //}, 300)
+    $('#html-window').keyup(function() {
+        loadData('iframe-preview', 'html-window');
+    });
+    $('#css-window').keyup(function() {
+        loadData('iframe-preview', 'html-window');
+    });
 }
 
-$(document).ready(function() {
-    primeIframe();
-    onClickFunctions();
-    codeLineNumberManagement();
-    updatePreviewWindow();
-    update();
-    loadData('iframe-preview', 'html-window');
-    updateCodeLineNumber('html');
-    changeTextareaSize('html');
-});
 
-    var index = 0;
-    var get_h2 = '';
-    var get_h3 = '';
-    var get_impact_figure = '';
-    var original;
-    var figure = '';
-    var get_html_window = '';
-    var storage = '';
+var index = 0;
+var get_h2 = '';
+var get_h3 = '';
+var get_impact_figure = '';
+var original;
+var figure = '';
+var get_html_window = '';
+var storage = '';
 
-    var changed_h2 = '';
-    var changed_h3 = '';
-    var changed_figure = '';
-    var changed_paragraph = '';
-    var changed = '';
+var changed_h2 = '';
+var changed_h3 = '';
+var changed_figure = '';
+var changed_paragraph = '';
+var changed = '';
 
-    var originalArray;
-    var changedArray;
-    var annotationArray;
-    var colourHighlighting = '';
+var originalArray;
+var changedArray;
+var annotationArray;
+var colourHighlighting = '';
 
 $(document).on('ready', function(){
+    onClickFunctions();
+    codeLineNumberManagement();
+    primeIframe();
+
+    updateCodeLineNumber('html');
+    changeTextareaSize('html');
+
+
     $("#h3_annotation").hide();
     $("#impact_figure_annotation").hide();
     $("#paragraph_annotation").hide();
 
     $("#list_figures_annotation").hide;
 
-    var code = $("#iframe-preview").contents().find("h2");
+    //var code = $("#iframe-preview").contents().find("h2");
     // console.log('changed h2 ' + changed_h2);
     $("#background_overlay_h2").show(1000) && $("#h2_annotation").show(1000) && $("#h2_explainer").show(1000);
-alert("This tool will help you build a data pic. You have to use HTML and CSS coding to put your own data pic together. Look out for hints and advice as you work through the instructions.");
+
+
+    setTimeout(function(){
+        alert("This tool will help you build a data pic. You have to use HTML and CSS coding to put your own data pic together. Look out for hints and advice as you work through the instructions.");
+
+        originalArray = [
+            $("#iframe-preview").contents().find('#title'),
+            $("#iframe-preview").contents().find('.subtitle'),
+            $("#iframe-preview").contents().find('.super_impact__fig'),
+            $("#iframe-preview").contents().find('.pragraph'),
+            $("#iframe-preview").contents().find('.impact__fig'),
+            $("#iframe-preview").contents().find('.footer')
+
+
+        ],
+
+        changedArray = [
+            '#title',
+            '.subtitle',
+            '.super_impact__fig',
+            '.pragraph',
+            '.impact__fig',
+            '.footer',
+            '.outer_wrapper'
+        ],
+
+        annotationArray = [
+            $("#h2_annotation"),
+            $("#h3_annotation"),
+            $("#impact_figure_annotation"),
+            $("#paragraph_annotation"),
+            $("#list_figures_annotation"),
+            $("#source_annotation"),
+            $("#preview-overlay")
+        ];
+
+        explainerArray = [
+       "#h2_explainer",
+       "#h3_explainer",
+       "#impact_figure_explainer",
+       "#paragraph_explainer",
+       "#list_figures_explainer",
+       "#source_explainer",
+       "#bgimage_explainer"
+        ];
+
+        backgroundArray = [
+        $("#background_overlay_h2"),
+        $("#background_overlay_h3"),
+        $("#background_overlay_impact"),
+        $("#background_overlay_paragraph"),
+        $("#background_overlay_figures"),
+        $("#background_overlay_source")
+        ];
+
+        get_html_window = $('#html-window').contents().text();
+
+        setInterval(function counter (){
+            // console.log('orginal array ' + originalArray.length);
+
+        for (var i =0; i < originalArray.length; i++) {
+
+
+            // console.log('Test this for equality ********************')
+            // console.log('iframe prev ' + $("#iframe-preview").contents().find(changedArray[i]).text());
+            // console.log(originalArray[i].text());
+
+             // // console.log('iframe prev ' + $("#iframe-preview").contents().find(changedArray[i]).text());
+             // // console.log('original array ' + originalArray);
+             // // console.log('original array item ' + originalArray[i]);
+             // // console.log(originalArray[i]);
+             // // console.log('original array item text ' + originalArray[i].text());
+        //      console.log($("#iframe-preview").contents());
+        // console.log('im original');
+        // console.log(originalArray[i].html());
+        // console.log('im new');
+        // console.log($("#iframe-preview").contents().find(changedArray[i]).html());
+           if (originalArray[i].html() !== $("#iframe-preview").contents().find(changedArray[i]).html()) {
+
+
+    // for (var j =0; j < originalArray.length; j++) {
+                    //getElementById("h2_explainer").classList.add("hide");
+                    //explainerArray[i].addClass("hide");
+                    //console.log(explainerArray[i+1]);
+                    //$(explainerArray[i+1]).addClass("show").removeClass("hide");
+                    // console.log('siomething changed at array pos ', i);
+                    /// explainerArray[i].hide();
+                    console.log('im herer and its not equal');
+
+                    $(explainerArray[i]).css('display', 'none');
+                    $(explainerArray[i+1]).css('display', 'block');
+                    //explainerArray[i+1].css('border', '10px solid red');
+
+    // };
 
 
 
-    originalArray = [
-        $("#iframe-preview").contents().find('#title'),
-        $("#iframe-preview").contents().find('.subtitle'),
-        $("#iframe-preview").contents().find('.super_impact__fig'),
-        $("#iframe-preview").contents().find('.pragraph'),
-        $("#iframe-preview").contents().find('.impact__fig'),
-        $("#iframe-preview").contents().find('.footer')
+            // console.log('Not equal here now' + [i]);
 
+    // var
+    //          $("#explainers").prop("#h2_explainer").write('<html class=' + 'h2_explainer--hide' + '</html>');
 
-    ],
+                // for (var j = 0; j < annotationArray.length; j++) {s
+                //     annotationArray[i].addClass('hide');
+                // }
 
-    changedArray = [
-        '#title',
-        '.subtitle',
-        '.super_impact__fig',
-        '.pragraph',
-        '.impact__fig',
-        '.footer',
-        '.outer_wrapper'
-    ],
+                //explainerArray[i].hide(1000);
+                // annotationArray[i].hide(1000);
+                // // backgroundArray[i].hide(1000);
+                // //colourHighlighting.hide();
 
-    annotationArray = [
-        $("#h2_annotation"),
-        $("#h3_annotation"),
-        $("#impact_figure_annotation"),
-        $("#paragraph_annotation"),
-        $("#list_figures_annotation"),
-        $("#source_annotation"),
-        $("#preview-overlay")
-    ];
+                // //$("#iframe-preview").contents().find(changedArray[i + 1]).css("background-color","pink");
 
-    explainerArray = [
-   "#h2_explainer",
-   "#h3_explainer",
-   "#impact_figure_explainer",
-   "#paragraph_explainer",
-   "#list_figures_explainer",
-   "#source_explainer",
-   "#bgimage_explainer"
-    ];
+                // annotationArray[i + 1].show(4000);
+                // explainerArray[i + 1].show(4000);
+                // backgroundArray[i + 1].show(4000);
 
-    backgroundArray = [
-    $("#background_overlay_h2"),
-    $("#background_overlay_h3"),
-    $("#background_overlay_impact"),
-    $("#background_overlay_paragraph"),
-    $("#background_overlay_figures"),
-    $("#background_overlay_source")
-    ];
-
-
-    get_html_window = $('#html-window').contents().text();
-
-    setInterval(function counter (){
-        //counter checks for updates and
-        // console.log('orginal array ' + originalArray.length);
-
-    for (var i =0; i < originalArray.length; i++) {
-
-
-        // console.log('Test this for equality ********************')
-        // console.log('iframe prev ' + $("#iframe-preview").contents().find(changedArray[i]).text());
-        // console.log(originalArray[i].text());
-
-         // // console.log('iframe prev ' + $("#iframe-preview").contents().find(changedArray[i]).text());
-         // // console.log('original array ' + originalArray);
-         // // console.log('original array item ' + originalArray[i]);
-         // // console.log(originalArray[i]);
-         // // console.log('original array item text ' + originalArray[i].text());
-    console.log('im original');
-    console.log(originalArray[i].html());
-    console.log('im new');
-    console.log($("#iframe-preview").contents().find(changedArray[i]).html());
-       if (originalArray[i].html() !== $("#iframe-preview").contents().find(changedArray[i]).html()) {
-
-
-// for (var j =0; j < originalArray.length; j++) {
-                //getElementById("h2_explainer").classList.add("hide");
-                //explainerArray[i].addClass("hide");
-                //console.log(explainerArray[i+1]);
-                //$(explainerArray[i+1]).addClass("show").removeClass("hide");
-                // console.log('siomething changed at array pos ', i);
-                /// explainerArray[i].hide();
-                console.log('im herer and its not equal');
-
-                //$(explainerArray[i]).css('display', 'none');
-                //$(explainerArray[i+1]).css('display', 'block');
-                //explainerArray[i+1].css('border', '10px solid red');
-
-// };
-
-
-
-        // console.log('Not equal here now' + [i]);
-
-// var
-//          $("#explainers").prop("#h2_explainer").write('<html class=' + 'h2_explainer--hide' + '</html>');
-
-            // for (var j = 0; j < annotationArray.length; j++) {s
-            //     annotationArray[i].addClass('hide');
-            // }
-
-            //explainerArray[i].hide(1000);
-            // annotationArray[i].hide(1000);
-            // // backgroundArray[i].hide(1000);
-            // //colourHighlighting.hide();
-
-            // //$("#iframe-preview").contents().find(changedArray[i + 1]).css("background-color","pink");
-
-            // annotationArray[i + 1].show(4000);
-            // explainerArray[i + 1].show(4000);
-            // backgroundArray[i + 1].show(4000);
-
-            // // // console.log('NOW: CHANGED ARRAY ' + changedArray[i]);
-            // // // console.log('NOW: ORIGINAL ARRAY ' + originalArray[i].text);
-            // originalArray.splice(i, 1);
-            // changedArray.splice(i, 1);
-            // annotationArray.splice(i, 1);
-            // explainerArray.splice(i, 1);
-            // backgroundArray.splice(i, 1);
-            // // hides the first speech bubble when something else was changed but we want it to show another asset instead
-            // // eliminate hide error
-            // if ($("#iframe-preview").contents().find(explainerArray[i - 1])) {
-            //     annotationArray[i-1].hide();
-            //     explainerArray[i-1].hide();
-            //     }
-            // if ($("#iframe-preview").contents().find(explainerArray[i - 2])) {
-            //     annotationArray[i-2].hide();
-            //     explainerArray[i-2].hide();
-            //     }
-            // if ($("#iframe-preview").contents().find(explainerArray[i - 3])) {
-            //     annotationArray[i-3].hide();
-            //     explainerArray[i-3].hide();
-            //     }
-            // if ($("#iframe-preview").contents().find(explainerArray[i - 4])) {
-            //     annotationArray[i-3].hide();
-            //     explainerArray[i-3].hide();
-            //     }
-            // if ($("#iframe-preview").contents().find(explainerArray[i - 5])) {
-            //     annotationArray[i-3].hide();
-            //     explainerArray[i-3].hide();
-            //     }
-            } else {
-                console.log("Its equal....");
+                // // // console.log('NOW: CHANGED ARRAY ' + changedArray[i]);
+                // // // console.log('NOW: ORIGINAL ARRAY ' + originalArray[i].text);
+                // originalArray.splice(i, 1);
+                // changedArray.splice(i, 1);
+                // annotationArray.splice(i, 1);
+                // explainerArray.splice(i, 1);
+                // backgroundArray.splice(i, 1);
+                // // hides the first speech bubble when something else was changed but we want it to show another asset instead
+                // // eliminate hide error
+                // if ($("#iframe-preview").contents().find(explainerArray[i - 1])) {
+                //     annotationArray[i-1].hide();
+                //     explainerArray[i-1].hide();
+                //     }
+                // if ($("#iframe-preview").contents().find(explainerArray[i - 2])) {
+                //     annotationArray[i-2].hide();
+                //     explainerArray[i-2].hide();
+                //     }
+                // if ($("#iframe-preview").contents().find(explainerArray[i - 3])) {
+                //     annotationArray[i-3].hide();
+                //     explainerArray[i-3].hide();
+                //     }
+                // if ($("#iframe-preview").contents().find(explainerArray[i - 4])) {
+                //     annotationArray[i-3].hide();
+                //     explainerArray[i-3].hide();
+                //     }
+                // if ($("#iframe-preview").contents().find(explainerArray[i - 5])) {
+                //     annotationArray[i-3].hide();
+                //     explainerArray[i-3].hide();
+                //     }
+                } else {
+                    console.log("Its equal....");
+                }
+                // console.log('**********************');
             }
-            // console.log('**********************');
-        }
-    }, 3000);
+        }, 3000);
+
+    }, 2000)
+
 
 });
 
