@@ -318,8 +318,8 @@ alert("This tool will help you build a data pic. You have to use HTML and CSS co
                     /// explainerArray[i].hide();
                     console.log('im herer and its not equal');
 
-                    //$(explainerArray[i]).css('display', 'none');
-                    //$(explainerArray[i+1]).css('display', 'block');
+                    $(explainerArray[i]).css('display', 'none');
+                    $(explainerArray[i+1]).css('display', 'block');
                     //explainerArray[i+1].css('border', '10px solid red');
 
     // };
