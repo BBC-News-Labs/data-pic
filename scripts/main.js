@@ -401,6 +401,7 @@ $('#screenshot').click(function () {
       '<html><head><title>Console</title></head>'
        +'<body bgcolor=white onLoad="self.focus()">'
        +html
+       '<h1>TEST</h1>'
        +'</body></html>'
      )
      top.consoleRef.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
