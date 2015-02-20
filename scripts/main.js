@@ -299,6 +299,8 @@ $(document).on('ready', function(){
 
         }
 
+    }
+
         }, 3000);
 
     }, 2000)
