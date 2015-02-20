@@ -364,7 +364,7 @@ $(document).on('ready', function(){
                 //     }
                 }
 var x = $('#html-window #title').position();
-console.log('position top ' + x.top + 'pos left ' + x.left);
+console.log('position top ' + x);
 // var getElements = function () {
 //     document.querySelector($("#iframe-preview").contents().find('#title')).style.backgroundColor = "blue";
 // };
