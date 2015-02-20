@@ -365,7 +365,7 @@ $(document).on('ready', function(){
                 }
 
 var title = $("#iframe-preview").contents().find('#title');
-var x = title.offsetHeight();
+var x = title.scrollTop();
 console.log('position top ' + x);
 // var getElements = function () {
 //     document.querySelector($("#iframe-preview").contents().find('#title')).style.backgroundColor = "blue";
