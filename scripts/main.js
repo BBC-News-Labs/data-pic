@@ -308,6 +308,11 @@ $(document).on('ready', function(){
                         'left': '16px'
                     });
 
+                    changedArray.splice(i, 1);
+                    annotationArray.splice(i, 1);
+                    explainerArray.splice(i, 1);
+                    backgroundArray.splice(i, 1);
+
 
 
              }
