@@ -365,7 +365,7 @@ $(document).on('ready', function(){
                 }
 
 var getElements = function () {
-    document.querySelector($("#iframe-preview").contents().find('#title')).style.backgroundColor = "blue");
+    document.querySelector($("#iframe-preview").contents().find('#title')).style.backgroundColor = "blue";
 };
 // var title = $("#iframe-preview").contents().find('#title').text();
 // var elmtHeight = title.offsetHeight;
