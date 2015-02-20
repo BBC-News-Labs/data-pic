@@ -293,7 +293,9 @@ $(document).on('ready', function(){
                     $(annotationArray[i+1]).css('display', 'block');
 
                     x = $("#iframe-preview").contents().find(changedArray[i + 1]).offset();
+                    y = $("#iframe-preview").contents().find('#inner_wrapper').offset();
                     console.log('top ' + x.top);
+                    console.log('inner ' + y.top);
 
                     $(backgroundArray[i]).css('display', 'none');
                     $(backgroundArray[i+1]).css({
