@@ -274,7 +274,7 @@ $(document).on('ready', function(){
             var x = title.offset();
             var y = subtitle.offset();
 
-            var z = originalArray[i].offset();
+            var z = changedArray[i].offset();
             console.log('position top ARRAY ' + z.top + 'position ARRAY ' + z.left);
 
 
