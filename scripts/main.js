@@ -26,6 +26,8 @@ var loadData = function(frame, html) {
               '<img src="./images/background_overlay6.png" id="background_overlay_source" alt="source background overlay" style="width:43%;height:28px">"' );
 
         iframePreviewNode.append(overlaysNode);
+        alert(overlaysNode.html());
+        alert(iframePreviewNode.html());
         alert('appended');
     // if (typeof contentDocument !== 'undefined') {
     //     contentDocument.write('<style>');
