@@ -284,13 +284,10 @@ $(document).on('ready', function(){
 
            if (originalArray[i].html() !== $("#iframe-preview").contents().find(changedArray[i]).html()) {
 
-                    $(explainerArray[i]).css('display', 'none');
+                    $('.explainers img').css('display', 'none');
                     $(explainerArray[i+1]).css('display', 'block');
-                    // $(explainerArray[i-1]).css('display', 'block');
-                    // $(explainerArray[i-2]).css('display', 'block');
-                    // $(explainerArray[i-3]).css('display', 'block');
 
-                    $(annotationArray[i]).css('display', 'none');
+                    $('.annotations img').css('display', 'none');
                     $(annotationArray[i+1]).css('display', 'block');
 
                     x = $("#iframe-preview").contents().find(changedArray[i + 1]).offset();
@@ -299,10 +296,7 @@ $(document).on('ready', function(){
                     console.log('inner ' + y.top);
                     console.log('changedArray ' + changedArray[i]);
 
-                    //$(backgroundArray[i]).css('display', 'none');
-
                     $('.overlays img').css('display', 'none');
-                    // $(backgroundArray[i]).css('display', 'none');
                     $(backgroundArray[i+1]).css({
                         'display': 'block',
                         'position': 'absolute',
