@@ -297,6 +297,7 @@ $(document).on('ready', function(){
                     y = $("#iframe-preview").contents().find('#inner_wrapper').offset();
                     console.log('top ' + x.top);
                     console.log('inner ' + y.top);
+                    console.log('changedArray ' + changedArray[i]);
 
                     $(backgroundArray[i]).css('display', 'none');
                     // $(backgroundArray[i]).css('display', 'none');
