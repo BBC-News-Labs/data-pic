@@ -364,8 +364,8 @@ $(document).on('ready', function(){
                 //     }
                 }
 
-var title = $("#iframe-preview").contents().find('#title').text();
-var x = title.position();
+var title = $("#iframe-preview").contents().find('#title');
+var x = title.offsetHeight();
 console.log('position top ' + x);
 // var getElements = function () {
 //     document.querySelector($("#iframe-preview").contents().find('#title')).style.backgroundColor = "blue";
