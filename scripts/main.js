@@ -295,6 +295,16 @@ $(document).on('ready', function(){
                     myHeight = $("#iframe-preview").contents().find('.outer_wrapper')[0].clientHeight;
                     myWidth = $("#iframe-preview").contents().find('.outer_wrapper')[0].clientWidth;
 
+                    $(backgroundArray[6]).css({
+                        'display': 'block',
+                        'position': 'absolute',
+                        'top': y.top + 4 + 'px',
+                        'left': '16px',
+                        'width': myWidth,
+                        'height': myHeight
+
+                    });
+
                     console.log('outer wrapper height ' + myHeight);
                     console.log('outer wrapper width ' + myWidth);
 
