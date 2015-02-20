@@ -204,7 +204,7 @@ $(document).on('ready', function(){
 
     $("#list_figures_annotation").hide;
 
-    //var code = $("#iframe-preview").contents().find("h2");
+    var code = $("#iframe-preview").contents().find("h2");
     // console.log('changed h2 ' + changed_h2);
     $("#background_overlay_h2").show(1000) && $("#h2_annotation").show(1000) && $("#h2_explainer").show(1000);
 
@@ -294,10 +294,9 @@ $(document).on('ready', function(){
 
                     x = $("#iframe-preview").contents().find(changedArray[i + 1]).offset();
                     console.log('top ' + x.top);
-                    x.top
 
-                    // $(backgroundArray[i]).css('display', 'none');
-                    // $(backgroundArray[i+1]).css('display', 'block');
+                    $(backgroundArray[i]).css('display', 'none');
+                    $(backgroundArray[i+1]).css('display', 'block', x.top);
 
 
 
