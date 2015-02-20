@@ -234,13 +234,13 @@ $(document).on('ready', function(){
         ],
 
         annotationArray = [
-            $("#h2_annotation"),
-            $("#h3_annotation"),
-            $("#impact_figure_annotation"),
-            $("#paragraph_annotation"),
-            $("#list_figures_annotation"),
-            $("#source_annotation"),
-            $("#preview-overlay")
+            "#h2_annotation",
+            "#h3_annotation",
+            "#impact_figure_annotation",
+            "#paragraph_annotation",
+            "#list_figures_annotation",
+            "#source_annotation",
+            "#preview-overlay"
         ];
 
         explainerArray = [
@@ -254,12 +254,12 @@ $(document).on('ready', function(){
         ];
 
         backgroundArray = [
-        $("#background_overlay_h2"),
-        $("#background_overlay_h3"),
-        $("#background_overlay_impact"),
-        $("#background_overlay_paragraph"),
-        $("#background_overlay_figures"),
-        $("#background_overlay_source")
+        "#background_overlay_h2",
+        "#background_overlay_h3",
+        "#background_overlay_impact",
+        "#background_overlay_paragraph",
+        "#background_overlay_figures",
+        "#background_overlay_source"
         ];
 
         get_html_window = $('#html-window').contents().text();
@@ -298,6 +298,12 @@ $(document).on('ready', function(){
 
                     $(explainerArray[i]).css('display', 'none');
                     $(explainerArray[i+1]).css('display', 'block');
+
+                    $(annotationArray[i]).css('display', 'none');
+                    $(annotationArray[i+1]).css('display', 'block');
+
+                    $(backgroundArray[i]).css('display', 'none');
+                    $(backgroundArray[i+1]).css('display', 'block');
                     //explainerArray[i+1].css('border', '10px solid red');
 
     // };
@@ -353,7 +359,7 @@ $(document).on('ready', function(){
                 //     annotationArray[i-3].hide();
                 //     explainerArray[i-3].hide();
                 //     }
-                } 
+                }
                 // console.log('**********************');
             }
         }, 3000);
@@ -411,7 +417,7 @@ $('#screenshot').click(function () {
 console.log('gets to here***************');
     var x=window.open('#');
 $(x).append(newIframe);
-    
+
 x.document.open();
 x.document.write(html);
 x.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
