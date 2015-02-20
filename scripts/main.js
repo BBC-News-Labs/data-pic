@@ -305,7 +305,7 @@ $(document).on('ready', function(){
                     $(annotationArray[i]).css('display', 'none');
                     $(annotationArray[i+1]).css('display', 'block');
 
-                    $(backgroundArray[i]).css('display', 'none');
+                    $(backgroundArray[i]).css('display', 'none' && 'background-color', 'red');
                     $(backgroundArray[i+1]).css('display', 'block');
                     //explainerArray[i+1].css('border', '10px solid red');
 
@@ -364,11 +364,13 @@ $(document).on('ready', function(){
                 //     }
                 }
 
-var title = $("#iframe-preview").contents().find('#title').text();
-var titleHeight = document.getElementById("title");
-var elmtHeight = titleHeight.offsetHeight;
-console.log('value of title ' + title);
-console.log('!!!!!!!!height of current element ' + elmtHeight);
+var getElements = function () {
+    document.querySelector($("#iframe-preview").contents().find('#title'))..style.backgroundColor = "blue";
+};
+// var title = $("#iframe-preview").contents().find('#title').text();
+// var elmtHeight = title.offsetHeight;
+// console.log('value of title ' + title);
+// console.log('!!!!!!!!height of current element ' + elmtHeight);
 
             }
         }, 3000);
