@@ -379,7 +379,6 @@ $(document).on('ready', function(){
                 //     }
                 }
 
-
 // var getElements = function () {
 //     document.querySelector($("#iframe-preview").contents().find('#title')).style.backgroundColor = "blue";
 // };
