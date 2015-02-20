@@ -8,24 +8,12 @@ var loadData = function(frame, html) {
     // function that creates html document to be uploaded on iframe
     // contentDocument gets what's inside the iframe.
 
-    var content, //= $("#" + frame).prop("contentDocument");
-        iframePreviewNode = $("#" + frame),
-        overlaysNode;
+    var content ;//= $("#" + frame).prop("contentDocument");
 
         content = $("#" + html).val();
 
-        iframePreviewNode.contents().find("body").html($.parseHTML(content));
+        $("#" + frame).contents().find("body").html($.parseHTML(content));
 
-        overlaysNode = $('<div id="overlays"></div>');
-
-        overlaysNode.html( '<p>hello</p><img src="./images/background_overlay1.png" id="background_overlay_h2" alt="h2 background overlay" style="width:43%;height:31px">' +
-              '<img src="./images/background_overlay2.png" id="background_overlay_h3" alt="h3 background overlay" style="width:43%;height:31px">' +
-              '<img src="./images/background_overlay3.png" id="background_overlay_impact" alt="impact figure background overlay" style="width:43%;height:56px">' +
-              '<img src="./images/background_overlay4.png" id="background_overlay_paragraph" alt="paragraph background overlay" style="width:43%;height:31px">' +
-              '<img src="./images/background_overlay5.png" id="background_overlay_figures" alt="figured background overlay" style="width:50%;height:165px">' +
-              '<img src="./images/background_overlay6.png" id="background_overlay_source" alt="source background overlay" style="width:43%;height:28px">"' );
-
-        iframePreviewNode.append(overlaysNode);
     // if (typeof contentDocument !== 'undefined') {
     //     contentDocument.write('<style>');
     //     contentDocument.write($("#" + css).val());
@@ -292,7 +280,6 @@ $(document).on('ready', function(){
                 // console.log('position top ARRAY ' + z.top + 'position ARRAY ' + z.left);
 
 
-        alert($("#iframe-preview").html());
 
            if (originalArray[i].html() !== $("#iframe-preview").contents().find(changedArray[i]).html()) {
 
