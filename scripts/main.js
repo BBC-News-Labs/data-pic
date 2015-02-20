@@ -366,8 +366,8 @@ $(document).on('ready', function(){
 
 var title = $("#iframe-preview").contents().find('#title');
 var subtitle = $("#iframe-preview").contents().find('#subtitle');
-var x = title.scrollTop();
-var y = subtitle.scrollTop();
+var x = title.position();
+var y = subtitle.position();
 console.log('position top title ' + x);
 console.log('position top subtitle ' + y);
 // var getElements = function () {
