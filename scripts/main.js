@@ -294,7 +294,17 @@ $(document).on('ready', function(){
                     //$(explainerArray[i+1]).addClass("show").removeClass("hide");
                     // console.log('siomething changed at array pos ', i);
                     /// explainerArray[i].hide();
-                    console.log('im herer and its not equal');
+
+                    var title = $("#iframe-preview").contents().find('#title');
+                    var subtitle = $("#iframe-preview").contents().find('#subtitle');
+                    var x = title.offset();
+                    var y = subtitle.offset();
+
+                    var z = originalArray.offset();
+                    console.log('position top ARRAY ' + z.top + 'position ARRAY ' + z.left);
+                    // console.log('position top title ' + x.top + 'position left ' + x.left);
+                    // console.log('position top subtitle ' + y.top + 'position left ' + x.left );
+                    // console.log('im herer and its not equal');
 
                     $(explainerArray[i]).css('display', 'none');
                     $(explainerArray[i+1]).css('display', 'block');
@@ -364,12 +374,7 @@ $(document).on('ready', function(){
                 //     }
                 }
 
-var title = $("#iframe-preview").contents().find('#title');
-var subtitle = $("#iframe-preview").contents().find('#subtitle');
-var x = title.offset();
-var y = subtitle.offset();
-console.log('position top title ' + x.top + 'position left ' + x.left);
-console.log('position top subtitle ' + y.top + 'position left ' + x.left );
+
 // var getElements = function () {
 //     document.querySelector($("#iframe-preview").contents().find('#title')).style.backgroundColor = "blue";
 // };
