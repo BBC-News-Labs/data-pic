@@ -286,9 +286,9 @@ $(document).on('ready', function(){
 
                     $(explainerArray[i]).css('display', 'none');
                     $(explainerArray[i+1]).css('display', 'block');
-                    $(explainerArray[i-1]).css('display', 'block');
-                    $(explainerArray[i-2]).css('display', 'block');
-                    $(explainerArray[i-3]).css('display', 'block');
+                    // $(explainerArray[i-1]).css('display', 'block');
+                    // $(explainerArray[i-2]).css('display', 'block');
+                    // $(explainerArray[i-3]).css('display', 'block');
 
                     $(annotationArray[i]).css('display', 'none');
                     $(annotationArray[i+1]).css('display', 'block');
