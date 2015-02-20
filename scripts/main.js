@@ -303,7 +303,7 @@ $(document).on('ready', function(){
                     $(annotationArray[i+1]).css('display', 'block');
 
                     $(backgroundArray[i]).css('display', 'none');
-                    $(backgroundArray[i+1]).css('display', 'block');
+                    $(backgroundArray[i+1]).css('display', 'block', '!important');
                     //explainerArray[i+1].css('border', '10px solid red');
 
     // };
