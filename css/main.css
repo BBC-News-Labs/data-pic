@@ -616,11 +616,6 @@ div.code-lines span {
 
 }
 
-/*Hides the annotations overlays*/
-.hide {
-    display: none !important;
-}
-
 .show {
     display: block !important;
 }
