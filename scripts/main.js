@@ -368,8 +368,8 @@ var title = $("#iframe-preview").contents().find('#title');
 var subtitle = $("#iframe-preview").contents().find('#subtitle');
 var x = title.offset();
 var y = subtitle.offset();
-console.log('position top title ' + x.top);
-console.log('position top subtitle ' + y.top);
+console.log('position top title ' + x.top + 'position left ' + x.left);
+console.log('position top subtitle ' + y.top + 'position left ' + x.left );
 // var getElements = function () {
 //     document.querySelector($("#iframe-preview").contents().find('#title')).style.backgroundColor = "blue";
 // };
