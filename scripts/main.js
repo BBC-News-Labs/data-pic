@@ -269,6 +269,8 @@ $(document).on('ready', function(){
 
         for (var i =0; i < originalArray.length; i++) {
 
+            for (var j =0; j < changedArray.length; j++) {
+
             var title = $("#iframe-preview").contents().find('#title');
             var subtitle = $("#iframe-preview").contents().find('#subtitle');
             var x = title.offset();
@@ -276,6 +278,8 @@ $(document).on('ready', function(){
 
             var z = changedArray[i].offset();
             console.log('position top ARRAY ' + z.top + 'position ARRAY ' + z.left);
+
+            }
 
 
             // console.log('Test this for equality ********************')
