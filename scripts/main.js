@@ -292,8 +292,7 @@ $(document).on('ready', function(){
                         'left': '16px'
                     });
 
-                    var z =
-                    z = $("#iframe-preview").contents().find('.outer_wrapper')[0].clientHeight();
+                    z = $("#iframe-preview").contents().find('.outer_wrapper')[0].clientHeight;
                     console.log('outer wrapper height ' + z);
 
 
