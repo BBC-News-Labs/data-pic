@@ -269,15 +269,15 @@ $(document).on('ready', function(){
 
         for (var i =0; i < originalArray.length; i++) {
 
-                for (var j =0; j < changedArray.length; j++) {
+                // for (var j =0; j < changedArray.length; j++) {
 
-                var title = $("#iframe-preview").contents().find('#title');
-                var subtitle = $("#iframe-preview").contents().find('#subtitle');
-                var x = title.offset();
-                var y = subtitle.offset();
+                // var title = $("#iframe-preview").contents().find('#title');
+                // var subtitle = $("#iframe-preview").contents().find('#subtitle');
+                // var x = title.offset();
+                // var y = subtitle.offset();
 
-                var z = changedArray[j].offset();
-                console.log('position top ARRAY ' + z.top + 'position ARRAY ' + z.left);
+                // var z = changedArray[j].offset();
+                // console.log('position top ARRAY ' + z.top + 'position ARRAY ' + z.left);
 
 
 
@@ -292,12 +292,17 @@ $(document).on('ready', function(){
                     $(annotationArray[i]).css('display', 'none');
                     $(annotationArray[i+1]).css('display', 'block');
 
+                    x = $("#iframe-preview").contents().find(changedArray[i + 1]).offset();
+                    console.log('top ' + x.top);
+
                     $(backgroundArray[i]).css('display', 'none');
                     $(backgroundArray[i+1]).css('display', 'block');
 
+
+
              }
 
-        }
+        // }
 
     }
 
