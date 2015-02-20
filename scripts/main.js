@@ -298,8 +298,8 @@ $(document).on('ready', function(){
                     $(backgroundArray[6]).css({
                         'display': 'block',
                         'position': 'absolute',
-                        'top': y.top + 4 + 'px',
-                        'left': '16px',
+                        'top': y.top + 14 + 'px',
+                        'left': '10px',
                         'width': myWidth,
                         'height': myHeight
 
