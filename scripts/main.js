@@ -260,7 +260,7 @@ $(document).on('ready', function(){
         "#background_overlay_paragraph",
         "#background_overlay_figures",
         "#background_overlay_source",
-        "#preview-overlay"
+        "#background_overlay_pic"
         ];
 
         get_html_window = $('#html-window').contents().text();
@@ -311,6 +311,8 @@ $(document).on('ready', function(){
 
 
              }
+
+
 
         // }
 
