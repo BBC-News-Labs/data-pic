@@ -296,7 +296,11 @@ $(document).on('ready', function(){
                     console.log('top ' + x.top);
 
                     $(backgroundArray[i]).css('display', 'none');
-                    $(backgroundArray[i+1]).css('display', 'block', x.top);
+                    $(backgroundArray[i+1]).css({
+                        'display': 'block',
+                        'position': 'absolute',
+                        'top': x.top
+                    );
 
 
 
