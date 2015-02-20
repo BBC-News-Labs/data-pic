@@ -298,12 +298,15 @@ $(document).on('ready', function(){
 
                     $(explainerArray[i]).css('display', 'none');
                     $(explainerArray[i+1]).css('display', 'block');
+                    $(explainerArray[i-1]).css('display', 'block');
+                    $(explainerArray[i-2]).css('display', 'block');
+                    $(explainerArray[i-3]).css('display', 'block');
 
                     $(annotationArray[i]).css('display', 'none');
                     $(annotationArray[i+1]).css('display', 'block');
 
                     $(backgroundArray[i]).css('display', 'none');
-                    $(backgroundArray[i+1]).css('display', 'block', '!important');
+                    $(backgroundArray[i+1]).css('display', 'block');
                     //explainerArray[i+1].css('border', '10px solid red');
 
     // };
@@ -360,7 +363,10 @@ $(document).on('ready', function(){
                 //     explainerArray[i-3].hide();
                 //     }
                 }
-                // console.log('**********************');
+
+var elmtHeight = [i].offsetHeight;
+console.log('!!!!!!!!height of current element ' + elmtHeight);
+
             }
         }, 3000);
 
@@ -368,6 +374,10 @@ $(document).on('ready', function(){
 
 
 });
+
+// GET HEIGHTS AND WIDTHS OF DATA PIC ELEMENTS FOR OVERLAYS
+// var title$("#iframe-preview").contents().find('#title')
+// var elmt = document.getElementById():
 
 
 count = 0;
