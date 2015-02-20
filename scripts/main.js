@@ -308,8 +308,6 @@ $(document).on('ready', function(){
                         'left': '16px'
                     });
 
-                    var removeItems = changedArray.splice(i, 1);
-
 
 
              }
