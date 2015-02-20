@@ -366,6 +366,7 @@ $(document).on('ready', function(){
 
 var title = $("#iframe-preview").contents().find('#title')
 var elmtHeight = title.offsetHeight;
+console.log('value of title ' + title);
 console.log('!!!!!!!!height of current element ' + elmtHeight);
 
             }
