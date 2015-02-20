@@ -284,7 +284,7 @@ $(document).on('ready', function(){
 
            if (originalArray[i].html() !== $("#iframe-preview").contents().find(changedArray[i]).html()) {
 
-                    $('.explainers img').css('display', 'none');
+                    $('.explainers').css('display', 'none');
                     $(explainerArray[i+1]).css('display', 'block');
 
                     $('.annotations img').css('display', 'none');
