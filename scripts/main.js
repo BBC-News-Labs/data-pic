@@ -301,7 +301,8 @@ $(document).on('ready', function(){
                     $(backgroundArray[i+1]).css({
                         'display': 'block',
                         'position': 'absolute',
-                        'top': x.top + y.top + 4 + 'px'
+                        'top': x.top + y.top + 4 + 'px',
+                        'left': '16px'
                     });
 
 
