@@ -366,10 +366,10 @@ $(document).on('ready', function(){
 
 var title = $("#iframe-preview").contents().find('#title');
 var subtitle = $("#iframe-preview").contents().find('#subtitle');
-var x = title.position();
-var y = subtitle.position();
-console.log('position top title ' + x);
-console.log('position top subtitle ' + y);
+var x = title.offset();
+var y = subtitle.offset();
+console.log('position top title ' + x.top);
+console.log('position top subtitle ' + y.top);
 // var getElements = function () {
 //     document.querySelector($("#iframe-preview").contents().find('#title')).style.backgroundColor = "blue";
 // };
