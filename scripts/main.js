@@ -364,7 +364,8 @@ $(document).on('ready', function(){
                 //     }
                 }
 
-var elmtHeight = [i].offsetHeight;
+var title = $("#iframe-preview").contents().find('#title')
+var elmtHeight = title.offsetHeight;
 console.log('!!!!!!!!height of current element ' + elmtHeight);
 
             }
