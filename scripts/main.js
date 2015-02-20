@@ -299,7 +299,9 @@ $(document).on('ready', function(){
                     console.log('inner ' + y.top);
                     console.log('changedArray ' + changedArray[i]);
 
-                    $(backgroundArray[i]).css('display', 'none');
+                    //$(backgroundArray[i]).css('display', 'none');
+
+                    $('.overlays img').css('display', 'none');
                     // $(backgroundArray[i]).css('display', 'none');
                     $(backgroundArray[i+1]).css({
                         'display': 'block',
