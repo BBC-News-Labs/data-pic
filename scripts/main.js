@@ -373,7 +373,7 @@ $('#screenshot').click(function () {
 
 console.log('gets to here***************');
     var x=window.open('#');
-$(x).append(newIframe);
+//$(x).append(newIframe);
 
 x.document.open();
 x.document.write(html);
