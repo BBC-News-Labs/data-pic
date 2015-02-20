@@ -363,12 +363,14 @@ $(document).on('ready', function(){
                 //     explainerArray[i-3].hide();
                 //     }
                 }
-var x = $('#html-window #title').position();
+
+var title = $("#iframe-preview").contents().find('#title');
+var x = title.position();
 console.log('position top ' + x);
 // var getElements = function () {
 //     document.querySelector($("#iframe-preview").contents().find('#title')).style.backgroundColor = "blue";
 // };
-// var title = $("#iframe-preview").contents().find('#title').text();
+
 // var elmtHeight = title.offsetHeight;
 // console.log('value of title ' + title);
 // console.log('!!!!!!!!height of current element ' + elmtHeight);
