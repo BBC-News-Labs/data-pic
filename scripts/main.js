@@ -305,8 +305,8 @@ $(document).on('ready', function(){
                     $(annotationArray[i]).css('display', 'none');
                     $(annotationArray[i+1]).css('display', 'block');
 
-                    $(backgroundArray[i]).css('display', 'none', 'background-color', 'red');
-                    $(backgroundArray[i+1]).css('display', 'block');
+                    $(backgroundArray[i]).css('display', 'none');
+                    $(backgroundArray[i+1]).css('background-color', 'red');
                     //explainerArray[i+1].css('border', '10px solid red');
 
     // };
