@@ -204,8 +204,6 @@ $(document).on('ready', function(){
 
     $("#list_figures_annotation").hide;
 
-    //var code = $("#iframe-preview").contents().find("h2");
-    // console.log('changed h2 ' + changed_h2);
     $("#background_overlay_h2").show(1000) && $("#h2_annotation").show(1000) && $("#h2_explainer").show(1000);
 
 
@@ -270,16 +268,6 @@ $(document).on('ready', function(){
 
         for (var i =0; i < originalArray.length; i++) {
 
-                // for (var j =0; j < changedArray.length; j++) {
-
-                // var title = $("#iframe-preview").contents().find('#title');
-                // var subtitle = $("#iframe-preview").contents().find('#subtitle');
-                // var x = title.offset();
-                // var y = subtitle.offset();
-
-                // var z = changedArray[j].offset();
-                // console.log('position top ARRAY ' + z.top + 'position ARRAY ' + z.left);
-
 
 
            if (originalArray[i].html() !== $("#iframe-preview").contents().find(changedArray[i]).html()) {
@@ -303,6 +291,9 @@ $(document).on('ready', function(){
                         'top': x.top + y.top + 4 + 'px',
                         'left': '16px'
                     });
+
+                    z = $("#iframe-preview").contents().find('.outer_wrapper').element.clientHeight();
+                    console.log('outer wrapper height ' + z);
 
 
 
