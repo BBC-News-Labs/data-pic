@@ -363,8 +363,8 @@ $(document).on('ready', function(){
                 //     explainerArray[i-3].hide();
                 //     }
                 }
-var pos = $('#html-window #title').scrollTop();
-console.log('position ' + pos);
+var x = $('#html-window #title').position();
+console.log('position top ' + x.top + 'pos left ' + x.left);
 // var getElements = function () {
 //     document.querySelector($("#iframe-preview").contents().find('#title')).style.backgroundColor = "blue";
 // };
