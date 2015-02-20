@@ -269,6 +269,14 @@ $(document).on('ready', function(){
 
         for (var i =0; i < originalArray.length; i++) {
 
+            var title = $("#iframe-preview").contents().find('#title');
+            var subtitle = $("#iframe-preview").contents().find('#subtitle');
+            var x = title.offset();
+            var y = subtitle.offset();
+
+            var z = originalArray[i].offset();
+            console.log('position top ARRAY ' + z.top + 'position ARRAY ' + z.left);
+
 
             // console.log('Test this for equality ********************')
             // console.log('iframe prev ' + $("#iframe-preview").contents().find(changedArray[i]).text());
@@ -295,13 +303,6 @@ $(document).on('ready', function(){
                     // console.log('siomething changed at array pos ', i);
                     /// explainerArray[i].hide();
 
-                    var title = $("#iframe-preview").contents().find('#title');
-                    var subtitle = $("#iframe-preview").contents().find('#subtitle');
-                    var x = title.offset();
-                    var y = subtitle.offset();
-
-                    var z = originalArray.offset();
-                    console.log('position top ARRAY ' + z.top + 'position ARRAY ' + z.left);
                     // console.log('position top title ' + x.top + 'position left ' + x.left);
                     // console.log('position top subtitle ' + y.top + 'position left ' + x.left );
                     // console.log('im herer and its not equal');
