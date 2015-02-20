@@ -296,7 +296,7 @@ $(document).on('ready', function(){
                     myWidth = $("#iframe-preview").contents().find('.outer_wrapper')[0].clientWidth;
 
                     console.log('outer wrapper height ' + myHeight);
-                    console.log('outer wrapper width ' + myHeight);
+                    console.log('outer wrapper width ' + myWidth);
 
 
 
