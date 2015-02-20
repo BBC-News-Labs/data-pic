@@ -364,7 +364,7 @@ $(document).on('ready', function(){
                 //     }
                 }
 
-var title = $("#iframe-preview").contents().find('#title');
+var title = $("#iframe-preview").contents().find('#title').text();
 var x = title.position();
 console.log('position top ' + x);
 // var getElements = function () {
