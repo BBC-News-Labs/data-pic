@@ -18,7 +18,7 @@ var loadData = function(frame, html) {
 
         overlaysNode = $('<div id="overlays"></div>');
 
-        overlaysNode.html( '<img src="./images/background_overlay1.png" id="background_overlay_h2" alt="h2 background overlay" style="width:43%;height:31px">' +
+        overlaysNode.html( '<p>hello</p><img src="./images/background_overlay1.png" id="background_overlay_h2" alt="h2 background overlay" style="width:43%;height:31px">' +
               '<img src="./images/background_overlay2.png" id="background_overlay_h3" alt="h3 background overlay" style="width:43%;height:31px">' +
               '<img src="./images/background_overlay3.png" id="background_overlay_impact" alt="impact figure background overlay" style="width:43%;height:56px">' +
               '<img src="./images/background_overlay4.png" id="background_overlay_paragraph" alt="paragraph background overlay" style="width:43%;height:31px">' +
