@@ -269,47 +269,19 @@ $(document).on('ready', function(){
 
         for (var i =0; i < originalArray.length; i++) {
 
-            for (var j =0; j < changedArray.length; j++) {
+                for (var j =0; j < changedArray.length; j++) {
 
-            var title = $("#iframe-preview").contents().find('#title');
-            var subtitle = $("#iframe-preview").contents().find('#subtitle');
-            var x = title.offset();
-            var y = subtitle.offset();
+                var title = $("#iframe-preview").contents().find('#title');
+                var subtitle = $("#iframe-preview").contents().find('#subtitle');
+                var x = title.offset();
+                var y = subtitle.offset();
 
-            var z = changedArray[j].offset();
-            console.log('position top ARRAY ' + z.top + 'position ARRAY ' + z.left);
-
-            }
+                var z = changedArray[j].offset();
+                console.log('position top ARRAY ' + z.top + 'position ARRAY ' + z.left);
 
 
-            // console.log('Test this for equality ********************')
-            // console.log('iframe prev ' + $("#iframe-preview").contents().find(changedArray[i]).text());
-            // console.log(originalArray[i].text());
 
-             // // console.log('iframe prev ' + $("#iframe-preview").contents().find(changedArray[i]).text());
-             // // console.log('original array ' + originalArray);
-             // // console.log('original array item ' + originalArray[i]);
-             // // console.log(originalArray[i]);
-             // // console.log('original array item text ' + originalArray[i].text());
-        //      console.log($("#iframe-preview").contents());
-        // console.log('im original');
-        // console.log(originalArray[i].html());
-        // console.log('im new');
-        // console.log($("#iframe-preview").contents().find(changedArray[i]).html());
            if (originalArray[i].html() !== $("#iframe-preview").contents().find(changedArray[i]).html()) {
-
-
-    // for (var j =0; j < originalArray.length; j++) {
-                    //getElementById("h2_explainer").classList.add("hide");
-                    //explainerArray[i].addClass("hide");
-                    //console.log(explainerArray[i+1]);
-                    //$(explainerArray[i+1]).addClass("show").removeClass("hide");
-                    // console.log('siomething changed at array pos ', i);
-                    /// explainerArray[i].hide();
-
-                    // console.log('position top title ' + x.top + 'position left ' + x.left);
-                    // console.log('position top subtitle ' + y.top + 'position left ' + x.left );
-                    // console.log('im herer and its not equal');
 
                     $(explainerArray[i]).css('display', 'none');
                     $(explainerArray[i+1]).css('display', 'block');
@@ -322,72 +294,11 @@ $(document).on('ready', function(){
 
                     $(backgroundArray[i]).css('display', 'none');
                     $(backgroundArray[i+1]).css('display', 'block');
-                    //explainerArray[i+1].css('border', '10px solid red');
 
-    // };
+             }
 
+        }
 
-
-            // console.log('Not equal here now' + [i]);
-
-    // var
-    //          $("#explainers").prop("#h2_explainer").write('<html class=' + 'h2_explainer--hide' + '</html>');
-
-                // for (var j = 0; j < annotationArray.length; j++) {s
-                //     annotationArray[i].addClass('hide');
-                // }
-
-                //explainerArray[i].hide(1000);
-                // annotationArray[i].hide(1000);
-                // // backgroundArray[i].hide(1000);
-                // //colourHighlighting.hide();
-
-                // //$("#iframe-preview").contents().find(changedArray[i + 1]).css("background-color","pink");
-
-                // annotationArray[i + 1].show(4000);
-                // explainerArray[i + 1].show(4000);
-                // backgroundArray[i + 1].show(4000);
-
-                // // // console.log('NOW: CHANGED ARRAY ' + changedArray[i]);
-                // // // console.log('NOW: ORIGINAL ARRAY ' + originalArray[i].text);
-                // originalArray.splice(i, 1);
-                // changedArray.splice(i, 1);
-                // annotationArray.splice(i, 1);
-                // explainerArray.splice(i, 1);
-                // backgroundArray.splice(i, 1);
-                // // hides the first speech bubble when something else was changed but we want it to show another asset instead
-                // // eliminate hide error
-                // if ($("#iframe-preview").contents().find(explainerArray[i - 1])) {
-                //     annotationArray[i-1].hide();
-                //     explainerArray[i-1].hide();
-                //     }
-                // if ($("#iframe-preview").contents().find(explainerArray[i - 2])) {
-                //     annotationArray[i-2].hide();
-                //     explainerArray[i-2].hide();
-                //     }
-                // if ($("#iframe-preview").contents().find(explainerArray[i - 3])) {
-                //     annotationArray[i-3].hide();
-                //     explainerArray[i-3].hide();
-                //     }
-                // if ($("#iframe-preview").contents().find(explainerArray[i - 4])) {
-                //     annotationArray[i-3].hide();
-                //     explainerArray[i-3].hide();
-                //     }
-                // if ($("#iframe-preview").contents().find(explainerArray[i - 5])) {
-                //     annotationArray[i-3].hide();
-                //     explainerArray[i-3].hide();
-                //     }
-                }
-
-// var getElements = function () {
-//     document.querySelector($("#iframe-preview").contents().find('#title')).style.backgroundColor = "blue";
-// };
-
-// var elmtHeight = title.offsetHeight;
-// console.log('value of title ' + title);
-// console.log('!!!!!!!!height of current element ' + elmtHeight);
-
-            }
         }, 3000);
 
     }, 2000)
