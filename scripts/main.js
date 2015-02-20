@@ -239,8 +239,8 @@ $(document).on('ready', function(){
             "#impact_figure_annotation",
             "#paragraph_annotation",
             "#list_figures_annotation",
-            "#source_annotation",
-            "#preview-overlay"
+            "#source_annotation"
+
         ];
 
         explainerArray = [
@@ -259,7 +259,8 @@ $(document).on('ready', function(){
         "#background_overlay_impact",
         "#background_overlay_paragraph",
         "#background_overlay_figures",
-        "#background_overlay_source"
+        "#background_overlay_source",
+        "#preview-overlay"
         ];
 
         get_html_window = $('#html-window').contents().text();
@@ -297,7 +298,7 @@ $(document).on('ready', function(){
                     console.log('top ' + x.top);
                     console.log('inner ' + y.top);
 
-                    $(backgroundArray[i]).css('display', 'none');
+                    $(backgroundArray.css('display', 'none');
                     $(backgroundArray[i+1]).css({
                         'display': 'block',
                         'position': 'absolute',
