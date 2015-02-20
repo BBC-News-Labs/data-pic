@@ -365,8 +365,11 @@ $(document).on('ready', function(){
                 }
 
 var title = $("#iframe-preview").contents().find('#title');
+var subtitle = $("#iframe-preview").contents().find('#subtitle');
 var x = title.scrollTop();
-console.log('position top ' + x);
+var y = subtitle.scrollTop();
+console.log('position top title ' + x);
+console.log('position top subtitle ' + y);
 // var getElements = function () {
 //     document.querySelector($("#iframe-preview").contents().find('#title')).style.backgroundColor = "blue";
 // };
