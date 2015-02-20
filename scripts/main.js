@@ -198,15 +198,15 @@ $(document).on('ready', function(){
     changeTextareaSize('html');
     setUpDataPicHTMLClipboard();
 
-    $("#h3_annotation").hide();
-    $("#impact_figure_annotation").hide();
-    $("#paragraph_annotation").hide();
+    // $("#h3_annotation").hide();
+    // $("#impact_figure_annotation").hide();
+    // $("#paragraph_annotation").hide();
 
-    $("#list_figures_annotation").hide;
+    // $("#list_figures_annotation").hide;
 
-    //var code = $("#iframe-preview").contents().find("h2");
-    // console.log('changed h2 ' + changed_h2);
-    $("#background_overlay_h2").show(1000) && $("#h2_annotation").show(1000) && $("#h2_explainer").show(1000);
+    // //var code = $("#iframe-preview").contents().find("h2");
+    // // console.log('changed h2 ' + changed_h2);
+    // $("#background_overlay_h2").show(1000) && $("#h2_annotation").show(1000) && $("#h2_explainer").show(1000);
 
 
     setTimeout(function(){
