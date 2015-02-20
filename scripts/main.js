@@ -298,7 +298,8 @@ $(document).on('ready', function(){
                     console.log('top ' + x.top);
                     console.log('inner ' + y.top);
 
-                    $(backgroundArray.css('display', 'none');
+                    $(backgroundArray).css('display', 'none');
+                    // $(backgroundArray[i]).css('display', 'none');
                     $(backgroundArray[i+1]).css({
                         'display': 'block',
                         'position': 'absolute',
