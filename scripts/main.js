@@ -293,6 +293,19 @@ $(document).on('ready', function(){
                         'left': '16px'
                     });
 
+
+                    // ANNOTATIONS
+                    $('.annotations img').css('display', 'none');
+                    $(backgroundArray[i+1]).css({
+                        'display': 'block',
+                        'position': 'absolute',
+                        'top': x.top + y.top + 4 + 'px',
+                        'left': x.left + x.top + 10 + 'px'
+                    });
+
+
+
+
                     myHeight = $("#iframe-preview").contents().find('.outer_wrapper')[0].clientHeight;
                     myWidth = $("#iframe-preview").contents().find('.outer_wrapper')[0].clientWidth;
 

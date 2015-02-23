@@ -378,7 +378,7 @@ div.code-lines span {
 
 /*Annotation Array stylings */
 
-#h2_annotation {
+/*#h2_annotation {
     left: 50%;
     position: absolute;
     top: 38px;
@@ -387,7 +387,7 @@ div.code-lines span {
 }
 
 #h3_annotation {
-    /*background-image: url('../images/h3_heading.png');*/
+    background-image: url('../images/h3_heading.png');
     left: 50%;
     position: absolute;
     top: 68px;
@@ -426,10 +426,10 @@ div.code-lines span {
     display: none;
     left: 51%;
     position: absolute;
-    top: 424px;
+    top: 360px;
     width:50%;
     z-index: 1;
-}
+}*/
 
 /*Background overlays*/
 #background_overlay_h2 {
