@@ -292,7 +292,7 @@ $(document).on('ready', function(){
                         'top': x.top + y.top + 4 + 'px',
                         'left': '16px'
 
-                        if (backgroundArray[6] == i) {
+                        if (backgroundArray[6]) {
                         console.log(backgroundArray.indexOf( 6 ));
 
                             $(backgroundArray[6]).css({
