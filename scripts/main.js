@@ -307,8 +307,8 @@ $(document).on('ready', function(){
                     myHeight = $("#iframe-preview").contents().find('.outer_wrapper')[0].clientHeight;
                     myWidth = $("#iframe-preview").contents().find('.outer_wrapper')[0].clientWidth;
 
-                    if (backgroundArray.indexOf( 6 ) == i ) {
-                        console.log('entered if statement');
+                    // if (backgroundArray.indexOf( 6 ) == i ) {
+                    //     console.log(backgroundArray.indexOf( 6 ));
 
                         $(backgroundArray[6]).css({
                         'display': 'block',
@@ -319,7 +319,7 @@ $(document).on('ready', function(){
                         'height': myHeight
 
                         });
-                    };
+                    // };
 
 
 
