@@ -14,14 +14,6 @@ var loadData = function(frame, html) {
 
         $("#" + frame).contents().find("body").html($.parseHTML(content));
 
-    // if (typeof contentDocument !== 'undefined') {
-    //     contentDocument.write('<style>');
-    //     contentDocument.write($("#" + css).val());
-    //     contentDocument.write('</style></head>');
-    //     contentDocument.write($("#" + html).val());
-    //     contentDocument.write('</html>');
-    //     contentDocument.close();
-    // }
 }
 
 var old = '';
@@ -282,43 +274,48 @@ $(document).on('ready', function(){
                     $('.annotations img').css('display', 'none');
                     $(annotationArray[i+1]).css('display', 'block');
 
-                    x = $("#iframe-preview").contents().find(changedArray[i + 1]).offset();
-                    y = $("#iframe-preview").contents().find('#inner_wrapper').offset();
-                    myHeight = $("#iframe-preview").contents().find('.outer_wrapper')[0].clientHeight;
-                    myWidth = $("#iframe-preview").contents().find('.outer_wrapper')[0].clientWidth;
+                    if (BrowserDetect.browser === "Explorer" || "Trident") {
+                        $(backgroundArray[i+1]).css('display', 'block');
 
-                    $('.overlays img').css('display', 'none');
-
-
-
-                    if (i < backgroundArray.length - 2) {
-                        $(backgroundArray[i+1]).css({
-                        'display': 'block',
-                        'position': 'absolute',
-                        'top': x.top + y.top + 4 + 'px',
-                        'left': '16px'
-                    });
-                        } else {
-                            $(backgroundArray[backgroundArray.length - 1]).css ({
-                            'display': 'block',
-                            'position': 'absolute',
-                            'top': y.top + 24 + 'px',
-                            'left': '8px',
-                            'width': myWidth + 2 + 'px',
-                            'height': myHeight
-                        });
                     };
 
+                    // x = $("#iframe-preview").contents().find(changedArray[i + 1]).offset();
+                    // y = $("#iframe-preview").contents().find('#inner_wrapper').offset();
+                    // myHeight = $("#iframe-preview").contents().find('.outer_wrapper')[0].clientHeight;
+                    // myWidth = $("#iframe-preview").contents().find('.outer_wrapper')[0].clientWidth;
+
+                    // $('.overlays img').css('display', 'none');
 
 
-                    // ANNOTATIONS
-                    $('.annotations img').css('display', 'none');
-                    $(annotationArray[i+1]).css({
-                        'display': 'block',
-                        'position': 'absolute',
-                        'top': x.top + y.top + 3 + 'px',
-                        'right': x.left + -31 + 'px'
-                    });
+
+                    // if (i < backgroundArray.length - 2) {
+                    //     $(backgroundArray[i+1]).css({
+                    //     'display': 'block',
+                    //     'position': 'absolute',
+                    //     'top': x.top + y.top + 4 + 'px',
+                    //     'left': '16px'
+                    // });
+                    //     } else {
+                    //         $(backgroundArray[backgroundArray.length - 1]).css ({
+                    //         'display': 'block',
+                    //         'position': 'absolute',
+                    //         'top': y.top + 24 + 'px',
+                    //         'left': '8px',
+                    //         'width': myWidth + 2 + 'px',
+                    //         'height': myHeight
+                    //     });
+                    // };
+
+
+
+                    // // ANNOTATIONS
+                    // $('.annotations img').css('display', 'none');
+                    // $(annotationArray[i+1]).css({
+                    //     'display': 'block',
+                    //     'position': 'absolute',
+                    //     'top': x.top + y.top + 3 + 'px',
+                    //     'right': x.left + -31 + 'px'
+                    // });
 
 
              }
