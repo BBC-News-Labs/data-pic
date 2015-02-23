@@ -296,14 +296,12 @@ $(document).on('ready', function(){
 
                     // ANNOTATIONS
                     $('.annotations img').css('display', 'none');
-                    $(backgroundArray[i+1]).css({
+                    $(annotationArray[i+1]).css({
                         'display': 'block',
                         'position': 'absolute',
                         'top': x.top + y.top + 4 + 'px',
                         'left': x.left + x.top + 10 + 'px'
                     });
-
-
 
 
                     myHeight = $("#iframe-preview").contents().find('.outer_wrapper')[0].clientHeight;
