@@ -305,7 +305,7 @@ console.log(i);
                     });
                         } else {
                             console.log('is doing else');
-                            $(backgroundArray[backgroundArray.length]).css ({
+                            $(backgroundArray[backgroundArray.length - 1]).css ({
                             'display': 'block',
                             'position': 'absolute',
                             'top': y.top + 24 + 'px',
