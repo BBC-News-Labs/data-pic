@@ -285,8 +285,17 @@ $(document).on('ready', function(){
                     console.log('inner ' + y.top);
                     console.log('changedArray ' + changedArray[i]);
 
-                    $('.overlays img').css('display', 'none').end().find(':last').css ({
+                    $('.overlays img').css('display', 'none').end().find(':');
+                    $(backgroundArray[i+1]).css({
+                        'display': 'block',
+                        'position': 'absolute',
+                        'top': x.top + y.top + 4 + 'px',
+                        'left': '16px'
 
+                        if (i === 6) {
+                        console.log(backgroundArray.indexOf( 6 ));
+
+                            $(backgroundArray[6]).css({
                             'display': 'block',
                             'position': 'absolute',
                             'top': y.top + 24 + 'px',
@@ -295,28 +304,9 @@ $(document).on('ready', function(){
                             'height': myHeight
 
                             });
+                        };
 
-                    $(backgroundArray[i+1]).css({
-                        'display': 'block',
-                        'position': 'absolute',
-                        'top': x.top + y.top + 4 + 'px',
-                        'left': '16px'
-
-                      });
-
-                        // if (i === 6) {
-                        // console.log(backgroundArray.indexOf( 6 ));
-
-                        //     $(backgroundArray[6]).css({
-                        //     'display': 'block',
-                        //     'position': 'absolute',
-                        //     'top': y.top + 24 + 'px',
-                        //     'left': '8px',
-                        //     'width': myWidth + 2 + 'px',
-                        //     'height': myHeight
-
-                        //     });
-                        // };
+                    });
 
 
                     // ANNOTATIONS
