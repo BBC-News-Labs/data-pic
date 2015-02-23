@@ -315,7 +315,7 @@ $(document).on('ready', function(){
                         'position': 'absolute',
                         'top': y.top + 14 + 'px',
                         'left': '15px',
-                        'width': myWidth + 10 'px',
+                        'width': myWidth + 10 + 'px',
                         'height': myHeight
 
                         });
