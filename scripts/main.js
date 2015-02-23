@@ -299,8 +299,8 @@ $(document).on('ready', function(){
                     $(annotationArray[i+1]).css({
                         'display': 'block',
                         'position': 'absolute',
-                        'top': x.top + y.top + 3 + 'px',
-                        'right': 50 + 'px'
+                        'top': x.top + y.top + 4 + 'px',
+                        'right': 90 + 'px'
                     });
 
 
