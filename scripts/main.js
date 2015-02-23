@@ -281,6 +281,11 @@ $(document).on('ready', function(){
 
                     x = $("#iframe-preview").contents().find(changedArray[i + 1]).offset();
                     y = $("#iframe-preview").contents().find('#inner_wrapper').offset();
+                    myHeight = $("#iframe-preview").contents().find('.outer_wrapper')[0].clientHeight;
+                    myWidth = $("#iframe-preview").contents().find('.outer_wrapper')[0].clientWidth;
+
+                    console.log('outer wrapper height ' + myHeight);
+                    console.log('outer wrapper width ' + myWidth);
                     console.log('top ' + x.top);
                     console.log('inner ' + y.top);
                     console.log('changedArray ' + changedArray[i]);
@@ -311,14 +316,6 @@ $(document).on('ready', function(){
                         'top': x.top + y.top + 3 + 'px',
                         'right': x.left + -31 + 'px'
                     });
-
-
-                    myHeight = $("#iframe-preview").contents().find('.outer_wrapper')[0].clientHeight;
-                    myWidth = $("#iframe-preview").contents().find('.outer_wrapper')[0].clientWidth;
-
-                    console.log('outer wrapper height ' + myHeight);
-                    console.log('outer wrapper width ' + myWidth);
-
 
 
              }
