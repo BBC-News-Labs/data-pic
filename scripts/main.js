@@ -187,7 +187,7 @@ $(document).on('ready', function(){
 
     updateCodeLineNumber('html');
     changeTextareaSize('html');
-    //setUpDataPicHTMLClipboard();
+    setUpDataPicHTMLClipboard();
 
      // $('.annotations img').css('display', 'none');
      // $('.overlays img').css('display', 'none');
@@ -421,15 +421,15 @@ $(function() {
 });
 };
 
-// var setUpDataPicHTMLClipboard = function () {
-//     var client = new ZeroClipboard( document.getElementById("d_clip_button") );
-//     client.on( "ready", function( readyEvent ) {
-//       client.on( "copy", function (e) {
-//         var htmlString = document.getElementById('html-window').value;
-//         ZeroClipboard.setData("text/plain", htmlString);
-//       });
-//     } );
-// };
+var setUpDataPicHTMLClipboard = function () {
+    var client = new ZeroClipboard( document.getElementById("d_clip_button") );
+    client.on( "ready", function( readyEvent ) {
+      client.on( "copy", function (e) {
+        var htmlString = document.getElementById('html-window').value;
+        ZeroClipboard.setData("text/plain", htmlString);
+      });
+    } );
+};
 
 var BrowserDetect = {
         init: function () {
@@ -474,10 +474,10 @@ var BrowserDetect = {
 
 $('#d_clip_button').click(function () {
     BrowserDetect.init();
-    // if (BrowserDetect.browser === "Explorer" || "Trident") {
-    //     alert ('Sorry, this feature does not work on Internet Explorer.');
-    //     // console.log("You are using <b>" + BrowserDetect.browser + "</b> with version <b>" + BrowserDetect.version + "</b>");
-    // }
+    if (BrowserDetect.browser === "Explorer" || "Trident") {
+        alert ('Sorry, this feature does not work on Internet Explorer.');
+        // console.log("You are using <b>" + BrowserDetect.browser + "</b> with version <b>" + BrowserDetect.version + "</b>");
+    }
 });
 
 //Gets devive width
