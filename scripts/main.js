@@ -307,7 +307,12 @@ $(document).on('ready', function(){
                     myHeight = $("#iframe-preview").contents().find('.outer_wrapper')[0].clientHeight;
                     myWidth = $("#iframe-preview").contents().find('.outer_wrapper')[0].clientWidth;
 
-                    if (backgroundArray[6] == i) {
+                    console.log('outer wrapper height ' + myHeight);
+                    console.log('outer wrapper width ' + myWidth);
+
+
+
+             }
                     console.log(backgroundArray.indexOf( 6 ));
 
                         $(backgroundArray[6]).css({
@@ -319,16 +324,7 @@ $(document).on('ready', function(){
                         'height': myHeight
 
                         });
-                    };
 
-
-
-                    console.log('outer wrapper height ' + myHeight);
-                    console.log('outer wrapper width ' + myWidth);
-
-
-
-             }
 
 
 
