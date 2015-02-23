@@ -198,18 +198,20 @@ $(document).on('ready', function(){
     changeTextareaSize('html');
     setUpDataPicHTMLClipboard();
 
-    $("#h3_annotation").hide();
-    $("#background_overlay_pic").hide();
-    $("#impact_figure_annotation").hide();
-    $("#paragraph_annotation").hide();
-    $("#source_annotation").hide();
-     $("#list_figures_annotation").hide();
+     $('.annotations img').css('display', 'none');
 
-    $("#list_figures_annotation").hide;
+    // $("#h3_annotation").hide();
+    // $("#background_overlay_pic").hide();
+    // $("#impact_figure_annotation").hide();
+    // $("#paragraph_annotation").hide();
+    // $("#source_annotation").hide();
+    //  $("#list_figures_annotation").hide();
 
-    h2_offset = $("#iframe-preview").contents().find('#h2_annotation').offset();
+    // $("#list_figures_annotation").hide;
 
-    $("#background_overlay_h2").show(1000) && $("#h2_annotation").show(1000) && $("#h2_explainer").show(1000);
+    // h2_offset = $("#iframe-preview").contents().find('#h2_annotation').offset();
+
+    // $("#background_overlay_h2").show(1000) && $("#h2_annotation").show(1000) && $("#h2_explainer").show(1000);
 
 
     setTimeout(function(){
