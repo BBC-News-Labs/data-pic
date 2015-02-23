@@ -274,10 +274,10 @@ $(document).on('ready', function(){
                     $('.annotations img').css('display', 'none');
                     $(annotationArray[i+1]).css('display', 'block');
 
-                    if (BrowserDetect.browser === "Explorer" || "Trident") {
-                        $(backgroundArray[i+1]).css('display', 'block');
+                    // if (BrowserDetect.browser === "Explorer" || "Trident") {
+                    //     $(backgroundArray[i+1]).css('display', 'block');
 
-                    };
+                    // };
 
                     // x = $("#iframe-preview").contents().find(changedArray[i + 1]).offset();
                     // y = $("#iframe-preview").contents().find('#inner_wrapper').offset();
