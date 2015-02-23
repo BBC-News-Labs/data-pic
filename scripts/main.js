@@ -294,9 +294,9 @@ $(document).on('ready', function(){
 
                        });
 
-                        console.log(backgroundArray.indexOf( 6 ));
+                        // console.log(backgroundArray.indexOf( 6 ));
 
-                            $(backgroundArray[6]).css({
+                            $(backgroundArray[5]).css({
                             'display': 'block',
                             'position': 'absolute',
                             'top': y.top + 24 + 'px',
