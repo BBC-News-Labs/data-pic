@@ -293,6 +293,15 @@ $(document).on('ready', function(){
                         'left': '16px'
                     });
 
+                    $(backgroundArray[i+1]).end().find(':last').css ({
+                        'display': 'block',
+                        'position': 'absolute',
+                        'top': y.top + 24 + 'px',
+                        'left': '8px',
+                        'width': myWidth + 2 + 'px',
+                        'height': myHeight
+                    });
+
 
                     // ANNOTATIONS
                     $('.annotations img').css('display', 'none');
@@ -313,23 +322,6 @@ $(document).on('ready', function(){
 
 
              }
-
-             if (backgroundArray[6] == i) {
-                    console.log(backgroundArray.indexOf( 6 ));
-
-                        $(backgroundArray[6]).css({
-                        'display': 'block',
-                        'position': 'absolute',
-                        'top': y.top + 24 + 'px',
-                        'left': '8px',
-                        'width': myWidth + 2 + 'px',
-                        'height': myHeight
-
-                        });
-                    };
-
-
-
 
         // }
 
