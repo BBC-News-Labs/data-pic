@@ -313,9 +313,9 @@ $(document).on('ready', function(){
                         $(backgroundArray[6]).css({
                         'display': 'block',
                         'position': 'absolute',
-                        'top': y.top + 29 + 'px',
+                        'top': y.top + 25 + 'px',
                         'left': '8px',
-                        'width': myWidth + 10 + 'px',
+                        'width': myWidth + 2 + 'px',
                         'height': myHeight
 
                         });
