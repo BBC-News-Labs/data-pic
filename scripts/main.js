@@ -188,13 +188,14 @@ $(document).on('ready', function(){
     updateCodeLineNumber('html');
     changeTextareaSize('html');
 
-    if (navigatior.userAgent.match(/MSIE/) == null) {
+    // var ie10andbelow = navigator.userAgent.indexOf('MSIE') != -1
+
+    // var allBrowsers = if(navigator.userAgent.indexOf("Mozilla") > 0
+
+    if (!ie10andbelow) {
     setUpDataPicHTMLClipboard();
     };
 
-
-     // $('.annotations img').css('display', 'none');
-     // $('.overlays img').css('display', 'none');
 
     $("#h3_annotation").css('display', 'none');
     $("#background_overlay_pic").css('display', 'none');
@@ -479,7 +480,7 @@ var BrowserDetect = {
 $('#d_clip_button').click(function () {
     BrowserDetect.init();
     if (BrowserDetect.browser === "Explorer" || "Trident") {
-        alert ('Sorry, this feature does not work on Internet Explorer.');
+        alert ('To copy the code press Ctrl + C.');
         // console.log("You are using <b>" + BrowserDetect.browser + "</b> with version <b>" + BrowserDetect.version + "</b>");
     }
 });

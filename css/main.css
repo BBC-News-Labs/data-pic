@@ -257,14 +257,14 @@ div.code-lines span {
     border: none;
 }
 
-/*#explainer {
+#explainer {
     font-size: 15px;
     z-index: 1;
     position: absolute;
     top:62%;
     left:3%;
     font-family: Arial;
-}*/
+}
 
 #preview-overlay {
     background-color: yellow;
@@ -514,6 +514,7 @@ div.code-lines span {
     font-size: 15px;
     height: 60%;
     top: -29%;
+    width: 90%;
     z-index: 1;
 }
 
