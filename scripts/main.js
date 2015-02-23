@@ -296,7 +296,7 @@ $(document).on('ready', function(){
 
 
                     if (i < backgroundArray.length - 1) {
-
+console.log(backgroundArray.length - 1);
                         $(backgroundArray[i+1]).css({
                         'display': 'block',
                         'position': 'absolute',
@@ -304,6 +304,7 @@ $(document).on('ready', function(){
                         'left': '16px'
                     });
                         } else {
+                            console.log('is doing else');
                             $(backgroundArray[backgroundArray.length]).css ({
                             'display': 'block',
                             'position': 'absolute',
