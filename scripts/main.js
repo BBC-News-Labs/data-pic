@@ -199,6 +199,8 @@ $(document).on('ready', function(){
     setUpDataPicHTMLClipboard();
 
      $('.annotations img').css('display', 'none');
+     $('.overlays img').css('display', 'none');
+
 
     // $("#h3_annotation").hide();
     // $("#background_overlay_pic").hide();
