@@ -298,7 +298,8 @@ $(document).on('ready', function(){
                         'left': '16px'
                     });
 
-                    $(backgroundArray[i+1]).end().find(':last').css ({
+
+                    $(backgroundArray[i] === 6).css ({
                         'display': 'block',
                         'position': 'absolute',
                         'top': y.top + 24 + 'px',
