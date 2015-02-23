@@ -292,22 +292,28 @@ $(document).on('ready', function(){
                     myWidth = $("#iframe-preview").contents().find('.outer_wrapper')[0].clientWidth;
 
                     $('.overlays img').css('display', 'none');
-                    $(backgroundArray[i+1]).css({
+
+
+
+                    if (i < backgroundArray.length) {
+
+                        $(backgroundArray[i+1]).css({
                         'display': 'block',
                         'position': 'absolute',
                         'top': x.top + y.top + 4 + 'px',
                         'left': '16px'
                     });
+                        } else {
+                            $(backgroundArray[backgroundArray.length]).css ({
+                            'display': 'block',
+                            'position': 'absolute',
+                            'top': y.top + 24 + 'px',
+                            'left': '8px',
+                            'width': myWidth + 2 + 'px',
+                            'height': myHeight
+                        });
+                    };
 
-
-                    $(backgroundArray[6]).css ({
-                        'display': 'block',
-                        'position': 'absolute',
-                        'top': y.top + 24 + 'px',
-                        'left': '8px',
-                        'width': myWidth + 2 + 'px',
-                        'height': myHeight
-                    });
 
 
                     // ANNOTATIONS
