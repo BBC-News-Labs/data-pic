@@ -300,7 +300,7 @@ $(document).on('ready', function(){
                     });
 
 
-                    $(backgroundArray[i] === 6).css ({
+                    $(backgroundArray[6]).css ({
                         'display': 'block',
                         'position': 'absolute',
                         'top': y.top + 24 + 'px',
