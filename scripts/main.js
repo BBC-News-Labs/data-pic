@@ -213,7 +213,7 @@ $(document).on('ready', function(){
 
     h2_offset = $("#iframe-preview").contents().find('#h2_annotation').offset();
 
-    $("#background_overlay_h2").css('display', 'block') && $("#h2_annotation").css('display', 'block') && $("#h2_explainer").css('display', 'none');
+    $("#background_overlay_h2").css('display', 'block') && $("#h2_annotation").css('display', 'block');
 
 
     setTimeout(function(){
