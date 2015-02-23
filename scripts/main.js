@@ -300,7 +300,7 @@ $(document).on('ready', function(){
                         'display': 'block',
                         'position': 'absolute',
                         'top': x.top + y.top + 4 + 'px',
-                        'right': x.left + 90 + 'px' + '!important'
+                        'right': x.left + 90 + 'px'
                     });
 
 
