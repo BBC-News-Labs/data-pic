@@ -200,8 +200,6 @@ $(document).on('ready', function(){
      // $('.annotations img').css('display', 'none');
      // $('.overlays img').css('display', 'none');
 
-    alert('hide');
-
     $("#h3_annotation").css('display', 'none');
     $("#background_overlay_pic").css('display', 'none');
     $("#impact_figure_annotation").css('display', 'none');
