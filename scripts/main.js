@@ -4,6 +4,8 @@ var wtop; // preview window current top position
 
 // >>> Main functions
 
+    alert('one');
+
 var loadData = function(frame, html) {
     // function that creates html document to be uploaded on iframe
     // contentDocument gets what's inside the iframe.
@@ -168,6 +170,7 @@ var primeIframe = function() {
     });
 }
 
+    alert('one and a half');
 
 var index = 0;
 var get_h2 = '';
@@ -190,10 +193,9 @@ var annotationArray;
 var colourHighlighting = '';
 
 $(document).on('ready', function(){
-    alert('one');
+    alert('two');
     onClickFunctions();
     codeLineNumberManagement();
-    alert('two');
     primeIframe();
 
     updateCodeLineNumber('html');
