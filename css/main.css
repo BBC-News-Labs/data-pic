@@ -378,13 +378,15 @@ div.code-lines span {
 
 /*Annotation Array stylings */
 
-/*#h2_annotation {
+#h2_annotation {
     left: 50%;
     position: absolute;
     top: 38px;
     z-index: 1;
     display: none;
 }
+
+/*
 
 #h3_annotation {
     background-image: url('../images/h3_heading.png');

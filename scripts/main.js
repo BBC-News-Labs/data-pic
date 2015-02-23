@@ -202,6 +202,8 @@ $(document).on('ready', function(){
     $("#background_overlay_pic").hide();
     $("#impact_figure_annotation").hide();
     $("#paragraph_annotation").hide();
+    $("#source_annotation").hide();
+     $("#list_figures_annotation").hide();
 
     $("#list_figures_annotation").hide;
 
