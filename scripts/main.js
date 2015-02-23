@@ -198,8 +198,8 @@ $(document).on('ready', function(){
     changeTextareaSize('html');
     setUpDataPicHTMLClipboard();
 
-     $('.annotations img').css('display', 'none');
-     $('.overlays img').css('display', 'none');
+     // $('.annotations img').css('display', 'none');
+     // $('.overlays img').css('display', 'none');
 
 
     // $("#h3_annotation").hide();
