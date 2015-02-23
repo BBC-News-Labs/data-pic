@@ -187,7 +187,7 @@ $(document).on('ready', function(){
 
     updateCodeLineNumber('html');
     changeTextareaSize('html');
-    setUpDataPicHTMLClipboard();
+    //setUpDataPicHTMLClipboard();
 
      // $('.annotations img').css('display', 'none');
      // $('.overlays img').css('display', 'none');
@@ -273,6 +273,9 @@ $(document).on('ready', function(){
 
                     $('.annotations img').css('display', 'none');
                     $(annotationArray[i+1]).css('display', 'block');
+
+                    $('.overlays img').css('display', 'none');
+                    $(backgroundArray[i+1]).css('display', 'block');
 
                     // if (BrowserDetect.browser === "Explorer" || "Trident") {
                     //     $(backgroundArray[i+1]).css('display', 'block');
@@ -419,15 +422,15 @@ $(function() {
 });
 };
 
-var setUpDataPicHTMLClipboard = function () {
-    var client = new ZeroClipboard( document.getElementById("d_clip_button") );
-    client.on( "ready", function( readyEvent ) {
-      client.on( "copy", function (e) {
-        var htmlString = document.getElementById('html-window').value;
-        ZeroClipboard.setData("text/plain", htmlString);
-      });
-    } );
-};
+// var setUpDataPicHTMLClipboard = function () {
+//     var client = new ZeroClipboard( document.getElementById("d_clip_button") );
+//     client.on( "ready", function( readyEvent ) {
+//       client.on( "copy", function (e) {
+//         var htmlString = document.getElementById('html-window').value;
+//         ZeroClipboard.setData("text/plain", htmlString);
+//       });
+//     } );
+// };
 
 var BrowserDetect = {
         init: function () {
