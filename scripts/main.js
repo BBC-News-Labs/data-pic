@@ -187,7 +187,11 @@ $(document).on('ready', function(){
 
     updateCodeLineNumber('html');
     changeTextareaSize('html');
+
+    if (navigatior.userAgent.match(/MSIE/) == null) {
     setUpDataPicHTMLClipboard();
+    };
+
 
      // $('.annotations img').css('display', 'none');
      // $('.overlays img').css('display', 'none');
