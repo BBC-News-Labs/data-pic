@@ -267,7 +267,6 @@ $(document).on('ready', function(){
 
 
            if (originalArray[i].html() !== $("#iframe-preview").contents().find(changedArray[i]).html()) {
-            console.log('gets into this function');
                     $('.explainer').css('display', 'none');
                     $(explainerArray[i+1]).css('display', 'block');
 
@@ -383,7 +382,7 @@ $('#screenshot').click(function () {
 
 
 
-console.log('gets to here***************');
+//console.log('gets to here***************');
     var x=window.open('#');
 //$(x).append(newIframe);
 
