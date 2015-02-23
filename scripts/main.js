@@ -193,10 +193,12 @@ $(document).on('ready', function(){
     onClickFunctions();
     codeLineNumberManagement();
     primeIframe();
+    alert('one');
 
     updateCodeLineNumber('html');
     changeTextareaSize('html');
     setUpDataPicHTMLClipboard();
+    alert('two');
 
      // $('.annotations img').css('display', 'none');
      // $('.overlays img').css('display', 'none');
@@ -296,7 +298,6 @@ $(document).on('ready', function(){
 
 
                     if (i < backgroundArray.length - 2) {
-console.log(i);
                         $(backgroundArray[i+1]).css({
                         'display': 'block',
                         'position': 'absolute',
@@ -304,7 +305,6 @@ console.log(i);
                         'left': '16px'
                     });
                         } else {
-                            console.log('is doing else');
                             $(backgroundArray[backgroundArray.length - 1]).css ({
                             'display': 'block',
                             'position': 'absolute',
