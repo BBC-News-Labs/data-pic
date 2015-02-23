@@ -313,8 +313,8 @@ $(document).on('ready', function(){
                         $(backgroundArray[6]).css({
                         'display': 'block',
                         'position': 'absolute',
-                        'top': y.top + 14 + 'px',
-                        'left': '15px',
+                        'top': y.top + 29 + 'px',
+                        'left': '8px',
                         'width': myWidth + 10 + 'px',
                         'height': myHeight
 
