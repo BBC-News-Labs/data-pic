@@ -188,7 +188,7 @@ $(document).on('ready', function(){
     updateCodeLineNumber('html');
     changeTextareaSize('html');
 
-    var ie10andbelow = navigator.userAgent.indexOf('MSIE') != -1
+    var ie10andbelow = navigator.userAgent.indexOf('MSIE') != -1;
 
     // var allBrowsers = if(navigator.userAgent.indexOf("Mozilla") > 0
 
