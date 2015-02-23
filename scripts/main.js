@@ -292,7 +292,8 @@ $(document).on('ready', function(){
                         'top': x.top + y.top + 4 + 'px',
                         'left': '16px'
 
-                        if (i === 6) {
+                       });
+
                         console.log(backgroundArray.indexOf( 6 ));
 
                             $(backgroundArray[6]).css({
@@ -304,9 +305,9 @@ $(document).on('ready', function(){
                             'height': myHeight
 
                             });
-                        };
 
-                    });
+
+
 
 
                     // ANNOTATIONS
