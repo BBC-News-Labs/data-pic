@@ -437,6 +437,7 @@ div.code-lines span {
     position: absolute;
     top: 42px;
     z-index: 0;
+    display: block;
 }
 
 #background_overlay_h3 {

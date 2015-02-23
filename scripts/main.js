@@ -314,8 +314,8 @@ $(document).on('ready', function(){
                         'display': 'block',
                         'position': 'absolute',
                         'top': y.top + 14 + 'px',
-                        'left': '10px',
-                        'width': myWidth,
+                        'left': '15px',
+                        'width': myWidth + 10 'px',
                         'height': myHeight
 
                         });
