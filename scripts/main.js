@@ -291,6 +291,21 @@ $(document).on('ready', function(){
                         'position': 'absolute',
                         'top': x.top + y.top + 4 + 'px',
                         'left': '16px'
+
+                        if (backgroundArray[6] == i) {
+                        console.log(backgroundArray.indexOf( 6 ));
+
+                            $(backgroundArray[6]).css({
+                            'display': 'block',
+                            'position': 'absolute',
+                            'top': y.top + 24 + 'px',
+                            'left': '8px',
+                            'width': myWidth + 2 + 'px',
+                            'height': myHeight
+
+                            });
+                        };
+
                     });
 
 
@@ -313,17 +328,6 @@ $(document).on('ready', function(){
 
 
              }
-                    console.log(backgroundArray.indexOf( 6 ));
-
-                        $(backgroundArray[6]).css({
-                        'display': 'block',
-                        'position': 'absolute',
-                        'top': y.top + 24 + 'px',
-                        'left': '8px',
-                        'width': myWidth + 2 + 'px',
-                        'height': myHeight
-
-                        });
 
 
 
