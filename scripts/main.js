@@ -207,6 +207,8 @@ $(document).on('ready', function(){
 
     $("#list_figures_annotation").hide;
 
+    h2_offset = $("#iframe-preview").contents().find('#h2_annotation').offset();
+
     $("#background_overlay_h2").show(1000) && $("#h2_annotation").show(1000) && $("#h2_explainer").show(1000);
 
 
@@ -267,14 +269,13 @@ $(document).on('ready', function(){
         get_html_window = $('#html-window').contents().text();
 
         setInterval(function counter (){
-            // console.log('orginal array ' + originalArray.length);
 
         for (var i =0; i < originalArray.length; i++) {
 
 
 
            if (originalArray[i].html() !== $("#iframe-preview").contents().find(changedArray[i]).html()) {
-
+            console.log('gets into this function');
                     $('.explainer').css('display', 'none');
                     $(explainerArray[i+1]).css('display', 'block');
 
@@ -285,12 +286,6 @@ $(document).on('ready', function(){
                     y = $("#iframe-preview").contents().find('#inner_wrapper').offset();
                     myHeight = $("#iframe-preview").contents().find('.outer_wrapper')[0].clientHeight;
                     myWidth = $("#iframe-preview").contents().find('.outer_wrapper')[0].clientWidth;
-
-                    console.log('outer wrapper height ' + myHeight);
-                    console.log('outer wrapper width ' + myWidth);
-                    console.log('top ' + x.top);
-                    console.log('inner ' + y.top);
-                    console.log('changedArray ' + changedArray[i]);
 
                     $('.overlays img').css('display', 'none');
                     $(backgroundArray[i+1]).css({
