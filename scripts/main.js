@@ -211,8 +211,6 @@ $(document).on('ready', function(){
 
     $("#list_figures_annotation").css('display', 'none');
 
-    h2_offset = $("#iframe-preview").contents().find('#h2_annotation').offset();
-
     $("#background_overlay_h2").css('display', 'block') && $("#h2_annotation").css('display', 'block');
 
 
