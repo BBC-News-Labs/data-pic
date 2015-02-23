@@ -295,7 +295,7 @@ $(document).on('ready', function(){
 
 
 
-                    if (i < backgroundArray.length) {
+                    if (i < backgroundArray.length - 1) {
 
                         $(backgroundArray[i+1]).css({
                         'display': 'block',
