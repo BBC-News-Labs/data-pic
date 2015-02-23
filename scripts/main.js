@@ -192,13 +192,25 @@ $(document).on('ready', function(){
     updateCodeLineNumber('html');
     changeTextareaSize('html');
 
-    var ie10andbelow = navigator.userAgent.indexOf('MSIE') != -1;
-
     // var allBrowsers = if(navigator.userAgent.indexOf("Mozilla") > 0
 
+
+
+    var setUpDataPicHTMLClipboard = function () {
+
+    var ie10andbelow = navigator.userAgent.indexOf('MSIE') != -1;
+
+
     if (!ie10andbelow) {
-    setUpDataPicHTMLClipboard();
+            var client = new ZeroClipboard( document.getElementById("d_clip_button") );
+            client.on( "ready", function( readyEvent ) {
+            client.on( "copy", function (e) {
+            var htmlString = document.getElementById('html-window').value;
+            ZeroClipboard.setData("text/plain", htmlString);
+      });
+    } );
     };
+};
 
 
     $("#h3_annotation").css('display', 'none');
@@ -428,16 +440,6 @@ $(function() {
         axis: "x"
     });
 });
-};
-
-var setUpDataPicHTMLClipboard = function () {
-    var client = new ZeroClipboard( document.getElementById("d_clip_button") );
-    client.on( "ready", function( readyEvent ) {
-      client.on( "copy", function (e) {
-        var htmlString = document.getElementById('html-window').value;
-        ZeroClipboard.setData("text/plain", htmlString);
-      });
-    } );
 };
 
 var BrowserDetect = {
