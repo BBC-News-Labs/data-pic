@@ -199,6 +199,7 @@ $(document).on('ready', function(){
     setUpDataPicHTMLClipboard();
 
     $("#h3_annotation").hide();
+    $("#background_overlay_pic").hide();
     $("#impact_figure_annotation").hide();
     $("#paragraph_annotation").hide();
 
@@ -295,7 +296,10 @@ $(document).on('ready', function(){
                     myHeight = $("#iframe-preview").contents().find('.outer_wrapper')[0].clientHeight;
                     myWidth = $("#iframe-preview").contents().find('.outer_wrapper')[0].clientWidth;
 
-                    $(backgroundArray[6]).css({
+                    if (backgroundArray.indexOf( 6 ) == i ) {
+                        console.log('entered if statement');
+
+                        $(backgroundArray[6]).css({
                         'display': 'block',
                         'position': 'absolute',
                         'top': y.top + 14 + 'px',
@@ -303,7 +307,10 @@ $(document).on('ready', function(){
                         'width': myWidth,
                         'height': myHeight
 
-                    });
+                        });
+                    };
+
+
 
                     console.log('outer wrapper height ' + myHeight);
                     console.log('outer wrapper width ' + myWidth);
