@@ -190,15 +190,15 @@ var annotationArray;
 var colourHighlighting = '';
 
 $(document).on('ready', function(){
+    alert('one');
     onClickFunctions();
     codeLineNumberManagement();
+    alert('two');
     primeIframe();
-    alert('one');
 
     updateCodeLineNumber('html');
     changeTextareaSize('html');
     setUpDataPicHTMLClipboard();
-    alert('two');
 
      // $('.annotations img').css('display', 'none');
      // $('.overlays img').css('display', 'none');
