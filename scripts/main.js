@@ -369,24 +369,25 @@ count = 0;
 $('#screenshot').click(function () {
 
 //IE8 Fallback
-ie10andbelow = navigator.userAgent.indexOf('MSIE') != -1;
+    ie10andbelow = navigator.userAgent.indexOf('MSIE') != -1;
 
 
     if (!ie10andbelow) {
-           $('.explainer').css('display', 'none');
-           $('.annotations img').css('display', 'none');
-           $('.overlays img').css('display', 'none');
-    alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
+        $('.explainer').css('display', 'none');
+        $('.annotations img').css('display', 'none');
+        $('.overlays img').css('display', 'none');
+        alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
     } else {
-    newIframe = document.createElement('iframe');
-    iframeCopy = document.getElementById('html-window').value;
+
+        newIframe = document.createElement('iframe');
+        iframeCopy = document.getElementById('html-window').value;
 
 
     // newWindow = window.open();
     // $(newWindow).append(newIframe);
 
     //var w = window.open('http://'+document.domain+'/window');
-    var html = iframeCopy;
+        var html = iframeCopy;
     // w.document.domain = document.domain;
     // w.document.writeln(html);
     // w.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
@@ -418,11 +419,11 @@ ie10andbelow = navigator.userAgent.indexOf('MSIE') != -1;
 
 //console.log('gets to here***************');
     var x=window.open('#');
-//$(x).append(newIframe);
+    //$(x).append(newIframe);
 
-x.document.open();
-x.document.write(html);
-x.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
+    x.document.open();
+    x.document.write(html);
+    x.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
 //x.close();
 
 
@@ -443,7 +444,8 @@ x.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr 
      // top.consoleRef.document.close()
 
     //}
-};
+    }
+});
 
 
 var setUpUITabs = function () {
