@@ -118,8 +118,6 @@ var codeLineNumberManagement = function() {
 
     $("#html-window").on('scroll', function() {
         $(".code-lines").scrollTop($(this).scrollTop());
-        console.log('scroll position' + $(this).scrollTop());
-        console.log('document scrollTop ' + this.scrollTop);
     })
 
 
