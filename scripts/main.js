@@ -188,6 +188,7 @@ $(document).on('ready', function(){
     onClickFunctions();
     codeLineNumberManagement();
     primeIframe();
+    setUpDataPicHTMLClipboard();
 
     updateCodeLineNumber('html');
     changeTextareaSize('html');
@@ -459,7 +460,7 @@ if (w < 1259) {
 }
 
 
-setUpDataPicHTMLClipboard();
+//setUpDataPicHTMLClipboard();
 // setUpUITabs();
 // //HidePreviewWindowAnnotations();
 // loadData();
