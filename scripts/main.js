@@ -367,7 +367,7 @@ count = 0;
 $('#screenshot').click(function () {
 
 //IE8 Fallback
-    ie10andbelow = navigator.userAgent.indexOf('MSIE') != -1;
+    ie10andbelow = navigator.userAgent.indexOf('MSIE 8.0') != -1;
 
 
     if (ie10andbelow) {
