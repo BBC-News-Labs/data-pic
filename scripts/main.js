@@ -294,8 +294,8 @@ if (w < 1200) {
 
                         x = $("#iframe-preview").contents().find(changedArray[i + 1]).offset();
                         y = $("#iframe-preview").contents().find('#inner_wrapper').offset();
-                        myHeight = $("#iframe-preview").contents().find('.outer_wrapper')[0].clientHeight;
-                        myWidth = $("#iframe-preview").contents().find('.outer_wrapper')[0].clientWidth;
+                        myHeight = $("#iframe-preview").contents().find('.outer_wrapper').clientHeight;
+                        myWidth = $("#iframe-preview").contents().find('.outer_wrapper').clientWidth;
 
                         $('.overlays img').css('display', 'none');
 
