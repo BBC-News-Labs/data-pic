@@ -163,6 +163,22 @@ var primeIframe = function() {
     });
 }
 
+var setUpDataPicHTMLClipboard = function () {
+
+    ie10andbelow = navigator.userAgent.indexOf('MSIE') != -1;
+
+
+    if (!ie10andbelow) {
+            var client = new ZeroClipboard( document.getElementById("d_clip_button") );
+            client.on( "ready", function( readyEvent ) {
+            client.on( "copy", function (e) {
+            var htmlString = document.getElementById('html-window').value;
+            ZeroClipboard.setData("text/plain", htmlString);
+      });
+    } );
+    };
+};
+
 var index = 0;
 var get_h2 = '';
 var get_h3 = '';
@@ -197,21 +213,7 @@ $(document).on('ready', function(){
 
 
 
-    var setUpDataPicHTMLClipboard = function () {
 
-    ie10andbelow = navigator.userAgent.indexOf('MSIE') != -1;
-
-
-    if (!ie10andbelow) {
-            var client = new ZeroClipboard( document.getElementById("d_clip_button") );
-            client.on( "ready", function( readyEvent ) {
-            client.on( "copy", function (e) {
-            var htmlString = document.getElementById('html-window').value;
-            ZeroClipboard.setData("text/plain", htmlString);
-      });
-    } );
-    };
-};
 
 
     $("#h3_annotation").css('display', 'none');
