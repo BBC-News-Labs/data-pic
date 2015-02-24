@@ -22,7 +22,7 @@ if (w < 1200) {
 
     }
 
-var old = '';
+    var old = '';
 
 
     var changeTextareaSize = function(tab_name) {
@@ -157,18 +157,21 @@ var old = '';
 
     var setUpDataPicHTMLClipboard = function () {
 
-        ie10andbelow = navigator.userAgent.indexOf('MSIE') != -1;
+        if (navigator.userAgent.indexOf('MSIE') != -1 || navigator.userAgent.indexOf('Windows NT') != -1) {
+            var ie = true;
+        } 
 
-
-        if (!ie10andbelow) {
-                var client = new ZeroClipboard( document.getElementById("d_clip_button") );
-                client.on( "ready", function( readyEvent ) {
+        if (!ie) {
+            var client = new ZeroClipboard( document.getElementById("d_clip_button") );
+            client.on( "ready", function( readyEvent ) {
                 client.on( "copy", function (e) {
-                var htmlString = document.getElementById('html-window').value;
-                ZeroClipboard.setData("text/plain", htmlString);
-          });
-        } );
-        };
+                    var htmlString = document.getElementById('html-window').value;
+                    ZeroClipboard.setData("text/plain", htmlString);
+                });
+            });
+        } else {
+            $("d_clip_button").css("visibility", "hidden");
+        }
     };
 
     var index = 0;
@@ -356,8 +359,8 @@ var old = '';
 
     count = 0;
 
-        var iframeCopy = '';
-        var newWindow = '';
+    var iframeCopy = '';
+    var newWindow = '';
 
     $('#screenshot').click(function () {
 
@@ -394,44 +397,44 @@ var old = '';
     };
 
     var BrowserDetect = {
-            init: function () {
-                this.browser = this.searchString(this.dataBrowser) || "Other";
-                this.version = this.searchVersion(navigator.userAgent) || this.searchVersion(navigator.appVersion) || "Unknown";
-            },
-            searchString: function (data) {
-                for (var i = 0; i < data.length; i++) {
-                    var dataString = data[i].string;
-                    this.versionSearchString = data[i].subString;
+        init: function () {
+            this.browser = this.searchString(this.dataBrowser) || "Other";
+            this.version = this.searchVersion(navigator.userAgent) || this.searchVersion(navigator.appVersion) || "Unknown";
+        },
+        searchString: function (data) {
+            for (var i = 0; i < data.length; i++) {
+                var dataString = data[i].string;
+                this.versionSearchString = data[i].subString;
 
-                    if (dataString.indexOf(data[i].subString) !== -1) {
-                        return data[i].identity;
-                    }
+                if (dataString.indexOf(data[i].subString) !== -1) {
+                    return data[i].identity;
                 }
-            },
-            searchVersion: function (dataString) {
-                var index = dataString.indexOf(this.versionSearchString);
-                if (index === -1) {
-                    return;
-                }
+            }
+        },
+        searchVersion: function (dataString) {
+            var index = dataString.indexOf(this.versionSearchString);
+            if (index === -1) {
+                return;
+            }
 
-                var rv = dataString.indexOf("rv:");
-                if (this.versionSearchString === "Trident" && rv !== -1) {
-                    return parseFloat(dataString.substring(rv + 3));
-                } else {
-                    return parseFloat(dataString.substring(index + this.versionSearchString.length + 1));
-                }
-            },
+            var rv = dataString.indexOf("rv:");
+            if (this.versionSearchString === "Trident" && rv !== -1) {
+                return parseFloat(dataString.substring(rv + 3));
+            } else {
+                return parseFloat(dataString.substring(index + this.versionSearchString.length + 1));
+            }
+        },
 
-            dataBrowser: [
-                {string: navigator.userAgent, subString: "Chrome", identity: "Chrome"},
-                {string: navigator.userAgent, subString: "MSIE", identity: "Explorer"},
-                {string: navigator.userAgent, subString: "Trident", identity: "Explorer"},
-                {string: navigator.userAgent, subString: "Firefox", identity: "Firefox"},
-                {string: navigator.userAgent, subString: "Safari", identity: "Safari"},
-                {string: navigator.userAgent, subString: "Opera", identity: "Opera"}
-            ]
+        dataBrowser: [
+            {string: navigator.userAgent, subString: "Chrome", identity: "Chrome"},
+            {string: navigator.userAgent, subString: "MSIE", identity: "Explorer"},
+            {string: navigator.userAgent, subString: "Trident", identity: "Explorer"},
+            {string: navigator.userAgent, subString: "Firefox", identity: "Firefox"},
+            {string: navigator.userAgent, subString: "Safari", identity: "Safari"},
+            {string: navigator.userAgent, subString: "Opera", identity: "Opera"}
+        ]
 
-        };
+    };
 
 };
 
