@@ -377,7 +377,6 @@ ie10andbelow = navigator.userAgent.indexOf('MSIE') != -1;
            $('.overlays img').css('display', 'none');
     alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
     };
-};
 
 
     newIframe = document.createElement('iframe');
