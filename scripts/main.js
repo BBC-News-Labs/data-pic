@@ -4,6 +4,15 @@ var wtop; // preview window current top position
 
 // >>> Main functions
 
+var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+
+// console.log('w ' + w + 'h ' + h);
+
+if (w < 1000) {
+    alert ('To use this applicaton your screen needs to be at least 1260px wide.');
+} else {
+
 var loadData = function(frame, html) {
     // function that creates html document to be uploaded on iframe
     // contentDocument gets what's inside the iframe.
@@ -441,6 +450,8 @@ var BrowserDetect = {
 
     };
 
+};
+
 
 // $('#d_clip_button').click(function () {
 //     // BrowserDetect.init();
@@ -451,15 +462,6 @@ var BrowserDetect = {
 // });
 
 //Gets devive width
-var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-
-// console.log('w ' + w + 'h ' + h);
-
-if (w < 1259) {
-    alert ('This application only supports laptop and desktop.');
-    $("p:first").addClass("device_message");
-}
 
 
 //setUpDataPicHTMLClipboard();
