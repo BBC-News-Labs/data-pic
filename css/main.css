@@ -232,10 +232,6 @@ div.code-lines span {
     top: -9px;
 }
 
-/*#div-preview.docked div.title-bar p, #div-preview.docked div.title-bar img.close {
-    display: none;
-}*/
-
 #div-preview.docked iframe {
     top: -20px;
     width: 598px;
@@ -264,18 +260,6 @@ div.code-lines span {
     top:62%;
     left:3%;
     font-family: Arial;
-}
-
-#preview-overlay {
-    background-color: yellow;
-    height: 65%;
-    left: 10px;
-    opacity: 0.5;
-    position: absolute;
-    top: 40px;
-    width: 96%;
-    display: none;
-
 }
 
 #html-window {
@@ -388,52 +372,6 @@ div.code-lines span {
     display: none;
 }
 
-/*
-
-#h3_annotation {
-    background-image: url('../images/h3_heading.png');
-    left: 50%;
-    position: absolute;
-    top: 68px;
-    z-index: 1;
-    width:50%;
-    height:31px
-}
-
-#paragraph_annotation {
-    left: 50%;
-    position: absolute;
-    top: 148px;
-    z-index: 1;
-    width:50%;
-    height:31px
-}
-
-#impact_figure_annotation {
-    display: none;
-    left: 52%;
-    position: absolute;
-    top: 98px;
-    z-index: 1;
-}
-
-#list_figures_annotation {
-    display: none;
-    left: 52%;
-    position: absolute;
-    top: 191px;
-    width:50%;
-    z-index: 1;
-}
-
-#source_annotation {
-    display: none;
-    left: 51%;
-    position: absolute;
-    top: 360px;
-    width:50%;
-    z-index: 1;
-}*/
 
 /*Background overlays*/
 #background_overlay_h2 {
@@ -582,12 +520,6 @@ div.code-lines span {
         top: 103px;
     }
 
-    #preview-overlay {
-
-        height: 59%;
-        width: 97%;
-    }
-
     #d_clip_button {
 
         left: 83%;
@@ -602,18 +534,4 @@ div.code-lines span {
 
 .show {
     display: block !important;
-}
-
-@media (min-width: 1px) and (max-width: 1200px) {
-        body { display: none }
-        #device_message .device_message  {
-            display: block;
-            position: absolute;
-            left: 15px;
-            top: 465px;
-            width: 95%;
-            font-size: 20px;
-            color: red;
-        }
-
 }
