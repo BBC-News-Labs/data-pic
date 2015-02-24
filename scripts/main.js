@@ -370,7 +370,7 @@ $('#screenshot').click(function () {
     ie10andbelow = navigator.userAgent.indexOf('MSIE') != -1;
 
 
-    if (!ie10andbelow) {
+    if (ie10andbelow) {
         $('.explainer').css('display', 'none');
         $('.annotations img').css('display', 'none');
         $('.overlays img').css('display', 'none');
@@ -380,68 +380,11 @@ $('#screenshot').click(function () {
         newIframe = document.createElement('iframe');
         iframeCopy = document.getElementById('html-window').value;
 
-
-    // newWindow = window.open();
-    // $(newWindow).append(newIframe);
-
-    //var w = window.open('http://'+document.domain+'/window');
         var html = iframeCopy;
-    // w.document.domain = document.domain;
-    // w.document.writeln(html);
-    // w.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
-    // w.document.close();
-    // newWindow.document.write(iframeCopy);
-    // newWindow.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
-    // newWindow.document.close();
-
-    //writeConsole('Hello from JavaScript!');
-    //function writeConsole(content) {
-     // top.consoleRef=window.open('','',
-     //  'width=625,height=400'
-     //   +',menubar=0'
-     //   +',toolbar=1'
-     //   +',status=0'
-     //   +',scrollbars=1'
-     //   +',resizable=1')
-     // top.consoleRef.document.writeln(
-     //  '<html><head><title>Console</title></head>'
-     //   +'<body bgcolor=white onLoad="self.focus()">'
-     //   +html
-     //   +'<h1>TEST</h1>'
-     //   +'</body></html>'
-     // )
-//     top.consoleRef.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
-     //top.consoleRef.document.close()
-
-
-
-//console.log('gets to here***************');
-    var x=window.open('#');
-    //$(x).append(newIframe);
-
-    x.document.open();
-    x.document.write(html);
-    x.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
-//x.close();
-
-
-     // top.consoleRef=window.open('','myconsole',
-     //  'width=625,height=400'
-     //   +',menubar=0'
-     //   +',toolbar=1'
-     //   +',status=0'
-     //   +',scrollbars=1'
-     //   +',resizable=1')
-     // top.consoleRef.document.writeln(
-     //  '<html><head><title>Console</title></head>'
-     //   +'<body bgcolor=white onLoad="self.focus()">'
-     //   +html
-     //   +'</body></html>'
-     // )
-     // top.consoleRef.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
-     // top.consoleRef.document.close()
-
-    //}
+        var x=window.open('#');
+        x.document.open();
+        x.document.write(html);
+        x.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
     }
 });
 
