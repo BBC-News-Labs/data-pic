@@ -442,7 +442,7 @@ x.alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr 
      // top.consoleRef.document.close()
 
     //}
-});
+};
 
 
 var setUpUITabs = function () {
