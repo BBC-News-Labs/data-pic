@@ -302,21 +302,21 @@ if (w < 1200) {
 
 
                         if (i < backgroundArray.length - 2) {
-                            $(backgroundArray[i+1]).css({
-                            'display': 'block',
-                            'position': 'absolute',
-                            'top': x.top + y.top + 4 + 'px',
-                            'left': '16px'
-                        });
-                            } else {
-                                console.log('gets into this function');
-                                $(backgroundArray[backgroundArray.length - 1]).css({
+                                $(backgroundArray[i+1]).css({
                                 'display': 'block',
                                 'position': 'absolute',
-                                'top': y.top + 24 + 'px',
-                                'left': '8px',
-                                'width': myWidth + 2 + 'px',
-                                'height': myHeight
+                                'top': x.top + y.top + 4 + 'px',
+                                'left': '16px'
+                            });
+                        } else {
+                            console.log('gets into this function');
+                            $(backgroundArray[backgroundArray.length - 1]).css({
+                                'display': 'block'
+                                // 'position': 'absolute',
+                                // 'top': y.top + 24 + 'px',
+                                // 'left': '8px',
+                                // 'width': myWidth + 2 + 'px',
+                                // 'height': myHeight
                             });
                         };
 
