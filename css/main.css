@@ -402,6 +402,10 @@ div.code-lines span {
     display: none;
 }
 
+#background_overlay_pic {
+    display: none;
+}
+
 /*Explainer Array Stylings */
 
 #explainers {
@@ -488,10 +492,6 @@ div.code-lines span {
     position: absolute;
 }
 
-.change_background {
-    background-color: red;
-}
-
 /*MEDIA QUERIES */
 @media (min-width: 1260px) and (max-width: 1395px) {
 
@@ -523,10 +523,6 @@ div.code-lines span {
     #d_clip_button {
 
         left: 83%;
-    }
-
-    #device_message {
-        display: none !important;
     }
 
 
