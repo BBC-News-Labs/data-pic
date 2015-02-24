@@ -310,7 +310,7 @@ if (w < 1200) {
                         });
                             } else {
                                 console.log('gets into this function');
-                                $(backgroundArray[backgroundArray.length - 1]).css ({
+                                $(backgroundArray[backgroundArray.length - 1]).css({
                                 'display': 'block',
                                 'position': 'absolute',
                                 'top': y.top + 24 + 'px',
