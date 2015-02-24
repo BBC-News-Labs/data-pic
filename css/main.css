@@ -605,7 +605,7 @@ div.code-lines span {
     display: block !important;
 }
 
-@media (min-width: 1px) and (max-width: 1259px) {
+@media (min-width: 1px) and (max-width: 1000px) {
         body { display: none }
         #device_message .device_message  {
             display: block;
