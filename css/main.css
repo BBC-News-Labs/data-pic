@@ -94,9 +94,9 @@ div.code-lines {
 
 div.code-lines span {
     width: 30px;
-    height: 14px;
     text-align: right;
-    font-size: 12px;
+    font-size: 10px;
+    line-height: 15px;
     font-weight: bold;
     color: #494949;
     display: inline-block;
@@ -285,6 +285,8 @@ div.code-lines span {
     right: -6px;
     top: 6px;
     width: 47%;
+    line-height: 15px;
+    font-size: 10px;
 }
 
 #html_window-title-bar {
