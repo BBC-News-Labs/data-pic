@@ -157,7 +157,6 @@ if (w < 1200) {
 
         if (navigator.userAgent.indexOf('MSIE') != -1 || navigator.userAgent.indexOf('Windows NT') != -1) {
             var ie = true;
-        }
 
         if (!ie) {
             var client = new ZeroClipboard( document.getElementById("d_clip_button") );
@@ -168,7 +167,7 @@ if (w < 1200) {
                 });
             });
         } else {
-            $("d_clip_button").css("visibility", "hidden");
+            $("#d_clip_button").css("visibility", "hidden");
         }
     };
 
