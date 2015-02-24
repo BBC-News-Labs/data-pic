@@ -311,7 +311,7 @@ if (w < 1200) {
                             } else {
                                 console.log('gets into this function');
                                 $(backgroundArray[backgroundArray.length - 1]).css ({
-                                'display': 'block',
+                                'display': 'block' + '!important',
                                 'position': 'absolute',
                                 'top': y.top + 24 + 'px',
                                 'left': '8px',
