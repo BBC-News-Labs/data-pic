@@ -320,7 +320,7 @@ if (w < 1200) {
                                 'top': y.top + 24 + 'px',
                                 'left': '8px',
                                 'width': myWidth + 2 + 'px',
-                                'height': myHeight
+                                'height': myHeight + 1 + 'px'
                             });
                         };
 
