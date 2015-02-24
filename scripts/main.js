@@ -203,13 +203,6 @@ if (w < 1200) {
         updateCodeLineNumber('html');
         changeTextareaSize('html');
 
-        // var allBrowsers = if(navigator.userAgent.indexOf("Mozilla") > 0
-
-
-
-
-
-
         $("#h3_annotation").css('display', 'none');
         $("#background_overlay_pic").css('display', 'none');
         $("#impact_figure_annotation").css('display', 'none');
@@ -294,10 +287,10 @@ if (w < 1200) {
                         $('.overlays img').css('display', 'none');
                         $(backgroundArray[i+1]).css('display', 'block');
 
-                        // if (BrowserDetect.browser === "Explorer" || "Trident") {
-                        //     $(backgroundArray[i+1]).css('display', 'block');
+                        if (BrowserDetect.browser === "Explorer" || "Trident") {
+                            $(backgroundArray[i+1]).css('display', 'block');
 
-                        // };
+                        };
 
                         x = $("#iframe-preview").contents().find(changedArray[i + 1]).offset();
                         y = $("#iframe-preview").contents().find('#inner_wrapper').offset();
@@ -316,6 +309,7 @@ if (w < 1200) {
                             'left': '16px'
                         });
                             } else {
+                                console.log('gets into this function');
                                 $(backgroundArray[backgroundArray.length - 1]).css ({
                                 'display': 'block',
                                 'position': 'absolute',
