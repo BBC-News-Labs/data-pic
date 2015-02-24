@@ -108,9 +108,9 @@ if (w < 1200) {
             changeTextareaSize('html');
         });
 
-        // $("#html-window").on('scroll', function() {
-        //     $(".code-lines").scrollTop($(this).scrollTop());
-        // })
+        $("#html-window").on('scroll', function() {
+            $(".code-lines").scrollTop($(this).scrollTop());
+        });
 
     }
 
