@@ -281,7 +281,6 @@ div.code-lines span {
 #html-window {
     height: 594px;
     overflow-y: scroll !important;
-    overflow-x: scroll !important;
     position: relative;
     right: -6px;
     top: 6px;
