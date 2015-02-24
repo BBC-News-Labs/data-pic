@@ -95,7 +95,7 @@ div.code-lines {
 div.code-lines span {
     width: 30px;
     text-align: right;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 15px;
     font-weight: bold;
     color: #494949;
@@ -281,12 +281,13 @@ div.code-lines span {
 #html-window {
     height: 594px;
     overflow-y: scroll !important;
+    overflow-x: scroll !important;
     position: relative;
     right: -6px;
     top: 6px;
     width: 47%;
     line-height: 15px;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 #html_window-title-bar {
