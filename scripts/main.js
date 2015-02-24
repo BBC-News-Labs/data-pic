@@ -439,13 +439,13 @@ var BrowserDetect = {
     };
 
 
-$('#d_clip_button').click(function () {
-    BrowserDetect.init();
-    if (BrowserDetect.browser === "Explorer" || "Trident") {
-        alert ('To copy the code press Ctrl + C.');
-        // console.log("You are using <b>" + BrowserDetect.browser + "</b> with version <b>" + BrowserDetect.version + "</b>");
-    }
-});
+// $('#d_clip_button').click(function () {
+//     // BrowserDetect.init();
+//     // if (BrowserDetect.browser === "Explorer" || "Trident") {
+//     //     alert ('To copy the code press Ctrl + C.');
+//     //     // console.log("You are using <b>" + BrowserDetect.browser + "</b> with version <b>" + BrowserDetect.version + "</b>");
+//     // }
+// });
 
 //Gets devive width
 var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
