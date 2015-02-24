@@ -63,6 +63,7 @@ var old = '';
 
         if (text_buffer['size'] <= 38) { // sets scroll bar to top
             $('#tabs-' + tab_name).scrollTop(0);
+        }
     };
 
     var getTextareaBufferData = function(id_name) {
