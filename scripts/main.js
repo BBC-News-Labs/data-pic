@@ -183,6 +183,7 @@ var originalArray;
 var changedArray;
 var annotationArray;
 var colourHighlighting = '';
+var ie10andbelow = '';
 
 $(document).on('ready', function(){
     onClickFunctions();
@@ -198,7 +199,7 @@ $(document).on('ready', function(){
 
     var setUpDataPicHTMLClipboard = function () {
 
-    var ie10andbelow = navigator.userAgent.indexOf('MSIE') != -1;
+    ie10andbelow = navigator.userAgent.indexOf('MSIE') != -1;
 
 
     if (!ie10andbelow) {
@@ -365,6 +366,20 @@ count = 0;
     var newWindow = '';
 
 $('#screenshot').click(function () {
+
+//IE8 Fallback
+ie10andbelow = navigator.userAgent.indexOf('MSIE') != -1;
+
+
+    if (!ie10andbelow) {
+           $('.explainer').css('display', 'none');
+           $('.annotations img').css('display', 'none');
+           $('.overlays img').css('display', 'none');
+    alert('Take a screenshot by pressing the following keys:\nCtr + Alt + Prt Scr (on a PC)\ncmd + shift + 3 (on a Mac)\nThen use file preview to crop and save your data pic.');
+    };
+};
+
+
     newIframe = document.createElement('iframe');
     iframeCopy = document.getElementById('html-window').value;
 
