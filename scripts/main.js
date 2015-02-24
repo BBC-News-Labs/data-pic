@@ -108,9 +108,9 @@ if (w < 1200) {
             changeTextareaSize('html');
         });
 
-        $("#html-window").on('scroll', function() {
-            $(".code-lines").scrollTop($(this).scrollTop());
-        });
+        // $("#html-window").on('scroll', function() {
+        //     $(".code-lines").scrollTop($(this).scrollTop());
+        // })
 
     }
 
@@ -157,6 +157,8 @@ if (w < 1200) {
 
         if (navigator.userAgent.indexOf('MSIE') != -1 || navigator.userAgent.indexOf('Windows NT') != -1) {
             var ie = true;
+
+        }
 
         if (!ie) {
             var client = new ZeroClipboard( document.getElementById("d_clip_button") );
