@@ -319,8 +319,8 @@ if (w < 1200) {
                                 'position': 'absolute',
                                 'top': y.top + 24 + 'px',
                                 'left': '8px',
-                                'width': myWidth + 2 + 'px',
-                                'height': myHeight + 1 + 'px'
+                                'width': myWidth + 'px',
+                                'height': myHeight + 'px'
                             });
                         };
 
