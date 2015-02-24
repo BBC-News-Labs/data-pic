@@ -6,8 +6,8 @@ var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
 
-if (w < 1000) {
-    alert ('To use this applicaton your screen needs to be at least 1000px wide.');
+if (w < 1200) {
+    alert ('To use this applicaton your screen needs to be at least 1200px wide.');
 } else {
 
     var loadData = function(frame, html) {
