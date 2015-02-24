@@ -459,7 +459,7 @@ if (w < 1259) {
 }
 
 
-// setUpDataPicHTMLClipboard();
+setUpDataPicHTMLClipboard();
 // setUpUITabs();
 // //HidePreviewWindowAnnotations();
 // loadData();
