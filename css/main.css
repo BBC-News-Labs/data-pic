@@ -367,7 +367,7 @@ div.code-lines span {
 #h2_annotation {
     left: 50%;
     position: absolute;
-    top: 38px;
+    top: 48px;
     z-index: 1;
     display: none;
 }
