@@ -305,7 +305,7 @@ if (w < 1200) {
                                 $(backgroundArray[i+1]).css({
                                 'display': 'block',
                                 'position': 'absolute',
-                                'top': x.top + y.top + 4 + 'px',
+                                'top': x.top + y.top + 3 + 'px',
                                 'left': '16px'
                             });
                         } else if (!ie10andbelow) {
@@ -325,7 +325,8 @@ if (w < 1200) {
                                 'display': 'block',
                                 'position': 'absolute',
                                 'top': y.top + 24 + 'px',
-                                'right': '1px',
+                                'right': '8px',
+                                'left': '5px',
                                 'width': '550' + 'px',
                                 'height': '350' + 'px'
 
