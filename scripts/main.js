@@ -309,7 +309,7 @@ if (w < 1200) {
                                 'left': '16px'
                             });
 
-                        } else if (!e10andbelow) {
+                        } else if (!ie10andbelow) {
 
                             $(backgroundArray[backgroundArray.length - 1]).css({
                                 'display': 'block',
@@ -320,6 +320,7 @@ if (w < 1200) {
                                 'height': myHeight + 1 + 'px'
 
                             });
+
                         } else {
 
                             $(backgroundArray[backgroundArray.length - 1]).css({
