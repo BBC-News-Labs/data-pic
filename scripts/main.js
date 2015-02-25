@@ -309,14 +309,14 @@ if (w < 1200) {
                                 'left': '16px'
                             });
                         } else {
-
+                            console.log('gets into this function');
                             $(backgroundArray[backgroundArray.length - 1]).css({
                                 'display': 'block',
-                                'position': 'absolute',
-                                'top': y.top + 24 + 'px',
-                                'left': '8px',
-                                'width': myWidth + 2 + 'px',
-                                'height': myHeight
+                                'position': 'absolute'
+                                // 'top': y.top + 24 + 'px',
+                                // 'left': '8px',
+                                // 'width': myWidth + 2 + 'px',
+                                // 'height': myHeight
                             });
                         };
 
