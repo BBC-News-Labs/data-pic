@@ -308,22 +308,8 @@ if (w < 1200) {
                                 'top': x.top + y.top + 4 + 'px',
                                 'left': '16px'
                             });
-                        } else {
 
-                            if (ie10andbelow) {
-                                console.log(ie10andbelow);
-
-                                $(backgroundArray[backgroundArray.length - 1]).css({
-                                'display': 'block',
-                                'position': 'absolute',
-                                'top': y.top + 24 + 'px',
-                                'left': '8px',
-                                'width':  624 +'px',
-                                'height': 351 + 'px'
-
-                            });
-
-                            }
+                        } else if (!e10andbelow) {
 
                             $(backgroundArray[backgroundArray.length - 1]).css({
                                 'display': 'block',
@@ -334,6 +320,25 @@ if (w < 1200) {
                                 'height': myHeight + 1 + 'px'
 
                             });
+
+                        } else {
+
+                                console.log(ie10andbelow);
+
+                                $(backgroundArray[backgroundArray.length - 1]).css({
+                                'display': 'block',
+                                'position': 'absolute',
+                                'top': y.top + 24 + 'px',
+                                'left': '8px',
+                                'width':  624 +'px',
+                                'height': 351 + 'px'
+
+                                });
+
+                                }
+
+                        });
+
                         };
 
 
