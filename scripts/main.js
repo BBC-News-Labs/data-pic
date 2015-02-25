@@ -222,7 +222,7 @@ if (w < 1200) {
                 $("#iframe-preview").contents().find('#title'),
                 $("#iframe-preview").contents().find('.subtitle'),
                 $("#iframe-preview").contents().find('.super_impact__fig'),
-                $("#iframe-preview").contents().find('.pragraph'),
+                $("#iframe-preview").contents().find('.paragraph'),
                 $("#iframe-preview").contents().find('.impact__fig'),
                 $("#iframe-preview").contents().find('.footer')
 
@@ -233,7 +233,7 @@ if (w < 1200) {
                 '#title',
                 '.subtitle',
                 '.super_impact__fig',
-                '.pragraph',
+                '.paragraph',
                 '.impact__fig',
                 '.footer',
                 '.outer_wrapper'
