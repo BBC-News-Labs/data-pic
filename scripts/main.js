@@ -299,7 +299,7 @@ if (w < 1200) {
 
                         $('.overlays img').css('display', 'none');
 
-
+                        ie10andbelow = navigator.userAgent.indexOf('MSIE 8.0') != -1;
 
                         if (i < backgroundArray.length - 2) {
                                 $(backgroundArray[i+1]).css({
