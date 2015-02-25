@@ -298,7 +298,7 @@ if (w < 1200) {
                         myWidth = $("#iframe-preview").contents().find('.outer_wrapper')[0].clientWidth;
 
                         $('.overlays img').css('display', 'none');
-
+                        ie10andbelow = navigator.userAgent.indexOf('MSIE 8.0') != -1;
 
 
                         if (i < backgroundArray.length - 2) {
@@ -318,21 +318,20 @@ if (w < 1200) {
                                 'width': myWidth + 2 + 'px',
                                 'height': myHeight
                             });
+
                         } else {
 
                             $(backgroundArray[backgroundArray.length - 1]).css({
                                 'display': 'block',
                                 'position': 'absolute',
-                                'top': y.top + 24 + 'px',
-                                'left': '10px',
-                                'width': 570 + 'px',
-                                'height': 349 + 'px'
+                                'top': y.top,
+                                'left': '3px',
+                                'width': '570px',
+                                'height': '349px'
 
                             });
 
                         };
-
-
 
                         // ANNOTATIONS
                         $('.annotations img').css('display', 'none');
