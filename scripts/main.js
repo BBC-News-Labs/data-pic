@@ -328,8 +328,8 @@ if (w < 1200) {
                                 'position': 'absolute',
                                 'top': y.top + 24 + 'px',
                                 'left': '8px',
-                                'width': 351 + 'px',
-                                'height': 624 + 'px'
+                                'width': 351,
+                                'height': 624
 
                             });
 
