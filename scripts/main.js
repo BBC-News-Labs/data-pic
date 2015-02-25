@@ -326,8 +326,7 @@ if (w < 1200) {
                             $(backgroundArray[backgroundArray.length - 1]).css({
                                 'display': 'block',
                                 'position': 'absolute',
-                                'top': y.top + 24 + 'px',
-                                'left': '8px'
+                                'top': y.top
 
                             });
 
