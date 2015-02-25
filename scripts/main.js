@@ -308,7 +308,7 @@ if (w < 1200) {
                                 'top': x.top + y.top + 4 + 'px',
                                 'left': '16px'
                             });
-                        } else if (!ie10andbelow) {
+                        } else {
 
                             $(backgroundArray[backgroundArray.length - 1]).css({
                                 'display': 'block',
@@ -318,18 +318,6 @@ if (w < 1200) {
                                 'width': myWidth + 2 + 'px',
                                 'height': myHeight + 1 + 'px'
                             });
-                        } else {
-
-                             $(backgroundArray[backgroundArray.length - 1]).css({
-                                'display': 'block',
-                                'position': 'absolute',
-                                'top': y.top + 24 + 'px',
-                                'left': '4px',
-                                'width': 500,
-                                'height': 349
-
-                            });
-
                         };
 
 
