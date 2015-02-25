@@ -308,7 +308,7 @@ if (w < 1200) {
                                 'top': x.top + y.top + 4 + 'px',
                                 'left': '16px'
                             });
-                        } else if (!ie10andbelow) {
+                        } else {
 
                             $(backgroundArray[backgroundArray.length - 1]).css({
                                 'display': 'block',
@@ -316,21 +316,8 @@ if (w < 1200) {
                                 'top': y.top + 24 + 'px',
                                 'left': '8px',
                                 'width': myWidth + 2 + 'px',
-                                'height': myHeight + 1 + 'px'
+                                'height': myHeight
                             });
-                        } else {
-
-                             $(backgroundArray[backgroundArray.length - 1]).css({
-                                'display': 'block',
-                                'position': 'absolute',
-                                'top': y.top + 24 + 'px',
-                                'left': '10px',
-                                'width': 570 + 'px',
-                                'height': 349 + 'px'
-
-                            });
-
-
                         };
 
 
@@ -347,7 +334,7 @@ if (w < 1200) {
 
                  }
 
-            }
+            // }
 
         }
 
