@@ -314,6 +314,21 @@ if (w < 1200) {
                             console.log('height ' + myHeight);
                             console.log('width ' + myWidth);
                             console.log('gets into this function');
+
+                            if (ie10andbelow) {
+
+                                $(backgroundArray[backgroundArray.length - 1]).css({
+                                'display': 'block',
+                                'position': 'absolute',
+                                'top': y.top + 24 + 'px',
+                                'left': '8px',
+                                'width':  624 +'px',
+                                'height': 351 + 'px'
+
+                            });
+
+                            }
+
                             $(backgroundArray[backgroundArray.length - 1]).css({
                                 'display': 'block',
                                 'position': 'absolute',
@@ -321,6 +336,7 @@ if (w < 1200) {
                                 'left': '8px',
                                 'width': myWidth + 2 + 'px',
                                 'height': myHeight + 1 + 'px'
+
                             });
                         };
 
