@@ -299,7 +299,7 @@ if (w < 1200) {
 
                         $('.overlays img').css('display', 'none');
 
-                        ie10andbelow = navigator.userAgent.indexOf('MSIE 8.0') != -1;
+
 
                         if (i < backgroundArray.length - 2) {
                                 $(backgroundArray[i+1]).css({
@@ -308,9 +308,12 @@ if (w < 1200) {
                                 'top': x.top + y.top + 4 + 'px',
                                 'left': '16px'
                             });
-
-                        } else if (!ie10andbelow) {
-
+                        } else {
+                            console.log('y ' + y);
+                            console.log('x ' + x);
+                            console.log('height ' + myHeight);
+                            console.log('weight ' + myWidth);
+                            console.log('gets into this function');
                             $(backgroundArray[backgroundArray.length - 1]).css({
                                 'display': 'block',
                                 'position': 'absolute',
@@ -318,21 +321,7 @@ if (w < 1200) {
                                 'left': '8px',
                                 'width': myWidth + 2 + 'px',
                                 'height': myHeight + 1 + 'px'
-
                             });
-
-                        } else {
-
-                            $(backgroundArray[backgroundArray.length - 1]).css({
-                                'display': 'block',
-                                'position': 'absolute',
-                                'top': y.top + 24 + 'px',
-                                'left': '10px',
-                                'width': 570 + 'px',
-                                'height': 349 + 'px'
-
-                            });
-
                         };
 
 
@@ -359,6 +348,11 @@ if (w < 1200) {
 
 
     });
+
+    // GET HEIGHTS AND WIDTHS OF DATA PIC ELEMENTS FOR OVERLAYS
+    // var title$("#iframe-preview").contents().find('#title')
+    // var elmt = document.getElementById():
+
 
     count = 0;
 
