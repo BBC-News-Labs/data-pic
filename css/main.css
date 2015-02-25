@@ -350,7 +350,6 @@ div.code-lines span {
 }
 
 #clear-test {
-
     color: #009999;
     left: 95%;
     position: fixed;
@@ -409,7 +408,6 @@ div.code-lines span {
 /*Explainer Array Stylings */
 
 #explainers {
-
     position: absolute;
     top: 417px;
     left: 16px;
@@ -417,7 +415,6 @@ div.code-lines span {
 }
 
 #h2_explainer {
-
     font-family: Arial;
     font-size: 15px;
     width:90%;
@@ -425,7 +422,6 @@ div.code-lines span {
 }
 
 #h3_explainer{
-
     display: none;
     font-family: Arial;
     font-size: 15px;
@@ -433,7 +429,6 @@ div.code-lines span {
 }
 
 #impact_figure_explainer{
-
     display: none;
     font-family: Arial;
     font-size: 14px;
@@ -443,7 +438,6 @@ div.code-lines span {
 }
 
 #paragraph_explainer{
-
     display: none;
     font-family: Arial;
     font-size: 15px;
@@ -452,7 +446,6 @@ div.code-lines span {
 }
 
 #list_figures_explainer {
-
     display: none;
     font-family: Arial;
     font-size: 15px;
@@ -463,7 +456,6 @@ div.code-lines span {
 }
 
 #source_explainer {
-
     display: none;
     font-family: Arial;
     font-size: 14px;
@@ -473,7 +465,6 @@ div.code-lines span {
 
 
 #bgimage_explainer{
-
     display: none;
     font-family: Arial;
     font-size: 14px;
@@ -496,7 +487,6 @@ div.code-lines span {
 @media (min-width: 1260px) and (max-width: 1395px) {
 
     #explainers {
-
     left: 15px;
     top: 465px;
     width: 95%;
@@ -521,7 +511,6 @@ div.code-lines span {
     }
 
     #d_clip_button {
-
         left: 83%;
     }
 

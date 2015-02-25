@@ -308,7 +308,8 @@ if (w < 1200) {
                                 'top': x.top + y.top + 4 + 'px',
                                 'left': '16px'
                             });
-                        } else {
+
+                        } else if (!e10andbelow) {
 
                             $(backgroundArray[backgroundArray.length - 1]).css({
                                 'display': 'block',
@@ -319,6 +320,18 @@ if (w < 1200) {
                                 'height': myHeight + 1 + 'px'
 
                             });
+                        } else {
+
+                            $(backgroundArray[backgroundArray.length - 1]).css({
+                                'display': 'block',
+                                'position': 'absolute',
+                                'top': y.top + 24 + 'px',
+                                'left': '8px',
+                                'width': 351 + 'px',
+                                'height': 624 + 'px'
+
+                            });
+
                         };
 
 
