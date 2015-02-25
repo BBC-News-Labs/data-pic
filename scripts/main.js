@@ -324,9 +324,9 @@ if (w < 1200) {
                                 'display': 'block',
                                 'position': 'absolute',
                                 'top': y.top + 24 + 'px',
-                                'left': '10px',
-                                'width': 570 + 'px',
-                                'height': 349 + 'px'
+                                'left': '4' + 'px',
+                                'width': '500' +' px',
+                                'height': '349' + 'px'
 
                             });
 
