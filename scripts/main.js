@@ -313,7 +313,7 @@ if (w < 1200) {
                             $(backgroundArray[backgroundArray.length - 1]).css({
                                 'display': 'block',
                                 'position': 'absolute',
-                                'top': y.top + 24 + 'px',
+                                'top': y.top + 22 + 'px',
                                 'left': '8px',
                                 'width': myWidth + 2 + 'px',
                                 'height': myHeight
@@ -325,9 +325,9 @@ if (w < 1200) {
                                 'display': 'block',
                                 'position': 'absolute',
                                 'top': y.top + 24 + 'px',
-                                'left': '1px',
-                                'width': '560' + 'px',
-                                'height': '349' + 'px'
+                                'left': '3px',
+                                'width': '550' + 'px',
+                                'height': '330' + 'px'
 
                             });
 
