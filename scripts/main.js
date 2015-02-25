@@ -316,8 +316,8 @@ if (w < 1200) {
                                 'position': 'absolute',
                                 'top': y.top + 24 + 'px',
                                 'left': '8px',
-                                'width': myWidth + 2 + 'px',
-                                'height': myHeight + 1 + 'px'
+                                'width': 351 + 'px',
+                                'height': 624 + 'px'
 
                             });
 
@@ -330,14 +330,14 @@ if (w < 1200) {
                                 'position': 'absolute',
                                 'top': y.top + 24 + 'px',
                                 'left': '8px',
-                                'width':  624 +'px',
-                                'height': 351 + 'px'
+                                'width':  myWidth + 2 + 'px',
+                                'height': myHeight + 1 + 'px'
 
                                 });
 
                                 }
 
-                        });
+                        // });
 
                         };
 
