@@ -308,12 +308,8 @@ if (w < 1200) {
                                 'top': x.top + y.top + 4 + 'px',
                                 'left': '16px'
                             });
-                        } else {
-                            console.log('y ' + y);
-                            console.log('x ' + x);
-                            console.log('height ' + myHeight);
-                            console,log('weight ' + myWidth);
-                            console.log('gets into this function');
+                        } else if (!ie10andbelow) {
+
                             $(backgroundArray[backgroundArray.length - 1]).css({
                                 'display': 'block',
                                 'position': 'absolute',
@@ -322,6 +318,19 @@ if (w < 1200) {
                                 'width': myWidth + 2 + 'px',
                                 'height': myHeight + 1 + 'px'
                             });
+                        } else {
+
+                             $(backgroundArray[backgroundArray.length - 1]).css({
+                                'display': 'block',
+                                'position': 'absolute',
+                                'top': y.top + 24 + 'px',
+                                'left': '10px',
+                                'width': 570 + 'px',
+                                'height': 349 + 'px'
+
+                            });
+
+
                         };
 
 
