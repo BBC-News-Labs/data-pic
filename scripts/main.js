@@ -325,8 +325,8 @@ if (w < 1200) {
                                 'position': 'absolute',
                                 'top': y.top + 24 + 'px',
                                 'left': '4px',
-                                'width': 500 + 'px',
-                                'height': 349 + 'px'
+                                'width': 500,
+                                'height': 349
 
                             });
 
