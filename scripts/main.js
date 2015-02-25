@@ -309,7 +309,11 @@ if (w < 1200) {
                                 'left': '16px'
                             });
                         } else {
-
+                            console.log('y ' + y);
+                            console.log('x ' + x);
+                            console.log('height ' + myHeight);
+                            console,log('weight ' + myWidth);
+                            console.log('gets into this function');
                             $(backgroundArray[backgroundArray.length - 1]).css({
                                 'display': 'block',
                                 'position': 'absolute',
