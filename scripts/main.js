@@ -309,13 +309,9 @@ if (w < 1200) {
                                 'left': '16px'
                             });
                         } else {
-                            console.log('y ' + y);
-                            console.log('x ' + x);
-                            console.log('height ' + myHeight);
-                            console.log('width ' + myWidth);
-                            console.log('gets into this function');
 
                             if (ie10andbelow) {
+                                console.log(ie10andbelow);
 
                                 $(backgroundArray[backgroundArray.length - 1]).css({
                                 'display': 'block',
@@ -364,11 +360,6 @@ if (w < 1200) {
 
 
     });
-
-    // GET HEIGHTS AND WIDTHS OF DATA PIC ELEMENTS FOR OVERLAYS
-    // var title$("#iframe-preview").contents().find('#title')
-    // var elmt = document.getElementById():
-
 
     count = 0;
 
