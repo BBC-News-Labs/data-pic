@@ -305,7 +305,7 @@ if (w < 1200) {
                                 $(backgroundArray[i+1]).css({
                                 'display': 'block',
                                 'position': 'absolute',
-                                'top': x.top + y.top + 3 + 'px',
+                                'top': x.top + y.top + 2 + 'px',
                                 'left': '16px'
                             });
                         } else if (!ie10andbelow) {
