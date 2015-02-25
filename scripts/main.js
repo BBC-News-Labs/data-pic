@@ -326,7 +326,7 @@ if (w < 1200) {
                                 'position': 'absolute',
                                 'top': y.top + 24 + 'px',
                                 'right': '8px',
-                                'left': '5px',
+                                'left': '3px',
                                 'width': '550' + 'px',
                                 'height': '350' + 'px'
 
