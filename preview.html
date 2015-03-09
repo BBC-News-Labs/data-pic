@@ -1,15 +1,13 @@
 <html>
     <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     </head>
     <body>
         <p>Data pic preview loading please wait...</p>
-        <script type="text/javascript">
+        <script>
             if (typeof queryString()['domain'] == 'string') {
                 document.domain = queryString()['domain'];
             }
             function queryString() {
-                var
                 vars = [],
                 hash,
                 hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
