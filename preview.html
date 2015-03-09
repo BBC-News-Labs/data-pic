@@ -8,9 +8,9 @@
                 document.domain = queryString()['domain'];
             }
             function queryString() {
-                vars = [],
-                hash,
-                hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+                var vars = [],
+                var hash = '',
+                var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&') || '';
                 for (var i = 0; i < hashes.length; i++) {
                     hash = hashes[i].split('=');
                     vars.push(hash[0]);
