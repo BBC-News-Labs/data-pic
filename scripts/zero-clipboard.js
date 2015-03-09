@@ -1852,12 +1852,20 @@
  * @readonly
  * @property {string}
  */
-  _defineProperty(ZeroClipboard, "version", {
+  // _defineProperty(ZeroClipboard, "version", {
+  //   value: "2.2.0",
+  //   writable: false,
+  //   configurable: true,
+  //   enumerable: true
+  // });
+
+  ZeroClipboard.version = {
     value: "2.2.0",
     writable: false,
     configurable: true,
     enumerable: true
-  });
+  };
+
   /**
  * Update or get a copy of the ZeroClipboard global configuration.
  * Returns a copy of the current/updated configuration.
