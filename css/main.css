@@ -479,7 +479,6 @@ div.code-lines span {
     font-size: 14px;
     z-index: 1;
     width: 98%;
-    top: ;
 }
 
 #d_debug {
@@ -500,7 +499,6 @@ div.code-lines span {
     left: 15px;
     top: 465px;
     width: 95%;
-
     }
 
     #h2_explainer, #h3_explainer, #impact_figure_explainer, #paragraph_explainer, #list_figures_explainer, #source_explainer,
